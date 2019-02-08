@@ -127,6 +127,9 @@ nav a:active{
 .thispage {
     color: #ffe348;
 }
+.thispage a {
+    color: #ffe348;
+}
 .thispage a:hover{
     text-shadow: 0 0 4px #ffe348, 0 0 6px #FFFFFF;
 }
