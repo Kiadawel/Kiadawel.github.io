@@ -10,7 +10,21 @@ body {
     margin: 0 auto;
     padding: 0;
 }
-
+a {
+    color: #133751;
+}
+a:hover{
+    color: #ffe348;
+}
+a:visited{
+    color: #133751;
+}
+a:focus{
+    color: #ffffff;
+}
+a:active{
+    color: #ffe348;
+}
 /* Top Banner Styles */
 
 body>header{
@@ -76,7 +90,21 @@ nav {
     text-align: center;
     line-height: 2rem;
 }
+.menubutton {
+    display: block;
+    background-color: #133751;
+}
+.menubutton a {
+    display: block;
+    color: #ffffff;
+    border: none;
+    width: 100%;
+}
+.menubutton a:visited{
+    color: #ffffff;
+}
 nav ul{
+    display:none;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -95,7 +123,7 @@ nav a:hover{
     text-shadow: 0 0 6px #ffe348;
 }
 nav a:visited{
-    color: #ffffff;
+    color: #CEE5F2;
 }
 nav a:focus{
     color: #cee5f2;
@@ -122,7 +150,7 @@ main {
     margin: 0;
     height: 18rem;
     width: 100%;
-    background:url(../images/herobanner.jpg) top center no-repeat;
+    background:url(../images/herobanner_sm.jpg) top left no-repeat;
     background-size: cover;
     background-color: black;
 }
@@ -140,12 +168,18 @@ main {
     color: #ffffff;
     overflow: auto; 
 }
+/* Five Day Forecast Section */
+.fiveday {
+    display: none;
+}
 
 /* Article Section */
 
 .featured {
+    display: flex;
+    flex-flow: column-reverse nowrap;
     margin-top: 2.5rem;
-    padding: 0 1rem 1rem 1rem;
+    padding: 0.5rem 1rem 1rem 1rem;
     border: 1px solid #282828;
     border-radius: .2rem;
 }
@@ -162,41 +196,46 @@ main {
     font-size: .7rem;
     font-style: italic;       
 }
-.featured img{
+.featured_item{
     max-width:100%;
-    display: block;
     margin: auto;
 }
 
 /* Contact Section */
 
 .contact {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
     margin-top: 1rem;
-    padding: .5rem 1rem 1rem 1rem;
+    padding: .5rem;
     background-color: #133751;
     color: #ffffff;
 }
-.contact img {
+.contact_item {
     max-width:100%;
-    display: block;
     margin: auto;
+}
+.contact strong{
+    font-weight: bold;
+    color: #ffe348;
 }
 
 /* Footer Styles */
 footer {
-    margin: 0px .5rem 1rem .5rem;
+    margin: 0px;
     background-color: #282828;
     color: #FFFFFF;
-    font-size: 1rem;
+    font-size: .7rem;
     text-align: center;
-    padding: .5rem;
-    border-radius: 0px 0px 5px 5px;
+    width:100%;
     display: flex;
     justify-content: space-between;
     flex-flow: row nowrap;
 }
 
 footer div{
+    padding: .5rem;
     display: inline-flex;
 }
 
