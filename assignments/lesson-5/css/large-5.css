@@ -130,6 +130,9 @@ nav a:active{
 .thispage a:hover{
     text-shadow: 0 0 4px #ffe348, 0 0 6px #FFFFFF;
 }
+.thispage a:visited {
+    color: #ffe348;
+}
 
 main {
     margin: 0 auto;
