@@ -1,7 +1,7 @@
 /* MOBILE/SMALL SCREEN VIEW */
 
 /* General Page Styles */
-
+ 
 body {
     font-family: 'Muli', sans-serif;
     color: #133751;
@@ -68,11 +68,16 @@ h1, h2, h3 {
 }
 h1{
     font-size: 2rem;
+    margin: 1rem;
+    margin-bottom: .5rem;
 }
 h2 {
     font-size: 1.5rem;
+    margin: 0;
+    margin-bottom: .3rem;
 }
 h3 {
+    margin: 0;
     font-size: 1.2rem;
     margin-bottom: .3rem;
 }
@@ -122,6 +127,7 @@ nav a {
     text-shadow: 1px 1px 2px #000000;
     border-width: 0px 0px 1px 0px;
     border-style: solid;
+    border-color: #CEE5F2;
 }
 nav a:hover{
     color: #ffffff;
@@ -137,25 +143,22 @@ nav a:active{
     color: #ffe348;
 }
 .thispage {
+    color: #ffe348;
     background-color: #133751;
-}
-.thispage a:hover{
-    text-shadow: 0 0 4px #ffe348, 0 0 6px #FFFFFF;
-    background-color: #cee5f2;
 }
 
 main {
-    margin: 0 .5rem 0 .5rem;
+    margin: 0 auto;
+    width:100%;
 }
 
 /* Hero & Summary Section */
 .hero {
     position: relative;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     height: 18rem;
-    width: 100%;
-    background:url(../images/herobanner_sm.jpg) top left no-repeat;
+    background:url(../images/herobanner_768.jpg) bottom left no-repeat;
     background-size: cover;
     background-color: black;
 }
@@ -164,7 +167,7 @@ main {
     position: absolute;
     margin-left: 1rem;
     margin-top: 1rem;
-    padding: 0 .5rem .5rem .5rem; 
+    padding: .5rem; 
     width: 60%;
     height: 18rem;
     text-align: left;
@@ -172,6 +175,7 @@ main {
     background-color: #282828;
     color: #ffffff;
     overflow: auto; 
+    border-radius: .2rem;
 }
 /* Five Day Forecast Section */
 .fiveday {
@@ -183,16 +187,21 @@ main {
 .featured {
     display: flex;
     flex-flow: column-reverse nowrap;
+    margin: 0 auto;
     margin-top: 2.5rem;
-    padding: 0.5rem 1rem 1rem 1rem;
+    padding: 0.5rem;
     border: 1px solid #282828;
     border-radius: .2rem;
+    align-self: stretch;
 }
 .featured h2{
     margin-bottom: 0;
 }
 .featured p{
     text-indent: 1rem;
+}
+.continue{
+    font-size: .7rem;
 }
 .author {
     margin-top: 0;
@@ -212,10 +221,13 @@ main {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
+    margin: 0 auto;
     margin-top: 1rem;
     padding: .5rem;
+    border: 1px solid #133751;
     background-color: #133751;
     color: #ffffff;
+    border-radius: .2rem .2rem 0 0;
 }
 .contact_item {
     max-width:100%;
@@ -227,7 +239,7 @@ main {
 
 /* Footer Styles */
 footer {
-    margin: 0px;
+    margin: 0;
     background-color: #282828;
     color: #FFFFFF;
     font-size: .7rem;
@@ -236,19 +248,18 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-flow: row nowrap;
+    border-style: 2px solid #282828;
+    border-radius: 0 0 .2rem .2rem;
 }
 
 footer div{
     padding: .5rem;
     display: inline-flex;
 }
-
 footer a {
     color: #CEE5F2;
     text-decoration: none;
     text-shadow: 1px 1px 2px #000000;
-    border-width: 0px 0px 1px 0px;
-    border-style: solid;
 }
 footer a:hover{
     color: #ffffff;
