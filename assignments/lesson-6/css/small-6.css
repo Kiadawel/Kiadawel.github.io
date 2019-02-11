@@ -1,0 +1,265 @@
+/* MOBILE/SMALL SCREEN VIEW */
+
+/* General Page Styles */
+
+body {
+    font-family: 'Muli', sans-serif;
+    color: #133751;
+    font-size: 2vh;
+    background-color: #cee5f2;
+    margin: 0 auto;
+    padding: 0;
+}
+a {
+    color: #133751;
+}
+a:hover{
+    color: #ffe348;
+}
+a:visited{
+    color: #133751;
+}
+a:focus{
+    color: #ffffff;
+}
+a:active{
+    color: #ffe348;
+}
+/* Top Banner Styles */
+
+body>header{
+    background-color: #133751;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sitehead{
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    vertical-align: middle;
+    text-align: left;
+    vertical-align: center;
+}
+.sitelogo {
+    display: inline-block;
+    vertical-align: middle;
+    padding: .5rem;
+}
+.sitename{
+    font-family: 'Special Elite', monospace;
+    font-size: 2.2rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000000;
+}
+.motto {
+    font-size: .7rem;
+    font-family: 'Muli', sans-serif;
+    font-style: italic;
+    color: #CEE5F2;
+    line-height: .7rem;
+    text-align: right;
+}
+
+/* Page Heading Styles */
+
+h1, h2, h3 {
+    font-family: 'Special Elite', monospace; 
+}
+h1{
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.5rem;
+}
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: .3rem;
+}
+h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline;
+}
+.city {
+    text-align: center;
+}
+
+/* Header Navigation Styles */
+
+nav {
+    width: 100%;
+    background-color: #282828;
+    font-family: 'Special Elite', monospace;
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 2rem;
+}
+.menubutton {
+    display: block;
+    background-color: #133751;
+}
+.menubutton a {
+    display: block;
+    color: #ffffff;
+    border: none;
+    width: 100%;
+}
+.menubutton a:visited{
+    color: #ffffff;
+}
+nav ul{
+    display:none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav a {
+    display: block;
+    padding: 5px;
+    color: #CEE5F2;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px #000000;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+}
+nav a:hover{
+    color: #ffffff;
+    text-shadow: 0 0 6px #ffe348;
+}
+nav a:visited{
+    color: #CEE5F2;
+}
+nav a:focus{
+    color: #cee5f2;
+}
+nav a:active{
+    color: #ffe348;
+}
+.thispage {
+    background-color: #133751;
+}
+.thispage a:hover{
+    text-shadow: 0 0 4px #ffe348, 0 0 6px #FFFFFF;
+    background-color: #cee5f2;
+}
+
+main {
+    margin: 0 .5rem 0 .5rem;
+}
+
+/* Hero & Summary Section */
+.hero {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 18rem;
+    width: 100%;
+    background:url(../images/herobanner_sm.jpg) top left no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+.summary {
+    float: left;
+    position: absolute;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    padding: 0 .5rem .5rem .5rem; 
+    width: 60%;
+    height: 18rem;
+    text-align: left;
+    font-size: 1.1rem;
+    background-color: #282828;
+    color: #ffffff;
+    overflow: auto; 
+}
+/* Five Day Forecast Section */
+.fiveday {
+    display: none;
+}
+
+/* Article Section */
+
+.featured {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    margin-top: 2.5rem;
+    padding: 0.5rem 1rem 1rem 1rem;
+    border: 1px solid #282828;
+    border-radius: .2rem;
+}
+.featured h2{
+    margin-bottom: 0;
+}
+.featured p{
+    text-indent: 1rem;
+}
+.author {
+    margin-top: 0;
+    margin-left: 1rem;
+    padding-top: 0;
+    font-size: .7rem;
+    font-style: italic;       
+}
+.featured_item{
+    max-width:100%;
+    margin: auto;
+}
+
+/* Contact Section */
+
+.contact {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    margin-top: 1rem;
+    padding: .5rem;
+    background-color: #133751;
+    color: #ffffff;
+}
+.contact_item {
+    max-width:100%;
+    margin: auto;
+}
+.contact h4{
+    color: #ffe348;
+}
+
+/* Footer Styles */
+footer {
+    margin: 0px;
+    background-color: #282828;
+    color: #FFFFFF;
+    font-size: .7rem;
+    text-align: center;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+}
+
+footer div{
+    padding: .5rem;
+    display: inline-flex;
+}
+
+footer a {
+    color: #CEE5F2;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px #000000;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+}
+footer a:hover{
+    color: #ffffff;
+    text-shadow: 0 0 6px #ffe348;
+}
+footer a:visited{
+    color: #ffffff;
+}
+footer a:focus{
+    color: #cee5f2;
+}
+footer a:active{
+    color: #ffe348;
+}
