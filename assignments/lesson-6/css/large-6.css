@@ -14,7 +14,13 @@
     .menubutton {
         display:none;
     }
-    nav ul{
+    .navlinks{
+        display: block;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .navlinks_show{
         display: block;
         list-style-type: none;
         margin: 0;
@@ -31,15 +37,16 @@
         text-decoration: none;
         text-shadow: 1px 1px 2px #000000;
     }
-    .active {
+    .thispage {
         color: #ffe348;
         background-color: #282828;
     }
-    .active:hover{
+    .thispage:hover{
         text-shadow: 0 0 4px #ffe348, 0 0 6px #FFFFFF;
     }
-    .active:visited {
+    .thispage:visited {
         color: #ffe348;
+        background-color: #282828;
     }
 
     main {
@@ -70,7 +77,7 @@
     .fiveday {
         display: block;
         margin: 0;
-        padding: .5rem 0 .5rem 0;
+        padding: 1rem 0 .5rem 0;
         width:100%;
         border-radius: .2rem;
         text-align: center;

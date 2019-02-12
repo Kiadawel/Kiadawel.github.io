@@ -29,11 +29,11 @@
             
             <nav>
                 <div class="menubutton">
-                    <a href="#"><img src="images/menu.png" alt="Menu"> Menu</a>
+                    <a onclick="toggleNav()"><img src="images/menu.png" alt="Menu"> Menu</a>
                 </div>
-                <ul>
+                <ul id="navigation" class="navlinks">
                     <li><a href="#">Home</a></li>
-                    <li><a class="active" href="#">Preston</a></li>
+                    <li><a class="thispage" href="#">Preston</a></li>
                     <li><a href="#">Soda Springs</a></li>
                     <li><a href="#">Fish Haven</a></li>
                     <li><a href="#">Storm Center</a></li>
@@ -113,8 +113,11 @@
         <footer>
             <div>&copy; 2019 Kimi Weldon</div> 
             <div><a href="#">Terms of Use</a></div>
-            <div>2/4/2019</div>
+            <div><span id="currentdate"> </span></div>
         </footer>
     </main>
+
+    <script src="scripts/currentdate.js"></script>
+    <script src="scripts/hamburger.js"></script>
     </body>
 </html>
