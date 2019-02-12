@@ -31,16 +31,14 @@
         text-decoration: none;
         text-shadow: 1px 1px 2px #000000;
     }
-    .thispage {
+    .active {
+        color: #ffe348;
         background-color: #282828;
     }
-    .thispage a {
-        color: #ffe348;
-    }
-    .thispage a:hover{
+    .active:hover{
         text-shadow: 0 0 4px #ffe348, 0 0 6px #FFFFFF;
     }
-    .thispage a:visited {
+    .active:visited {
         color: #ffe348;
     }
 

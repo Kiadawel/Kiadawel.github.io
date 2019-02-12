@@ -142,7 +142,7 @@ nav a:focus{
 nav a:active{
     color: #ffe348;
 }
-.thispage {
+.active {
     color: #ffe348;
     background-color: #133751;
 }
