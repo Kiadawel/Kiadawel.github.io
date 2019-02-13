@@ -46,10 +46,12 @@
 
             <div class="hero">
                 <img alt="Town of Preston"
-                    sizes="100vw"
                     srcset="images/herobanner_500.jpg 500w,
                             images/herobanner_768.jpg 768w, 
                             images/herobanner_1366.jpg 1366w"
+                    sizes="(max-width: 500px) 500px,
+                            (max-width: 768px) 768px,
+                            (min-width: 769px) 1366px"
                     src="images/herobanner_500.jpg">
                 <aside class="summary">
                     <h3>Weather Summary</h3>
