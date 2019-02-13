@@ -62,6 +62,9 @@
         margin: 0 1rem;
         background:url(../images/herobanner_1366.jpg) bottom left no-repeat;
     }*/
+    .hero {
+        margin: 0 1rem 0 1rem;
+    }
     .summary {
         padding: .5rem;
         height: 15rem;

@@ -96,9 +96,9 @@ nav {
     width: 100%;
     background-color: #282828;
     font-family: 'Special Elite', monospace;
-    font-size: 1.25rem;
+    font-size: 1rem;
     text-align: center;
-    line-height: 2rem;
+    line-height: 1.5rem;
 }
 .menubutton {
     display: block;
@@ -198,7 +198,7 @@ main {
     display:flex;
     flex-flow: row nowrap;
     padding: 0;
-    margin: 0 auto;
+    margin: 0 .5rem 0 .5rem;
     height: 18rem;
     background-color: black;
     overflow: hidden;
@@ -237,7 +237,7 @@ main {
 .featured {
     display: flex;
     flex-flow: column-reverse nowrap;
-    margin: 0 auto;
+    margin: 0 .5rem 0 .5rem;
     margin-top: 2.5rem;
     padding: 0.5rem;
     border: 1px solid #282828;
