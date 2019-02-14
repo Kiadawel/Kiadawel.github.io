@@ -10,6 +10,10 @@
     /* no changes */
 
     /* Header Navigation Styles */
+    nav {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
 
     .menubutton {
         display:none;
