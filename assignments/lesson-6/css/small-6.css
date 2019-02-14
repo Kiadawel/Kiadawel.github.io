@@ -169,31 +169,7 @@ main {
 }
 
 /* Hero & Summary Section */
-/*.hero {
-    position: relative;
-    padding: 0;
-    margin: 0 auto;
-    height: 18rem;
-    background:url(../images/herobanner_500.jpg) bottom left no-repeat;
-    background-size: cover;
-    background-color: black;
 
-    .summary {
-    float: left;
-    position: absolute;
-    margin-left: 1rem;
-    margin-top: 1rem;
-    padding: .5rem; 
-    width: 60%;
-    height: 18rem;
-    text-align: left;
-    font-size: 1.1rem;
-    background-color: #282828;
-    color: #ffffff;
-    overflow: auto; 
-    border-radius: .2rem;
-}
-} */
 .hero {
     display:flex;
     flex-flow: row nowrap;
