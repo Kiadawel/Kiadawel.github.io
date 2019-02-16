@@ -1,3 +1,4 @@
+//function to display or hide the mobile-site notification
 function toggleNav(){
     var navDisplay = document.getElementById('navigation');
 
