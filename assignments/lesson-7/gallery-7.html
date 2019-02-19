@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Gallery | Tri-Town Weather Watch</title>
+            <meta name="description" content="Gallery of weather photos for Tri-Town Weather Watch">
+            <link rel="stylesheet" href="css/normalize.css">
+            <link rel="stylesheet" href="css/small-7.css">
+            <link rel="stylesheet" href="css/medium-7.css">
+            <link rel="stylesheet" href="css/large-7.css">
+            <link href="https://fonts.googleapis.com/css?family=Muli:200i,400" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+            <link rel="icon" href="images/ttww_favicon.png">
+            <script src="scripts/hamburger.js"></script>
+            <script src="scripts/currentdate.js"></script>
+            <script src="scripts/windchill.js"></script>
+    </head>
+    
+    <body>
+        <header> 
+            <!-- Site header divisions for CSS styling -->
+            <div class="headwrapper">
+                <div class="sitelogo">
+                    <img src="images/ttww_logo.png" alt="Tri-Town Weather Watch Logo">
+                </div>
+                <div class="sitehead">
+                    <div class="sitename">Tri-Town Weather&nbsp;Watch</div>
+                    <div class="motto">You watch us, we'll watch the weather</div>
+                </div>
+            </div>
+            
+            <nav>
+                <div class="menubutton">
+                    <a onclick="toggleNav()"><img src="images/menu.png" alt="Menu"> Menu</a>
+                </div>
+                <ul id="navigation" class="navlinks">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="preston-7.html">Preston</a></li>
+                    <li><a href="#">Soda Springs</a></li>
+                    <li><a href="#">Fish Haven</a></li>
+                    <li><a href="#">Storm Center</a></li>
+                    <li><a class="thispage" href="gallery-7.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 class="pagename">Gallery</h1>
+
+            <div class="gallery_grid">
+                <figure>
+                    <img alt="Snowflake Close-up"
+                    srcset="images/gallery/gallery1_300.jpg 300w,
+                            images/gallery/gallery1_600.jpg 600w"
+                    sizes="100vw"
+                    src="images/gallery/gallery1_300.jpg">
+                    <figcaption>Snowflake close-up</figcaption>
+                </figure>
+                <figure>
+                    <img alt="Snowy day on a farm"
+                    srcset="images/gallery/gallery2_300.jpg 300w,
+                            images/gallery/gallery2_600.jpg 600w"
+                    sizes="100vw"
+                    src="images/gallery/gallery2_300.jpg">
+                    <figcaption>Snowstorm in Soda Springs</figcaption>
+                </figure>
+                <figure>
+                    <img alt="Rainbow over green fields"
+                    srcset="images/gallery/gallery3_300.jpg 300w,
+                            images/gallery/gallery3_600.jpg 600w"
+                    sizes="100vw"
+                    src="images/gallery/gallery3_300.jpg">
+                    <figcaption>Rainbow over the fields near Fish Haven</figcaption>
+                </figure>
+                <figure>
+                    <img alt="Dark rain clouds"
+                    srcset="images/gallery/gallery4_300.jpg 300w,
+                            images/gallery/gallery4_600.jpg 600w"
+                    sizes="100vw"
+                    src="images/gallery/gallery4_300.jpg">
+                    <figcaption>Rainclouds over Preston</figcaption>
+                </figure>
+                <figure>
+                    <img alt="Purple sky with lightning"
+                    srcset="images/gallery/gallery5_300.jpg 300w,
+                            images/gallery/gallery5_600.jpg 600w"
+                    sizes="100vw"
+                    src="images/gallery/gallery5_300.jpg">
+                    <figcaption>Thunderstorm captured by a Soda Springs local</figcaption>
+                </figure>
+                <figure>
+                    <img alt="A beautiful sunset"
+                    srcset="images/gallery/gallery6_300.jpg 300w,
+                            images/gallery/gallery6_600.jpg 600w"
+                    sizes="100vw"
+                    src="images/gallery/gallery6_300.jpg">
+                    <figcaption>Sunset over Fish Haven</figcaption>
+                </figure>
+                <figure>
+                    <img alt="Clouds in a blue sky"
+                    srcset="images/gallery/gallery2_300.jpg 300w,
+                            images/gallery/gallery2_600.jpg 600w"
+                    sizes="100vw"
+                    src="images/gallery/gallery2_300.jpg">
+                    <figcaption>Sunny skies!</figcaption>
+                </figure>
+            </div>
+
+            <section class="contact">
+                <div class="contact_item">
+                <h4>Tri-Town Weather Watch</h4>
+                <p>
+                375 Ninth St.<br>
+                Preston, ID 83263
+                </p>
+                <p>
+                    999.999.9999<br>
+                    weatherwatchers@ttww.com
+                </p>
+                </div>
+                <img class="contact_item" src="images/preston-map.jpg" alt="Map of Preston">
+            </section>
+        
+        <footer>
+            <div>&copy; 2019 Kimi Weldon</div> 
+            <div><a href="#">Terms of Use</a></div>
+            <div><span id="currentdate"> </span></div>
+        </footer>
+    </main>
+
+    <script>currentDate(); findWindChill();</script>
+    </body>
+</html>
