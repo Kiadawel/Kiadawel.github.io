@@ -324,6 +324,7 @@ footer a:active{
     max-width: 100%;
 }
 .gallery_grid figcaption {
+    text-align: center;
     padding: .5rem;
     font-size: 1rem;
 }
