@@ -1,0 +1,49 @@
+body {
+    font-family: Ubuntu, sans-serif;
+    background-color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+table {
+    margin: 0 auto;
+    box-shadow: .5rem .5rem 1rem #628ca6;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid #b5b5b5;
+}
+th, td {
+    padding: .5rem;
+}
+thead, tfoot {
+    background-color: #7fb9c2;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+tfoot {
+    font-size: .75rem;
+    font-weight: normal;
+}
+
+tbody{
+    color:#000;
+}
+tbody th {
+    background-color: #628ca6;
+    font-weight: bold;
+    color: #fff;
+}
+tbody td {
+    line-height: 1rem;
+}
+tbody tr:nth-child(even) {
+    background-color: #e7f0ed;
+  }
+tbody tr:nth-child(odd) {
+    background-color: #e7ffed;
+}
+.goalnotmet {
+    background-color: #628ca6;
+    color: #fff;
+}
