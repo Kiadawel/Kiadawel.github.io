@@ -229,7 +229,7 @@ main {
 .featured p{
     text-indent: 1rem;
 }
-.continue{
+.tinylink{
     font-size: .7rem;
 }
 .author {
@@ -327,4 +327,49 @@ footer a:active{
     text-align: center;
     padding: .5rem;
     font-size: 1rem;
+}
+
+/* Storm Center Styles */
+.formsection {
+    display: flex;
+    flex-flow: column;
+}
+fieldset {
+    margin: 0 .5rem .5rem .5rem;
+    border: 1px solid #282828;
+    border-radius: .2rem;;
+}
+input {
+    width: 50%;
+    border-radius: .2rem;
+    border: none;
+    border-bottom: 1px solid #282828;
+    padding: 3px;
+    color: #666666;
+}
+select {
+    width: 50%;
+    border-radius: .2rem;
+    border: none;
+    border-bottom: 1px solid #282828;
+    padding: 3px;
+    color: #133751;
+}
+textarea {
+    padding: 3px;
+    width: 50%;
+    height: 10rem;
+    color: #666666;
+    resize: none;
+    border-radius: .2rem;
+}
+input:focus, textarea:focus, select:focus {
+    border-bottom: 1px solid #ffe348;
+}
+input[type=submit]{
+    width: auto;
+    border-radius: .2rem;
+    background-color: #666666;
+    color: #CEE5F2;
+    border: 1px solid #133751;
 }
