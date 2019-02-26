@@ -1,6 +1,7 @@
 function severityLevel(rangevalue) {
     document.getElementById("rangevalue").innerHTML = rangevalue;
 }
+
 function clearForm(){
     document.getElementById("stormform").reset();
 }

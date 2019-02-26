@@ -71,7 +71,7 @@
 
                     <p>
                     <label for="zipcode">Zip Code:</label><br>
-                    <input name="zipcode" id="zipcode" type="number" placeholder="83263" autocomplete="postal-code" required>
+                    <input name="zipcode" id="zipcode" type="number" min="83263" autocomplete="postal-code" required>
                     </p>
                 </fieldset>
 
@@ -85,7 +85,7 @@
 
                     <p>
                     <label for="stormtype">Storm Type:</label><br>
-                    <input name="stormtype" id="stormtype" value= "" placeholder="Select One..." list="stormtypelist">
+                    <input name="stormtype" id="stormtype" type="text" placeholder="Select One..." list="stormtypelist">
                     <datalist id="stormtypelist">
                         <option value="Flash Flood">
                         <option value="Hail">
@@ -113,17 +113,19 @@
                     </p>
 
                     <p>
-                    <label for="dangerlvl">Are You In Danger? <em>(Select one)</em></label><br>
-                    <input type="radio" name="dangerlvl" id="dangeryes" value="y">
-                        <label for="dangeryes">Yes </label>
-                    <input type="radio" name="dangerlvl" id="dangermaybe" value="m">
-                        <label for="dangermaybe">Maybe </label>
-                    <input type="radio" name="dangerlvl" id="dangerno" value="n">
-                        <label for="dangerno">No </label>
+                    <label for="dangerlvl">Are You In Danger? <em>(Select one)</em></label>
+                    <div class="stayh">
+                        <input type="radio" name="dangerlvl" id="dangeryes" value="y">
+                            <label for="dangeryes">Yes </label>
+                        <input type="radio" name="dangerlvl" id="dangermaybe" value="m">
+                            <label for="dangermaybe">Maybe </label>
+                        <input type="radio" name="dangerlvl" id="dangerno" value="n">
+                            <label for="dangerno">No </label>
+                    </div>
                     </p>
 
                     <p>
-                    <label for="addlinfo">Additional Information</label><br>
+                    <label for="addlinfo">Additional Information <em>(Optional)</em></label><br>
                     <textarea name="addlinfo" id="addlinfo" placeholder="Comments..."></textarea>
                     </p>
 
@@ -132,8 +134,6 @@
                     </p>
                 </fieldset>
             </form>
-
-            <div id="formsummary"> </div>
 
             <section class="contact">
                 <div class="contact_item">
