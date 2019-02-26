@@ -10,11 +10,10 @@
     box-shadow: 0 .5rem 1rem #666666;
 }
 
-
-
-
-
-
+/* Storm Center Styles */
+fieldset {
+    margin: .5rem auto;
+}
 
 /* Thank You Page Formatting */
 .thankyoubox {

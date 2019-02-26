@@ -147,4 +147,35 @@
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: .5rem;
     }
+
+    /* Storm Center Styles */
+    fieldset {
+        max-width: 768px;
+    }
+    fieldset p {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: top;
+    }
+    label{
+        margin-right: .5rem;
+    }
+    .stayh label {
+        margin-right: .3rem;
+    }
+    input[type=text], input[type=number], input[type=email], 
+    input[type=tel], input[type=date], input[type=list], select,
+    .stayh, .slidebox {
+        width: 50%;
+    }
+    .slider {
+        align-self: flex-end;
+    }
+    textarea {
+        width: 50%;
+    }
+    input[type=submit]{
+        width:50%;
+    }
 }

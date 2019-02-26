@@ -2,11 +2,7 @@ function severityLevel(rangevalue) {
     document.getElementById("rangevalue").innerHTML = rangevalue;
 }
 
-function clearForm(){
-    document.getElementById("stormform").reset();
-}
-
-//function to parse URL found on css-tricks.com
+//function to parse URL found/modified from css-tricks.com
 function grabData(field){
     var stringBit = window.location.search.substring(1);
     var splitter = stringBit.split('&');
