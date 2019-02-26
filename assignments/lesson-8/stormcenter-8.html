@@ -16,7 +16,7 @@
             <link rel="icon" href="images/ttww_favicon.png">
             <script src="scripts/hamburger.js"></script>
             <script src="scripts/currentdate.js"></script>
-            <script src="scripts/windchill.js"></script>
+            <script src="scripts/stormreport.js"></script>
     </head>
     
     <body>
@@ -49,41 +49,43 @@
         <main>
             <h1 class="pagename">Storm Center</h1>
 
-            <div class="stormform">
+            <form action="#">
                 <fieldset>
-                <legend><h4>Personal Information</h4></legend>
-                    <div class="formsection">
-                    <label for="name">Full Name: </label>
-                    <input name="name" type="text" required>
-                    </div>
+                <legend><h3>Personal Information</h3></legend>
+                    <p>
+                    <label for="name">Full Name: </label><br>
+                    <input name="name" id="fullname" type="text" placeholder="John Doe" pattern="[A-Za-z].{5,}" 
+                        title="Enter your first and last name (minimum 5 letters, no numbers or special characters)." 
+                        autocomplete="name" required>
+                    </p>
 
-                    <div class="formsection">
-                    <label for="email">Email: <em>(optional)</em> </label>
-                    <input name="email" type="email" value="john.doe@ttww.com">
-                    </div>
+                    <p>
+                    <label for="email">Email: <em>(optional)</em> </label><br>
+                    <input name="email" id="email" type="email" placeholder="example@ttww.com" autocomplete="email">
+                    </p>
 
-                    <div class="formsection">
-                    <label for="tel">Phone Number:</label>
-                    <input name="telephone" type="tel" required>
-                    </div>
+                    <p>
+                    <label for="telephone">Phone Number:</label><br>
+                    <input name="telephone" id="telephone" type="tel" placeholder="XXX-XXX-XXXX" autocomplete="tel-national" required>
+                    </p>
 
-                    <div class="formsection">
-                    <label for="num">Zip Code:</label>
-                    <input name="stormdate" type="number" value="83263" required>
-                    </div>
+                    <p>
+                    <label for="zipcode">Zip Code:</label><br>
+                    <input name="zipcode" id="zipcode" type="number" placeholder="83263" autocomplete="postal-code" required>
+                    </p>
                 </fieldset>
 
                 <fieldset>
-                <legend><h4>Storm Information</h4></legend>
+                <legend><h3>Storm Information</h3></legend>
                     
-                    <div class="formsection">
-                    <label for="date">Storm Date:</label>
-                    <input name="stormdate" type="date">
-                    </div>
+                    <p>
+                    <label for="date">Storm Date:</label><br>
+                    <input name="stormdate" id="stormdate" type="date">
+                    </p>
 
-                    <div class="formsection">
-                    <label for="stormtype">Storm Type:</label>
-                    <input name="stormtype" list="stormtypelist">
+                    <p>
+                    <label for="stormtype">Storm Type:</label><br>
+                    <input name="stormtype" id="stormtype" value= "" placeholder="Select One..." list="stormtypelist">
                     <datalist id="stormtypelist">
                         <option value="Flash Flood">
                         <option value="Hail">
@@ -91,47 +93,45 @@
                         <option value="Thunderstorm">
                         <option value="Tornado">
                     </datalist>    
-                    </div>
+                    </p>
 
-                    <div class="formsection">
-                    <label for="severity">Storm Severity (1-10):</label>
-                    <input name="severity" type="range" value="1" min="1" max="10" step="1">
-                    </div>
+                    <p>
+                    <label for="severity">Storm Severity (1-10):</label><br>
+                    <input name="severity" id="severity" type="range" value="1" min="1" max="10" 
+                    step="1" oninput="severityLevel(this.value)" onchange="severityLevel(this.value)">
+                    <span id="rangevalue">1</span>
+                    </p>
 
-                    <div class="formsection">
-                    <label for="region">Storm Region:</label>
+                    <p>
+                    <label for="region">Storm Region:</label><br>
                     <select name="region" id="stormregion">
+                        <option disabled selected>Select Region...</option>
                         <option value="preston">Preston</option>
                         <option value="soda">Soda Springs</option>
                         <option value="fish">Fish Haven</option>
                     </select>
-                    </div>
+                    </p>
 
-                    <div class="formsection">
-                    <label for="dangerlvl">User In-Danger Level <em>(Select one)</em></label>
+                    <p>
+                    <label for="dangerlvl">Are You In Danger? <em>(Select one)</em></label><br>
                     <input type="radio" name="dangerlvl" id="dangeryes" value="y">
-                        <label for="dangeryes">Yes</label>
+                        <label for="dangeryes">Yes </label>
                     <input type="radio" name="dangerlvl" id="dangermaybe" value="m">
-                        <label for="dangermaybe">Maybe</label>
+                        <label for="dangermaybe">Maybe </label>
                     <input type="radio" name="dangerlvl" id="dangerno" value="n">
-                        <label for="dangerno">No</label>
-                    </div>
+                        <label for="dangerno">No </label>
+                    </p>
 
-                    <div class="formsection">
-                    <label for="addlinfo">Additional Information</label>
-                    <textarea name="addlinfo">Comments...</textarea>
-                    </div>
+                    <p>
+                    <label for="addlinfo">Additional Information</label><br>
+                    <textarea name="addlinfo" id="addlinfo" placeholder="Comments..."></textarea>
+                    </p>
 
+                    <p>
                     <input type="submit"> <a class="tinylink" onclick="clearForm()">Clear Form</a>
+                    </p>
                 </fieldset>
-
-
-
-
-
-
-
-            </div>
+            </form>
 
             <section class="contact">
                 <div class="contact_item">
