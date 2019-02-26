@@ -43,7 +43,7 @@ tbody tr:nth-child(even) {
 tbody tr:nth-child(odd) {
     background-color: #e7ffed;
 }
-.goalnotmet {
+.goalmet {
     background-color: #628ca6;
     color: #fff;
 }
