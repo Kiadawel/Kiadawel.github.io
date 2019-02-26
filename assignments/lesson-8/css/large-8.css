@@ -16,6 +16,16 @@
 
 
 
+/* Thank You Page Formatting */
+.thankyoubox {
+    display: block;
+}
+.thankswide {
+    display: block;
+    float: right;
+    margin-left: .5rem;
+    max-width: 50%;
+}
 
 /* END MEDIA QUERY*/
 }

@@ -366,5 +366,22 @@ textarea {
     border-radius: .2rem;
 }
 input:focus, textarea:focus, select:focus {
-    border: 2px solid #ffe348;
+    background-color: #fff3b0;
+}
+
+/* Thank You Page Formatting */
+.thankyoubox {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 .5rem 0 .5rem;
+    padding: 0.5rem;
+    border: 1px solid #282828;
+    border-radius: .2rem;
+    font-size: 1rem;
+}
+.thankswide {
+    display: none;
+}
+.clear {
+    clear: both;
 }
