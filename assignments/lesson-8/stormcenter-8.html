@@ -51,35 +51,35 @@
 
             <form id="stormform" action="thanks.html" method="GET">
                 <fieldset>
-                <legend><h3>Personal Information</h3></legend>
+                <legend>Personal Information</legend>
                     <p>
                     <label for="name">Full Name: </label>
-                    <input name="name" id="fullname" type="text" placeholder="John Doe" pattern="[A-Za-z].{5,}" 
+                    <input name="name" id="name" type="text" placeholder="John Doe" pattern="[A-Za-z].{5,}" 
                         title="Enter your first and last name (minimum 5 letters, no numbers or special characters)." 
-                        autocomplete="name" required>
+                        autocomplete="on" required>
                     </p>
 
                     <p>
                     <label for="email">Email: <em>(optional)</em> </label>
-                    <input name="email" id="email" type="email" placeholder="example@ttww.com" autocomplete="email">
+                    <input name="email" id="email" type="email" placeholder="example@ttww.com" autocomplete="on">
                     </p>
 
                     <p>
                     <label for="telephone">Phone Number:</label>
-                    <input name="telephone" id="telephone" type="tel" placeholder="XXX-XXX-XXXX" autocomplete="tel-national" required>
+                    <input name="telephone" id="telephone" type="tel" placeholder="XXX-XXX-XXXX" autocomplete="on" required>
                     </p>
 
                     <p>
                     <label for="zipcode">Zip Code:</label>
-                    <input name="zipcode" id="zipcode" type="number" min="83263" autocomplete="postal-code" required>
+                    <input name="zipcode" id="zipcode" type="number" min="83263" autocomplete="on" required>
                     </p>
                 </fieldset>
 
                 <fieldset>
-                <legend><h3>Storm Information</h3></legend>
+                <legend>Storm Information</legend>
                     
                     <p>
-                    <label for="date">Storm Date:</label>
+                    <label for="stormdate">Storm Date:</label>
                     <input name="stormdate" id="stormdate" type="date">
                     </p>
 
@@ -105,8 +105,8 @@
                     </p>
 
                     <p>
-                    <label for="region">Storm Region:</label>
-                    <select name="region" id="stormregion">
+                    <label for="stormregion">Storm Region:</label>
+                    <select name="stormregion" id="stormregion">
                         <option disabled selected>Select Region...</option>
                         <option value="preston">Preston</option>
                         <option value="soda">Soda Springs</option>
@@ -115,7 +115,7 @@
                     </p>
 
                     <p>
-                    <label for="dangerlvl">Are You In Danger? <em>(Select one)</em></label>
+                    <label for="dangeryes">Are You In Danger? <em>(Select one)</em></label>
                     <span class="stayh">
                         <input type="radio" name="dangerlvl" id="dangeryes" value="y">
                             <label for="dangeryes">Yes </label>

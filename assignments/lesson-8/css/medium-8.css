@@ -156,7 +156,7 @@
         display: flex;
         flex-flow: row nowrap;
         justify-content: flex-end;
-        align-items: top;
+        align-items: baseline;
     }
     label{
         margin-right: .5rem;

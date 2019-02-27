@@ -36,7 +36,7 @@ function stormForm(){
             stormType = 'storm';
         }
     var stormSev = grabData("severity");
-    var stormReg = grabData("region");
+    var stormReg = grabData("stormregion");
         if (stormReg == 'soda'){
             stormReg = 'Soda Springs';
         }

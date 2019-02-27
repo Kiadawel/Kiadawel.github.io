@@ -332,13 +332,16 @@ footer a:active{
 /* Storm Center Styles */
 fieldset {
     margin: 0 .5rem .5rem .5rem;
-    padding: 1rem;
+    padding: .5rem;
     border: 1px solid #282828;
     border-radius: .2rem;;
 }
-fieldset h3 {
-    margin-bottom: 0;
-    padding-bottom: 0;
+legend {
+    font-family: 'Special Elite', monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: .5rem;
+    padding: .5rem;
 }
 fieldset p {
     display: flex;
@@ -423,7 +426,7 @@ input[type=submit]:hover{
 input[type=submit]:active{
     background-color: #fff3b0;
     box-shadow: none;
-    transform: translateY(2px), translateX(2px);
+    transform: translateY(4px);
     cursor: pointer;
 }
 /* Thank You Page Formatting */
