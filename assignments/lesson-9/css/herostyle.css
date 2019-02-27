@@ -1,0 +1,68 @@
+/* || general styles */
+
+html {
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  }
+  
+  body {
+    width: 800px;
+    margin: 3rem auto;
+    color: darkblue;
+    background-color: darkred;
+    border: 10px solid gold;
+    border-radius: 5px;
+  }
+  
+  h1, h2 {
+    padding: 0;
+    margin: 0;
+    font-family: 'Faster One', cursive;
+  }
+  
+  /* header styles */
+  
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+  header {
+    background-color: white;
+    padding: 0;
+    margin: 0 auto;
+  }
+  header p {
+    margin: 0 auto;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    color: darkred;
+  }
+  
+  /* section styles */
+  section {
+    background-color: white;
+    margin: 0 auto;
+    padding: 0;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  section article {
+    margin: 0;
+    padding: 1rem;
+  }
+  
+  section p {
+    margin: 5px 0;
+  }
+  
+  section ul {
+    margin-top: 0;
+    list-style-type: square;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    letter-spacing: -5px;
+    margin-bottom: 10px;
+  }
