@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Storm Center | Tri-Town Weather Watch</title>
+            <meta name="description" content="Tri-Town Weather Watch Storm Center">
+            <meta name="author" content="Kimi Weldon">
+            <link rel="stylesheet" href="css/normalize.css">
+            <link rel="stylesheet" href="css/small-9.css">
+            <link rel="stylesheet" href="css/medium-9.css">
+            <link rel="stylesheet" href="css/large-9.css">
+            <link href="https://fonts.googleapis.com/css?family=Muli:200i,400" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+            <link rel="icon" href="images/ttww_favicon.png">
+            <script src="scripts/hamburger.js"></script>
+            <script src="scripts/currentdate.js"></script>
+            <script src="scripts/stormreport.js"></script>
+    </head>
+    
+    <body>
+        <header> 
+            <!-- Site header divisions for CSS styling -->
+            <div class="headwrapper">
+                <div class="sitelogo">
+                    <img src="images/ttww_logo.png" alt="Tri-Town Weather Watch Logo">
+                </div>
+                <div class="sitehead">
+                    <div class="sitename">Tri-Town Weather&nbsp;Watch</div>
+                    <div class="motto">You watch us, we'll watch the weather</div>
+                </div>
+            </div>
+            
+            <nav>
+                <div class="menubutton">
+                    <a onclick="toggleNav()"><img src="images/menu.png" alt="Menu"> Menu</a>
+                </div>
+                <ul id="navigation" class="navlinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="preston-9.html">Preston</a></li>
+                    <li><a href="#">Soda Springs</a></li>
+                    <li><a href="#">Fish Haven</a></li>
+                    <li><a class="thispage" href="stormcenter-9.html">Storm Center</a></li>
+                    <li><a href="gallery-9.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 class="pagename">Storm Center</h1>
+
+            <section class="thankyoubox">
+                <h3>Thank you for your Storm Report!</h3>
+                <img class="thankswide" src="images/gallery/gallery5_600.jpg" alt="Thunderstorm">
+                <div id="formsummary"> </div>
+                <p class="clear"><a href="stormcenter-9.html">Back to Storm Center</a></p>
+            </section>
+
+            <section class="contact">
+                <div class="contact_item">
+                <h4>Tri-Town Weather Watch</h4>
+                <p>
+                375 Ninth St.<br>
+                Preston, ID 83263
+                </p>
+                <p>
+                    999.999.9999<br>
+                    weatherwatchers@ttww.com
+                </p>
+                </div>
+                <img class="contact_item" src="images/preston-map.jpg" alt="Map of Preston">
+            </section>
+        
+        <footer>
+            <div>&copy; 2019 Kimi Weldon</div> 
+            <div><a href="#">Terms of Use</a></div>
+            <div><span id="currentdate"> </span></div>
+        </footer>
+    </main>
+
+    <script>currentDate(); stormForm();</script>
+    </body>
+</html>

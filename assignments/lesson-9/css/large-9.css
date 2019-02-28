@@ -1,0 +1,47 @@
+/* DESKTOP/LARGE SCREEN VIEW */
+@media only screen and (min-width: 1025px){
+
+
+/* Homepage Styles */
+#tritown {
+    flex-flow: row nowrap;
+}
+.townbox {
+    align-self: stretch;
+    max-height: 100%;
+}
+.townbox img {
+    width:100%;
+    border-radius: .2rem;
+    margin-top: auto;
+}
+
+/* Storm Center Styles */
+fieldset {
+    margin: .5rem auto;
+}
+
+/* Thank You Page Formatting */
+.thankyoubox {
+    display: block;
+}
+.thankswide {
+    display: block;
+    float: right;
+    margin-left: .5rem;
+    max-width: 50%;
+}
+
+/* Gallery Style */
+
+.gallery_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+}
+.gallery_grid figure:hover {
+    box-shadow: 0 .5rem 1rem #666666;
+}
+
+/* END MEDIA QUERY*/
+}
