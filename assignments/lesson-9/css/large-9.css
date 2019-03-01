@@ -7,12 +7,19 @@
     flex-flow: row nowrap;
 }
 .townbox {
-    align-self: stretch;
-    max-height: 100%;
-}
-.townbox img {
     width:100%;
-    border-radius: .2rem;
+    flex-flow: column nowrap;
+    align-self: stretch;
+    align-items: center;
+    max-height: 100%;
+    margin-bottom: 0;
+}
+.townbox div {
+    width:100%;
+    margin-bottom: 1rem;
+}
+.townbox a {
+    width:100%;
     margin-top: auto;
 }
 

@@ -10,7 +10,7 @@ body {
     margin: 0 auto;
     padding: 0;
 }
-a {
+a { 
     color: #133751;
 }
 a:hover{
@@ -172,6 +172,7 @@ main {
 
 /* Home Page Styles */
 #tritown {
+    margin: 0 auto;
     display:flex;
     flex-flow: column nowrap;
     width: 100%;
@@ -182,32 +183,59 @@ main {
     flex-flow: column nowrap;
     align-items: center; 
     background-color: #ffffff;
-    margin: 0 .5rem 0 .5rem;
-    margin-top: 2.5rem;
-    padding: .5rem;
+    margin: 0 .5rem 2rem .5rem;
+    padding: 1rem .5rem;
     border-radius: .2rem;
     font-size: 1rem;
     box-shadow: 0 3px 3px #666666;
 }
-.townbox h2 {
-    padding-top: 1rem;
+.townbox div {
+    text-align: center;
 }
-.townbox img {
-    width:100%;
-    border-radius: .2rem;
-    margin-top: auto;
+.townbox:last-child{
+    margin-bottom: 0;
 }
-.townbox p{
+.townbox div p{
     padding: .2rem;
     margin: 0;
     text-align: center;
+}
+.townbox div:last-child{
+    margin-bottom: 1rem;
 }
 .townmotto{
     font-weight: bold;
     font-style: italic;
 }
-.townbox .rain{
-    margin-bottom: 1rem;
+.townbox a img {
+    width:100%;
+    border-radius: .2rem;
+    margin-top: auto;
+}
+/* Home Page - News Section */
+.topnews {
+    display:flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem .5rem 0 .5rem;
+    padding: .5rem;
+    border: 1px solid #282828;
+    border-radius: .2rem;
+    font-size: 1rem;
+}
+.topnews_summary{
+    width: 48%;
+    padding: .5rem;
+}
+.topnews_image img{
+    max-width:100%;
+}
+.sub_headline{
+    font-weight:bold;
+}
+.topnews_sidebar{
+    display:none;
 }
 
 /* Town Page - Hero & Summary Section */
@@ -229,7 +257,6 @@ main {
     margin: 0;
     padding: 0;
 }
-
 .summary {
     float: left;
     position: absolute;

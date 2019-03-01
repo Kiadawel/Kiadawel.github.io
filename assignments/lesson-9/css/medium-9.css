@@ -7,13 +7,6 @@
 
     /* Page Heading Styles */
     /* no changes */
-    #tritown{
-        flex-flow: row wrap;
-        justify-content: center;
-    }
-    .townbox{
-        max-width: 40%;
-    }
 
     /* Header Navigation Styles */
     nav {
@@ -57,8 +50,42 @@
 
     main {
         margin: 0 auto;
-        width: 80%;
+        width: 90%;
         max-width:1920px;
+    }
+
+    /* Homepage Styles */
+    #tritown{
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+    .townbox{
+        flex-flow: row nowrap;
+        align-items: flex-start;
+    }
+    .townbox div{
+        width:50%;
+    }
+    .townbox a{
+        display:block;
+        margin-left: auto;
+        width:50%;
+    }
+    .topnews {
+        justify-content: flex-start;
+        align-items: flex-start;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .topnews_image{
+        width: fit-content;
+    }
+    .topnews_image img{
+        min-width: 200px;
+    }
+    .topnews_summary{
+        width: auto;
     }
 
     /* Hero & Summary Section */

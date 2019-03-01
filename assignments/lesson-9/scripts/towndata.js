@@ -19,16 +19,18 @@ function townData(){
 
             if(simplename == 'preston' || simplename == 'fishhaven' || simplename == 'sodasprings'){
                 var articleBox = document.createElement('article');
+                var infoDiv = document.createElement('div');
                 var townHeader = document.createElement('h2');
                 var townMotto = document.createElement('p');
                 var townYear = document.createElement('p');
                 var townPop = document.createElement('p');
                 var townRain = document.createElement('p');
+                var townLink = document.createElement('a');
                 var townImage = document.createElement('img');
                 
                 var townAltText = 'Town of ' + towns[i].name + ', Idaho';
                 var townImgSrc = 'images/' + simplename + '.jpg';
-                
+
                 articleBox.setAttribute('class','townbox');
                 townHeader.textContent = towns[i].name;
                 townMotto.textContent = towns[i].motto;
@@ -36,17 +38,21 @@ function townData(){
                 townYear.textContent = 'Founded in ' + towns[i].yearFounded;
                 townPop.textContent = 'Population: ' + towns[i].currentPopulation;
                 townRain.textContent = 'Annual Rainfall: ' + towns[i].averageRainfall + '"';
-                townRain.setAttribute('class','rain');
                 
+                townLink.setAttribute('href', simplename + '-9.html');
                 townImage.setAttribute('src', townImgSrc);
                 townImage.setAttribute('alt', townAltText);
 
-                articleBox.appendChild(townHeader);
-                articleBox.appendChild(townMotto);
-                articleBox.appendChild(townYear);
-                articleBox.appendChild(townPop);
-                articleBox.appendChild(townRain);
-                articleBox.appendChild(townImage);
+                townLink.appendChild(townImage);
+
+                infoDiv.appendChild(townHeader);
+                infoDiv.appendChild(townMotto);
+                infoDiv.appendChild(townYear);
+                infoDiv.appendChild(townPop);
+                infoDiv.appendChild(townRain);
+                
+                articleBox.appendChild(infoDiv);
+                articleBox.appendChild(townLink);
 
                 section.appendChild(articleBox);
             }
