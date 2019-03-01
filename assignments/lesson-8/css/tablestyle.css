@@ -43,7 +43,10 @@ tbody tr:nth-child(even) {
 tbody tr:nth-child(odd) {
     background-color: #e7ffed;
 }
+tbody tr:nth-child(6) td:first-child{
+    font-style:italic;
+}
 .goalmet {
     background-color: #628ca6;
     color: #fff;
-}
+} 
