@@ -401,7 +401,8 @@ fieldset {
     margin: 0 .5rem .5rem .5rem;
     padding: .5rem;
     border: 1px solid #282828;
-    border-radius: .2rem;;
+    border-radius: .2rem;
+    font-size: 1rem;
 }
 legend {
     font-family: 'Special Elite', monospace;
@@ -456,7 +457,7 @@ label {
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 36px;
+    width: 2.25rem;
     height: 24px;
     background: url('../images/slider.png');
     cursor: grab;
