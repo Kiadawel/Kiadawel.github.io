@@ -457,7 +457,7 @@ label {
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 2.25rem;
+    width: 36px;
     height: 24px;
     background: url('../images/slider.png');
     cursor: grab;
