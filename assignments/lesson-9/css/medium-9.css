@@ -71,12 +71,11 @@
         margin-left: auto;
         width:50%;
     }
+
+    /* Top News Section Styles */
     .topnews {
         justify-content: flex-start;
         align-items: flex-start;
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
     }
     .topnews_image{
         width: fit-content;
@@ -86,6 +85,10 @@
     }
     .topnews_summary{
         width: auto;
+        padding: 0 0 0 .5rem;
+    }
+    .headlines {
+        align-self: stretch;
     }
 
     /* Hero & Summary Section */

@@ -95,6 +95,8 @@ h4 {
 }
 .pagename {
     text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px #628191;
 }
 
 /* Header Navigation Styles */
@@ -213,12 +215,18 @@ main {
     margin-top: auto;
 }
 /* Home Page - News Section */
+.news {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 1.5rem .5rem 1rem .5rem;
+    padding: 0;
+}
 .topnews {
     display:flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
-    margin: 1.5rem .5rem 0 .5rem;
     padding: .5rem;
     border: 1px solid #282828;
     border-radius: .2rem;
@@ -234,8 +242,23 @@ main {
 .sub_headline{
     font-weight:bold;
 }
-.topnews_sidebar{
-    display:none;
+.headlines {
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    justify-self: stretch;
+    margin-top: 1rem;
+    padding: .5rem;
+    border: 1px solid #282828;
+    border-radius: .2rem;
+    font-size: 1rem;
+}
+.headlines ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5rem;
 }
 
 /* Town Page - Hero & Summary Section */
@@ -323,6 +346,7 @@ main {
     border: 1px solid #133751;
     background-color: #133751;
     color: #ffffff;
+    font-size: 1rem;
     border-radius: .2rem .2rem 0 0;
 }
 .contact_item {
