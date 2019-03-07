@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Town of Fish Haven, Idaho | Tri-Town Weather Watch</title>
+            <meta name="description" content="Local weather headlines and five-day 
+                    forecast for Fish Haven, Idaho">
+            <meta name="author" content="Kimi Weldon">
+            <link rel="stylesheet" href="css/normalize.css">
+            <link rel="stylesheet" href="css/small.css">
+            <link rel="stylesheet" href="css/medium.css">
+            <link rel="stylesheet" href="css/large.css">
+            <link href="https://fonts.googleapis.com/css?family=Muli:200i,400" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+            <link rel="icon" href="images/ttww_favicon.png">
+            <script src="scripts/hamburger.js"></script>
+            <script src="scripts/currentdate.js"></script>
+            <script src="scripts/windchill.js"></script>
+            <script src="scripts/weather.js"></script>
+    </head>
+    
+    <body>
+        <header> 
+            <!-- Site header divisions for CSS styling -->
+            <div class="headwrapper">
+                <div class="sitelogo">
+                    <img src="images/ttww_logo.png" alt="Tri-Town Weather Watch Logo">
+                </div>
+                <div class="sitehead">
+                    <div class="sitename">Tri-Town Weather&nbsp;Watch</div>
+                    <div class="motto">You watch us, we'll watch the weather</div>
+                </div>
+            </div>
+            
+            <nav>
+                <div class="menubutton">
+                    <a onclick="toggleNav()"><img src="images/menu.png" alt="Menu"> Menu</a>
+                </div>
+                <ul id="navigation" class="navlinks">
+                    <!-- loaded dynamically with Javascript -->
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 class="pagename">Fish Haven, Idaho</h1>
+
+            <div class="hero">
+                <img alt="Skies Over Fish Haven"
+                    srcset="images/herobanner_500.jpg 500w,
+                            images/herobanner_768.jpg 768w, 
+                            images/herobanner_1366.jpg 1366w,
+                            images/herobanner_1920.jpg 1920w"
+                    sizes="(max-width: 500px) 350px, (min-width:501px) 501px,
+                            (min-width:1025px) 1025px, (min-width: 1367px) 1367px"
+                    src="images/herobanner_500.jpg">
+                <aside class="summary" id="currentweather">
+                    <!--Populated by JSON Data. Leave blank! -->
+                </aside>
+            </div>
+
+            <section class="fiveday">
+                <h2>Five Day Forecast</h2>
+                <div class="forecastbox">
+                    <img class="forecast" src="images/monday.png" alt="Monday">
+                    <img class="forecast" src="images/tuesday.png" alt="Tuesday">
+                    <img class="forecast" src="images/wednesday.png" alt="Wednesday">
+                    <img class="forecast" src="images/thursday.png" alt="Thursday">
+                    <img class="forecast" src="images/friday.png" alt="Friday">
+                </div>
+            </section>
+
+            <article class="featured">
+                <div class="featured_item">
+                        <img class="featured_item" src="images/snowypark.jpg" alt="Park covered in snow">
+                    <h2>What a Week!</h2>
+                    <span class="author">by Susie Derkins</span>
+                        <p>
+                            This weekend, more snow was dumped on our little town than we've
+                            seen in years! Overnight, our yard was transformed into a winter
+                            wonderland. The kids are having a heyday, building snowmen and
+                            throwing snowballs. It's still coming down, so I hope you've got 
+                            your winter gear!
+                        </p>
+                        <p>
+                            Word has it another big storm is just around the corner, so make
+                            sure you're all stocked up on the essentials. If you need to take 
+                            a trip to the grocery store, be sure to reserve some extra time; 
+                            grocery lines are extra long as shoppers prepare for the snow. 
+                            However you prepare for the times ahead, stay warm and stay safe!
+                        </p>
+                        <p> 
+                            Speaking of storms, I'm reminded of the windstorm we had a few
+                            years back that knocked out ... <a href="#" class="tinylink">continue 
+                            to read full article</a>
+                        </p>
+                </div>
+            </article>
+
+            <section class="contact">
+                <div class="contact_item">
+                <h4>Tri-Town Weather Watch</h4>
+                <p>
+                375 Ninth St.<br>
+                Preston, ID 83263
+                </p>
+                <p>
+                    999.999.9999<br>
+                    weatherwatchers@ttww.com
+                </p>
+                </div>
+                <img class="contact_item" src="images/preston-map.jpg" alt="Map of Preston">
+            </section>
+        
+        <footer>
+            <div>&copy; 2019 Kimi Weldon</div> 
+            <div><a href="#">Terms of Use</a></div>
+            <div><span id="currentdate"> </span></div>
+        </footer>
+    </main>
+
+    <script>loadNavigation(); currentDate(); currentConditions('5585010');</script>
+    </body>
+</html>

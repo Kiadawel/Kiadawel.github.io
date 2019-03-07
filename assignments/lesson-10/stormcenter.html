@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Storm Center | Tri-Town Weather Watch</title>
+            <meta name="description" content="Tri-Town Weather Watch Storm Center">
+            <meta name="author" content="Kimi Weldon">
+            <link rel="stylesheet" href="css/normalize.css">
+            <link rel="stylesheet" href="css/small.css">
+            <link rel="stylesheet" href="css/medium.css">
+            <link rel="stylesheet" href="css/large.css">
+            <link href="https://fonts.googleapis.com/css?family=Muli:200i,400" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+            <link rel="icon" href="images/ttww_favicon.png">
+            <script src="scripts/hamburger.js"></script>
+            <script src="scripts/currentdate.js"></script>
+            <script src="scripts/stormreport.js"></script>
+    </head>
+    
+    <body>
+        <header> 
+            <!-- Site header divisions for CSS styling -->
+            <div class="headwrapper">
+                <div class="sitelogo">
+                    <img src="images/ttww_logo.png" alt="Tri-Town Weather Watch Logo">
+                </div>
+                <div class="sitehead">
+                    <div class="sitename">Tri-Town Weather&nbsp;Watch</div>
+                    <div class="motto">You watch us, we'll watch the weather</div>
+                </div>
+            </div>
+            
+            <nav>
+                <div class="menubutton">
+                    <a onclick="toggleNav()"><img src="images/menu.png" alt="Menu"> Menu</a>
+                </div>
+                <ul id="navigation" class="navlinks">
+                    <!-- loaded dynamically with Javascript -->
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 class="pagename">Storm Center</h1>
+
+            <form id="stormform" action="thanks.html" method="GET">
+                <fieldset>
+                <legend>Personal Information</legend>
+                    <p>
+                    <label for="name">Full Name: </label>
+                    <input name="name" id="name" type="text" placeholder="John Doe" pattern="[A-Za-z].{5,}" 
+                        title="Enter your first and last name (minimum 5 letters, no numbers or special characters)." 
+                        autocomplete="on" required>
+                    </p>
+
+                    <p>
+                    <label for="email">Email: <em>(optional)</em> </label>
+                    <input name="email" id="email" type="email" placeholder="example@ttww.com" autocomplete="on">
+                    </p>
+
+                    <p>
+                    <label for="telephone">Phone Number:</label>
+                    <input name="telephone" id="telephone" type="tel" placeholder="XXX-XXX-XXXX" autocomplete="on" required>
+                    </p>
+
+                    <p>
+                    <label for="zipcode">Zip Code:</label>
+                    <input name="zipcode" id="zipcode" type="number" min="83263" autocomplete="on" required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                <legend>Storm Information</legend>
+                    
+                    <p>
+                    <label for="stormdate">Storm Date:</label>
+                    <input name="stormdate" id="stormdate" type="date">
+                    </p>
+
+                    <p>
+                    <label for="stormtype">Storm Type:</label>
+                    <input name="stormtype" id="stormtype" type="text" placeholder="Select One..." list="stormtypelist">
+                    <datalist id="stormtypelist">
+                        <option value="Flash Flood">
+                        <option value="Hail">
+                        <option value="Hurricane">
+                        <option value="Thunderstorm">
+                        <option value="Tornado">
+                    </datalist>    
+                    </p>
+
+                    <p>
+                    <label for="severity">Storm Severity (1-10):</label> 
+                    <span class="slidebox">
+                        <input name="severity" id="severity" type="range" value="1" min="1" max="10" 
+                        step="1" oninput="severityLevel(this.value)" onchange="severityLevel(this.value)" class="slider">
+                        <span id="rangevalue">1</span>
+                    </span>
+                    </p>
+
+                    <p>
+                    <label for="stormregion">Storm Region:</label>
+                    <select name="stormregion" id="stormregion">
+                        <option disabled selected>Select Region...</option>
+                        <option value="preston">Preston</option>
+                        <option value="soda">Soda Springs</option>
+                        <option value="fish">Fish Haven</option>
+                    </select>
+                    </p>
+
+                    <p>
+                    <label>Are You In Danger? <em>(Select one)</em></label>
+                    <span class="stayh">
+                        <input type="radio" name="dangerlvl" id="dangeryes" value="y">
+                            <label for="dangeryes">Yes </label>
+                        <input type="radio" name="dangerlvl" id="dangermaybe" value="m">
+                            <label for="dangermaybe">Maybe </label>
+                        <input type="radio" name="dangerlvl" id="dangerno" value="n">
+                            <label for="dangerno">No </label>
+                    </span>
+                    </p>
+
+                    <p>
+                    <label for="comments">Comments <em>(Optional)</em></label>
+                    <textarea name="comments" id="comments" placeholder="Additional Info..."></textarea>
+                    </p>
+
+                    <p>
+                    <input type="submit" value="Submit Storm Report">
+                    </p>
+                </fieldset>
+            </form>
+
+            <section class="contact">
+                <div class="contact_item">
+                <h4>Tri-Town Weather Watch</h4>
+                <p>
+                375 Ninth St.<br>
+                Preston, ID 83263
+                </p>
+                <p>
+                    999.999.9999<br>
+                    weatherwatchers@ttww.com
+                </p>
+                </div>
+                <img class="contact_item" src="images/preston-map.jpg" alt="Map of Preston">
+            </section>
+        
+        <footer>
+            <div>&copy; 2019 Kimi Weldon</div> 
+            <div><a href="#">Terms of Use</a></div>
+            <div><span id="currentdate"> </span></div>
+        </footer>
+    </main>
+
+    <script>loadNavigation(); currentDate();</script>
+    </body>
+</html>
