@@ -115,19 +115,37 @@
         text-align: center;
     }
     .forecastbox {
-        display:inline-flex;
+        display: flex;
         flex-flow: row nowrap;
-        justify-content: space-around;
-        margin: .25rem;
-        background-color: #ffffff;
-        padding: .5rem;
-        max-width: 85%;
+        justify-content: space-between;
+        margin:0 auto;
+        padding:0;
+        max-width: 90%;
     }
     .forecast {
+        display:flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-items: space-between;
+        justify-self: stretch;
+        margin: .25rem;
+        padding: .5rem;
         width: 18%;
-        height: 100%;
+        background-color: #ffffff;
         border: 1px solid #282828;
-        border-radius: 3px;
+        border-radius: .2rem;
+        font-size: 1rem;
+    }
+    .forecastbox .forecast p{
+        padding:0;
+        margin:0;
+    }
+
+    .hitemp{
+        font-weight: bold;
+    }
+    .lotemp{
+        opacity: .7;
     }
 
 

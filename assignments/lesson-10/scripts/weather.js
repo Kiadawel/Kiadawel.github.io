@@ -53,3 +53,52 @@ function currentConditions(townid) {
             container.appendChild(currentList);  
         }
 }
+
+function fiveDayForecast(townid){
+    var container = document.querySelector('#fivedayforecast');
+    var forecastRequest = new XMLHttpRequest();
+    var apiURLString = 'https://api.openweathermap.org/data/2.5/forecast?id=' + townid 
+                        + '&APPID=d7bbba8e044ce8818ee15bb8d54d90c1&units=Imperial';
+
+        forecastRequest.open('GET',apiURLString, true);
+        forecastRequest.responseType = 'json';
+        forecastRequest.send();
+        forecastRequest.onload = function(){
+           
+            var foreCast = forecastRequest.response;
+            console.log(foreCast);
+            
+            //create array to loop through high-noon data only
+            var dayArray= [foreCast.list[6], foreCast.list[14],
+                            foreCast.list[22],foreCast.list[30],
+                            foreCast.list[38]];
+
+            for(i=0; i<dayArray.length; i++){
+                var dayBox = document.createElement('div');
+                var dayHeading = document.createElement('h3');
+                var weatherIcon = document.createElement('img');
+                var paraTemps = document.createElement('p');
+
+                var hiTemp = dayArray[i].main.temp_max.toFixed(1);
+                var loTemp = dayArray[i].main.temp_min.toFixed(1);
+                var iconURL = 'http://openweathermap.org/img/w/'+ dayArray[i].weather[0].icon + '.png';
+                var iconDesc = dayArray[i].weather[0].description;
+                var thisDate = new Date(dayArray[i].dt * 1000);
+                var dayOfWeek = thisDate.getDay();
+                var allDays = ['Sun','Mon','Tues','Wed','Thurs','Fri','Sat']
+                
+                dayBox.setAttribute('class','forecast');
+                dayHeading.textContent = allDays[dayOfWeek];
+                weatherIcon.setAttribute('src',iconURL);
+                weatherIcon.setAttribute('alt',iconDesc);
+                paraTemps.innerHTML = '<span class="hitemp">' + hiTemp + '&#176;</span> | '
+                                    + '<span class="lotemp">' + loTemp + '&#176;</span>';
+
+                dayBox.appendChild(dayHeading);
+                dayBox.appendChild(weatherIcon);
+                dayBox.appendChild(paraTemps);
+
+                container.appendChild(dayBox);
+            }
+        }
+}

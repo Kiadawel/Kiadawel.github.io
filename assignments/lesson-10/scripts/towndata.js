@@ -32,6 +32,7 @@ function townData(){
                 var townImgSrc = 'images/' + simplename + '.jpg';
 
                 articleBox.setAttribute('class','townbox');
+                articleBox.setAttribute('id',simplename);
                 townHeader.textContent = towns[i].name;
                 townMotto.textContent = towns[i].motto;
                 townMotto.setAttribute('class','townmotto');

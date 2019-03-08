@@ -48,13 +48,12 @@
 
             <div class="hero">
                 <img alt="Skies Over Preston"
-                    srcset="images/herobanner_500.jpg 500w,
-                            images/herobanner_768.jpg 768w, 
-                            images/herobanner_1366.jpg 1366w,
-                            images/herobanner_1920.jpg 1920w"
-                    sizes="(max-width: 500px) 350px, (min-width:501px) 501px,
-                            (min-width:1025px) 1025px, (min-width: 1367px) 1367px"
-                    src="images/herobanner_500.jpg">
+                    srcset="images/prestonbanner_768.jpg 768w, 
+                        images/prestonbanner_1366.jpg 1366w,
+                        images/prestonbanner_1920.jpg 1920w"
+                    sizes="(max-width:768px) 500px,
+                        (min-width:1025px) 1025px, (min-width: 1367px) 1367px"
+                    src="images/prestonbanner_768.jpg">
                 <aside class="summary" id="currentweather">
                     <!--Populated by JSON Data. Leave blank! --> 
                 </aside>
@@ -62,12 +61,8 @@
 
             <section class="fiveday">
                 <h2>Five Day Forecast</h2>
-                <div class="forecastbox">
-                    <img class="forecast" src="images/monday.png" alt="Monday">
-                    <img class="forecast" src="images/tuesday.png" alt="Tuesday">
-                    <img class="forecast" src="images/wednesday.png" alt="Wednesday">
-                    <img class="forecast" src="images/thursday.png" alt="Thursday">
-                    <img class="forecast" src="images/friday.png" alt="Friday">
+                <div class="forecastbox" id="fivedayforecast">
+                    <!--Populated by JSON Data. Leave blank! -->
                 </div>
                 <p class="tinylink">Weather Data Sourced from 
                     <a href="https://openweathermap.org">OpenWeatherMap.org</a></p>
@@ -122,6 +117,6 @@
         </footer>
     </main>
 
-    <script>loadNavigation(); currentDate(); currentConditions('5604473');</script>
+    <script>loadNavigation(); currentDate(); currentConditions('5604473'); fiveDayForecast('5604473');</script>
     </body>
 </html>

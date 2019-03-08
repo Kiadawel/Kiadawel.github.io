@@ -178,7 +178,16 @@ main {
     flex-flow: column nowrap;
     width: 100%;
     justify-content: center;
+}
+#preston {
+    order: 1;
 }   
+#sodasprings {
+    order: 2;
+}
+#fishhaven{
+    order: 3;
+}
 .townbox {
     display:flex;
     flex-flow: column nowrap;
@@ -192,9 +201,6 @@ main {
 }
 .townbox div {
     text-align: center;
-}
-.townbox:last-child{
-    margin-bottom: 0;
 }
 .townbox div p{
     padding: .2rem;
