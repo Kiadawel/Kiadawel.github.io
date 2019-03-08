@@ -126,7 +126,6 @@
         display:flex;
         flex-flow: column nowrap;
         align-items: center;
-        justify-items: space-between;
         justify-self: stretch;
         margin: .25rem;
         padding: .5rem;
