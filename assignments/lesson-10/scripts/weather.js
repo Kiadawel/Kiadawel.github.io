@@ -22,7 +22,7 @@ function currentConditions(townid) {
             var currentWindChill = document.createElement('li');
 
             var totalPrecip = parseFloat(weatherData.rain['1h']);
-                if (isNaN(totalPrecip) || totalPrecip == undefined || totalPrecip == null){
+                if (weatherData.rain['1h'] == undefined){
                     totalPrecip = 0;
                 }
             var tempF = parseFloat(weatherData.main.temp);
