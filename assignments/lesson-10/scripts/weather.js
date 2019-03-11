@@ -38,8 +38,8 @@ function currentConditions(townid) {
             currentWindChill.innerHTML = 'Feels Like: ' + feelsLike + '&#176; F'; 
                 currentWindChill.setAttribute('class','wchill');
             currentHum.innerHTML = 'Humidity: ' + weatherData.main.humidity + '&#37;';
-            currentPrecip.textContent = 'Precipitation: ' + totalPrecip + 'mm';
-            currentWindSpeed.textContent = 'Wind Speed: ' + speed + 'mph';
+            currentPrecip.textContent = 'Precipitation: ' + totalPrecip + ' mm';
+            currentWindSpeed.textContent = 'Wind Speed: ' + speed + ' mph';
 
             currentList.appendChild(currentCond);
             currentList.appendChild(currentTemp);
