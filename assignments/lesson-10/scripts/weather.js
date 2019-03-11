@@ -10,6 +10,7 @@ function currentConditions(townid) {
         weatherRequest.onload = function(){
             
             var weatherData = weatherRequest.response;
+            console.log(weatherData);
 
             var summaryHeading = document.createElement('h3');
             var headingLine = document.createElement('hr');
@@ -21,9 +22,12 @@ function currentConditions(townid) {
             var currentWindSpeed = document.createElement('li');
             var currentWindChill = document.createElement('li');
 
-            var totalPrecip = parseFloat(weatherData.rain['1h']);
-                if (weatherData.rain['1h'] == undefined){
+            var totalPrecip = weatherData.rain;
+                if (totalPrecip == null){
                     totalPrecip = 0;
+                }
+                else{
+                    totalPrecip = parseFloat(totalPrecip['1h']);
                 }
             var tempF = parseFloat(weatherData.main.temp);
             var speed = parseFloat(weatherData.wind.speed);
@@ -81,7 +85,7 @@ function fiveDayForecast(townid){
 
                 var hiTemp = dayArray[i].main.temp_max.toFixed(1);
                 var loTemp = dayArray[i].main.temp_min.toFixed(1);
-                var iconURL = 'http://openweathermap.org/img/w/'+ dayArray[i].weather[0].icon + '.png';
+                var iconURL = 'https://openweathermap.org/img/w/'+ dayArray[i].weather[0].icon + '.png';
                 var iconDesc = dayArray[i].weather[0].description;
                 var thisDate = new Date(dayArray[i].dt * 1000);
                 var dayOfWeek = thisDate.getDay();
