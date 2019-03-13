@@ -106,14 +106,13 @@ function fiveDayForecast(townid){
                 var iconDesc = dayArray[i].weather[0].description;
                 var thisDate = new Date(dayArray[i].dt * 1000);
                 var dayOfWeek = thisDate.getDay();
-                var allDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+                var allDays = ['Sun','Mon','Tues','Wed','Thurs','Fri','Sat']
                 
                 dayBox.setAttribute('class','forecast');
                 dayHeading.textContent = allDays[dayOfWeek];
                 weatherIcon.setAttribute('src',iconURL);
                 weatherIcon.setAttribute('alt',iconDesc);
-                paraTemps.innerHTML = 'High | Low <br>'
-                                    + '<span class="hitemp">' + hiTemp + '&#176; F</span> | '
+                paraTemps.innerHTML = '<span class="hitemp">' + hiTemp + '&#176; F</span><br> '
                                     + '<span class="lotemp">' + loTemp + '&#176; F</span>';
 
                 dayBox.appendChild(dayHeading);
