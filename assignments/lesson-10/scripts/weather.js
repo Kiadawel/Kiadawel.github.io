@@ -22,12 +22,22 @@ function currentConditions(townid) {
             var currentWindSpeed = document.createElement('li');
             var currentWindChill = document.createElement('li');
 
-            var totalPrecip = weatherData.rain;
-                if (totalPrecip == null){
+            //Calculate precipitation by checking for rain and snow values;
+            //Then, convert mm to inches
+            var totalRain = weatherData.rain;
+            var totalSnow = weatherData.snow;
+            var totalPrecip;
+                if (totalRain == null && totalSnow == null){
                     totalPrecip = 0;
                 }
-                else{
-                    totalPrecip = parseFloat(totalPrecip['1h']);
+                else if(totalRain != null && totalSnow == null){
+                    totalPrecip = (totalRain['1h']/25.4).toFixed(2);
+                }
+                else if(totalRain==null && totalSnow != null){
+                    totalPrecip = (totalSnow['1h']/25.4).toFixed(2);
+                }
+                else if(totalRain != null && totalSnow != null){
+                    totalPrecip = ((totalSnow['1h'] + totalRain['1h'])/25.4).toFixed(2);
                 }
             var tempF = parseFloat(weatherData.main.temp);
             var speed = parseFloat(weatherData.wind.speed);
@@ -42,7 +52,7 @@ function currentConditions(townid) {
             currentWindChill.innerHTML = 'Feels Like: ' + feelsLike + '&#176; F'; 
                 currentWindChill.setAttribute('class','wchill');
             currentHum.innerHTML = 'Humidity: ' + weatherData.main.humidity + '&#37;';
-            currentPrecip.textContent = 'Precipitation: ' + totalPrecip + ' mm';
+            currentPrecip.textContent = 'Precipitation: ' + totalPrecip + '"';
             currentWindSpeed.textContent = 'Wind Speed: ' + speed + ' mph';
 
             currentList.appendChild(currentCond);
@@ -72,10 +82,17 @@ function fiveDayForecast(townid){
             var foreCast = forecastRequest.response;
             console.log(foreCast);
             
-            //create array to loop through high-noon data only
-            var dayArray= [foreCast.list[6], foreCast.list[14],
-                            foreCast.list[22],foreCast.list[30],
-                            foreCast.list[38]];
+            //create array to populate with high-noon data values
+            var dayArray = [];
+
+            //figure out where high noon timestamps are and populate the array
+            for(var i=0; i<foreCast.list.length; i++){
+                var dateString = foreCast.list[i].dt_txt;
+                if(dateString.search('18:00:00') != -1){
+                    dayArray.push(foreCast.list[i]);
+                }
+            }
+            console.log(dayArray);
 
             for(i=0; i<dayArray.length; i++){
                 var dayBox = document.createElement('div');
@@ -89,14 +106,15 @@ function fiveDayForecast(townid){
                 var iconDesc = dayArray[i].weather[0].description;
                 var thisDate = new Date(dayArray[i].dt * 1000);
                 var dayOfWeek = thisDate.getDay();
-                var allDays = ['Sun','Mon','Tues','Wed','Thurs','Fri','Sat']
+                var allDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
                 
                 dayBox.setAttribute('class','forecast');
                 dayHeading.textContent = allDays[dayOfWeek];
                 weatherIcon.setAttribute('src',iconURL);
                 weatherIcon.setAttribute('alt',iconDesc);
-                paraTemps.innerHTML = '<span class="hitemp">' + hiTemp + '&#176;</span> | '
-                                    + '<span class="lotemp">' + loTemp + '&#176;</span>';
+                paraTemps.innerHTML = 'High | Low <br>'
+                                    + '<span class="hitemp">' + hiTemp + '&#176; F</span> | '
+                                    + '<span class="lotemp">' + loTemp + '&#176; F</span>';
 
                 dayBox.appendChild(dayHeading);
                 dayBox.appendChild(weatherIcon);
