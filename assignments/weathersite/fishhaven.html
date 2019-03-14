@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Town of Fish Haven, Idaho | Tri-Town Weather Watch</title>
+            <meta name="description" content="Local weather headlines and five-day 
+                    forecast for Fish Haven, Idaho">
+            <meta name="author" content="Kimi Weldon">
+            <link rel="stylesheet" href="css/normalize.css">
+            <link rel="stylesheet" href="css/small.css">
+            <link rel="stylesheet" href="css/medium.css">
+            <link rel="stylesheet" href="css/large.css">
+            <link href="https://fonts.googleapis.com/css?family=Muli:200i,400" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+            <link rel="icon" href="images/ttww_favicon.png">
+            <script src="scripts/hamburger.js"></script>
+            <script src="scripts/currentdate.js"></script>
+            <script src="scripts/windchill.js"></script>
+            <script src="scripts/weather.js"></script>
+            <script src="scripts/eventdata.js"></script>
+    </head>
+    
+    <body>
+        <header> 
+            <!-- Site header divisions for CSS styling -->
+            <div class="headwrapper">
+                <div class="sitelogo">
+                    <a href="index.html"><img src="images/ttww_logo.png" alt="Tri-Town Weather Watch Logo"></a>
+                </div>
+                <div class="sitehead">
+                    <div class="sitename">Tri-Town Weather&nbsp;Watch</div>
+                    <div class="motto">You watch us, we'll watch the weather</div>
+                </div>
+            </div>
+            
+            <nav>
+                <div class="menubutton">
+                    <a onclick="toggleNav()"><img src="images/menu.png" alt="Menu"> Menu</a>
+                </div>
+                <ul id="navigation" class="navlinks">
+                    <!-- loaded dynamically with Javascript -->
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 class="pagename">Fish Haven, Idaho</h1>
+
+            <div class="hero">
+                <img alt="Skies Over Fish Haven"
+                    srcset="images/fishbanner_768.jpg 768w, 
+                        images/fishbanner_1366.jpg 1366w,
+                        images/fishbanner_1920.jpg 1920w"
+                    sizes="(max-width:768px) 500px,
+                        (min-width:1025px) 1025px, (min-width: 1367px) 1367px"
+                    src="images/fishbanner_768.jpg">
+                <aside class="summary" id="currentweather">
+                    <!--Populated by JSON Data. Leave blank! -->
+                </aside>
+            </div>
+
+            <section class="fiveday">
+                <h2>Five Day Forecast</h2>
+                <div class="forecastbox" id="fivedayforecast">
+                    <!--Populated by JSON Data. Leave blank! -->
+                </div>
+                <p class="tinylink">Weather Data Sourced from 
+                    <a href="https://openweathermap.org">OpenWeatherMap.org</a></p>
+            </section>
+
+            <article class="featured">
+                <div class="featured_item">
+                        <img class="featured_item" src="images/fisherman.jpg" alt="Fisherman casting a line off a dock">
+                    <h2>Fishing Season is Almost Here!</h2>
+                    <span class="author">by Diana Palmer</span>
+                        <p>
+                            All right, all right, I know May is still a few months away, but I'm
+                            just trying to bring some hope to these bleak days without our favorite
+                            pastime.
+                        </p>
+                        <p>
+                            My twins, Kit and Heloise, love fishing with their father when he's not
+                            far away from home. On the island where we used to live, they would catch
+                            fish with their bare hands! Nowadays they use more refined techniques. 
+                        </p>
+                        <p> 
+                            It's no surprise, then, that the twins and my husband are as antsy as anyone
+                            for fishing season. Here are some great boredom busting ideas to pass the time
+                            until then ... <a href="#" class="tinylink">continue 
+                            to read full article</a>
+                        </p>
+                </div>
+            </article>
+
+            <article class="events">
+                <div class="eventsbox" id="eventdata">
+                    <!--Populated by JSON Data. Leave blank! -->
+                </div>
+            </article> 
+
+            <section class="contact">
+                <div class="contact_item">
+                <h4>Tri-Town Weather Watch</h4>
+                <p>
+                375 Ninth St.<br>
+                Preston, ID 83263
+                </p>
+                <p>
+                    999.999.9999<br>
+                    weatherwatchers@ttww.com
+                </p>
+                </div>
+                <img class="contact_item" src="images/preston-map.jpg" alt="Map of Preston">
+            </section>
+        
+        <footer>
+            <div>&copy; 2019 Kimi Weldon</div> 
+            <div><a href="#">Terms of Use</a></div>
+            <div><span id="currentdate"> </span></div>
+        </footer>
+    </main>
+
+    <script>
+    loadNavigation(); 
+    currentDate(); 
+    currentConditions('5585010'); 
+    fiveDayForecast('5585010');
+    eventData('Fish Haven');
+    </script>
+    </body>
+</html>

@@ -1,0 +1,235 @@
+@media only screen and (min-width: 501px){
+    /* General Page Styles */
+    /* no changes */
+
+    /* Top Banner Styles */
+    /* no changes */
+
+    /* Page Heading Styles */
+    /* no changes */
+
+    /* Header Navigation Styles */
+    nav {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .menubutton {
+        display:none;
+    }
+    .navlinks, .navlinks_show{
+        display: inline-flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        max-width: 1366px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    nav a {
+        display: inline-block;
+        border: none;
+        padding: .25rem .5rem;
+        color: #CEE5F2;
+        text-decoration: none;
+        text-shadow: 1px 1px 2px #000000;
+    }
+    .thispage {
+        color: #ffe348;
+        background-color: #282828;
+    }
+    .thispage:hover{
+        text-shadow: 0 0 4px #ffe348, 0 0 6px #FFFFFF;
+    }
+    .thispage:visited {
+        color: #ffe348;
+        background-color: #282828;
+    }
+
+    main {
+        margin: 0 auto;
+        width: 90%;
+        max-width:1920px;
+    }
+
+    /* Homepage Styles */
+    #tritown{
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+    .townbox{
+        flex-flow: row nowrap;
+        align-items: flex-start;
+    }
+    .townbox div{
+        width:50%;
+    }
+    .townbox a{
+        display:block;
+        margin-left: auto;
+        width:50%;
+    }
+
+    /* Top News Section Styles */
+    .topnews {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .topnews_image{
+        width: fit-content;
+    }
+    .topnews_image img{
+        min-width: 200px;
+    }
+    .topnews_summary{
+        width: auto;
+        padding: 0 0 0 .5rem;
+    }
+    .headlines {
+        align-self: stretch;
+    }
+
+    /* Hero & Summary Section */
+    .hero {
+        margin: 0 1rem 0 1rem;
+        height:15rem;
+    }
+    .summary {
+        padding: .5rem;
+        height: 12rem;
+        max-width: 12rem;
+        color: #ffffff;
+        overflow: auto; 
+    }
+
+
+    /* Five Day Forecast Section */
+    .fiveday {
+        display: block;
+        margin: 0;
+        padding: 1rem 0 .5rem 0;
+        width:100%;
+        border-radius: .2rem;
+        text-align: center;
+    }
+    .forecastbox {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        margin:0 auto;
+        padding:0;
+        max-width: 90%;
+    }
+    .forecast {
+        display:flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-self: stretch;
+        margin: .25rem;
+        padding: .5rem;
+        width: 18%;
+        background-color: #ffffff;
+        border: 1px solid #282828;
+        border-radius: .2rem;
+        font-size: 1rem;
+    }
+    .forecastbox .forecast p{
+        padding:0;
+        margin:0;
+    }
+
+    .hitemp{
+        font-weight: bold;
+    }
+    .lotemp{
+        opacity: .7;
+    }
+    /* Town Events Section */
+    .events{
+        margin: 1rem 1rem 0 1rem;
+    }
+
+    /* Article Section */
+
+    .featured {
+        display: block;
+        margin: 1rem 1rem 0 1rem;
+        overflow: hidden;
+    }
+    .featured img {
+        float: right;
+        width: 50%;
+        margin: .25rem;
+    }
+    .featured h2{
+        margin-bottom: 0;
+    }
+    .featured p{
+        text-indent: 1rem;
+    }
+    .author {
+        margin-top: 0;
+        margin-left: 1rem;
+        padding-top: 0;
+        font-size: .7rem;
+        font-style: italic;       
+    }
+
+
+    /* Contact Section */
+
+    .contact {
+        flex-flow: row-reverse wrap;
+    }
+    .contact_item {
+        max-width:100%;
+        margin: auto;
+        padding: .5rem;
+    }
+    .contact h4{
+        color: #ffe348;
+    }
+
+
+    /* Footer Styles */
+
+    /* Gallery Styles */
+    .gallery_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: .5rem;
+    }
+
+    /* Storm Center Styles */
+    fieldset {
+        max-width: 768px;
+    }
+    fieldset p {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: baseline;
+    }
+    label{
+        margin-right: .5rem;
+    }
+    .stayh label {
+        margin-right: .3rem;
+    }
+    input[type=text], input[type=number], input[type=email], 
+    input[type=tel], input[type=date], input[type=list], select,
+    .stayh, .slidebox {
+        width: 50%;
+    }
+    .slider {
+        align-self: flex-end;
+    }
+    textarea {
+        width: 50%;
+    }
+    input[type=submit]{
+        width:50%;
+    }
+}
