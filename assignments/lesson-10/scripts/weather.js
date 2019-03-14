@@ -18,27 +18,9 @@ function currentConditions(townid) {
             var currentCond = document.createElement('li');
             var currentTemp = document.createElement('li');
             var currentHum = document.createElement('li');
-            var currentPrecip = document.createElement('li');
             var currentWindSpeed = document.createElement('li');
             var currentWindChill = document.createElement('li');
 
-            //Calculate precipitation by checking for rain and snow values;
-            //Then, convert mm to inches
-            var totalRain = weatherData.rain;
-            var totalSnow = weatherData.snow;
-            var totalPrecip;
-                if (totalRain == null && totalSnow == null){
-                    totalPrecip = 0;
-                }
-                else if(totalRain != null && totalSnow == null){
-                    totalPrecip = (totalRain['1h']/25.4).toFixed(2);
-                }
-                else if(totalRain==null && totalSnow != null){
-                    totalPrecip = (totalSnow['1h']/25.4).toFixed(2);
-                }
-                else if(totalRain != null && totalSnow != null){
-                    totalPrecip = ((totalSnow['1h'] + totalRain['1h'])/25.4).toFixed(2);
-                }
             var tempF = parseFloat(weatherData.main.temp);
             var speed = parseFloat(weatherData.wind.speed);
             var feelsLike = findWindChill(tempF, speed); 
@@ -52,14 +34,12 @@ function currentConditions(townid) {
             currentWindChill.innerHTML = 'Feels Like: ' + feelsLike + '&#176; F'; 
                 currentWindChill.setAttribute('class','wchill');
             currentHum.innerHTML = 'Humidity: ' + weatherData.main.humidity + '&#37;';
-            currentPrecip.textContent = 'Precipitation: ' + totalPrecip + '"';
             currentWindSpeed.textContent = 'Wind Speed: ' + speed + ' mph';
 
             currentList.appendChild(currentCond);
             currentList.appendChild(currentTemp);
             currentList.appendChild(currentWindChill);
             currentList.appendChild(currentHum);
-            currentList.appendChild(currentPrecip);
             currentList.appendChild(currentWindSpeed);
 
             container.appendChild(summaryHeading);
