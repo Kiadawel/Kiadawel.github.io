@@ -19,6 +19,7 @@
             <script src="scripts/currentdate.js"></script>
             <script src="scripts/windchill.js"></script>
             <script src="scripts/weather.js"></script>
+            <script src="scripts/eventdata.js"></script>
     </head>
     
     <body>
@@ -70,30 +71,32 @@
 
             <article class="featured">
                 <div class="featured_item">
-                        <img class="featured_item" src="images/snowypark.jpg" alt="Park covered in snow">
-                    <h2>What a Week!</h2>
-                    <span class="author">by Susie Derkins</span>
+                        <img class="featured_item" src="images/geyser.jpg" alt="Park covered in snow">
+                    <h2>Climate Change and the Soda Springs</h2>
+                    <span class="author">by Linus van Pelt</span>
                         <p>
-                            This weekend, more snow was dumped on our little town than we've
-                            seen in years! Overnight, our yard was transformed into a winter
-                            wonderland. The kids are having a heyday, building snowmen and
-                            throwing snowballs. It's still coming down, so I hope you've got 
-                            your winter gear!
+                            The geyser that made our city famous, the Soda Spring, has a fascinating
+                            geological history. Dating back thousands of years, the fossil record
+                            is a rich study from surface to core. 
                         </p>
                         <p>
-                            Word has it another big storm is just around the corner, so make
-                            sure you're all stocked up on the essentials. If you need to take 
-                            a trip to the grocery store, be sure to reserve some extra time; 
-                            grocery lines are extra long as shoppers prepare for the snow. 
-                            However you prepare for the times ahead, stay warm and stay safe!
+                            On a cold night with nothing but a soft blanket for comfort, one might
+                            find cause to wonder, what effect will these recent polar vortexes and
+                            strange weather shifts have on our beloved Springs? My research has unveiled
+                            some startling truths.
                         </p>
                         <p> 
-                            Speaking of storms, I'm reminded of the windstorm we had a few
-                            years back that knocked out ... <a href="#" class="tinylink">continue 
+                            To start with, well below the surface of the geyser, evidence reveals ...<a href="#" class="tinylink">continue 
                             to read full article</a>
                         </p>
                 </div>
             </article>
+
+            <article class="events">
+                <div class="eventsbox" id="eventdata">
+                    <!--Populated by JSON Data. Leave blank! -->
+                </div>
+            </article> 
 
             <section class="contact">
                 <div class="contact_item">
@@ -117,6 +120,12 @@
         </footer>
     </main>
 
-    <script>loadNavigation(); currentDate(); currentConditions('5607916'); fiveDayForecast('5607916');</script>
+    <script>
+    loadNavigation(); 
+    currentDate(); 
+    currentConditions('5607916'); 
+    fiveDayForecast('5607916');
+    eventData('Soda Springs');
+    </script>
     </body>
 </html>

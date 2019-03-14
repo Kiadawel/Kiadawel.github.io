@@ -19,6 +19,7 @@
             <script src="scripts/currentdate.js"></script>
             <script src="scripts/windchill.js"></script>
             <script src="scripts/weather.js"></script>
+            <script src="scripts/eventdata.js"></script>
     </head>
     
     <body>
@@ -70,30 +71,33 @@
 
             <article class="featured">
                 <div class="featured_item">
-                        <img class="featured_item" src="images/snowypark.jpg" alt="Park covered in snow">
-                    <h2>What a Week!</h2>
-                    <span class="author">by Susie Derkins</span>
+                        <img class="featured_item" src="images/fisherman.jpg" alt="Fisherman casting a line off a dock">
+                    <h2>Fishing Season is Almost Here!</h2>
+                    <span class="author">by Diana Palmer</span>
                         <p>
-                            This weekend, more snow was dumped on our little town than we've
-                            seen in years! Overnight, our yard was transformed into a winter
-                            wonderland. The kids are having a heyday, building snowmen and
-                            throwing snowballs. It's still coming down, so I hope you've got 
-                            your winter gear!
+                            All right, all right, I know May is still a few months away, but I'm
+                            just trying to bring some hope to these bleak days without our favorite
+                            pastime.
                         </p>
                         <p>
-                            Word has it another big storm is just around the corner, so make
-                            sure you're all stocked up on the essentials. If you need to take 
-                            a trip to the grocery store, be sure to reserve some extra time; 
-                            grocery lines are extra long as shoppers prepare for the snow. 
-                            However you prepare for the times ahead, stay warm and stay safe!
+                            My twins, Kit and Heloise, love fishing with their father when he's not
+                            far away from home. On the island where we used to live, they would catch
+                            fish with their bare hands! Nowadays they use more refined techniques. 
                         </p>
                         <p> 
-                            Speaking of storms, I'm reminded of the windstorm we had a few
-                            years back that knocked out ... <a href="#" class="tinylink">continue 
+                            It's no surprise, then, that the twins and my husband are as antsy as anyone
+                            for fishing season. Here are some great boredom busting ideas to pass the time
+                            until then ... <a href="#" class="tinylink">continue 
                             to read full article</a>
                         </p>
                 </div>
             </article>
+
+            <article class="events">
+                <div class="eventsbox" id="eventdata">
+                    <!--Populated by JSON Data. Leave blank! -->
+                </div>
+            </article> 
 
             <section class="contact">
                 <div class="contact_item">
@@ -117,6 +121,12 @@
         </footer>
     </main>
 
-    <script>loadNavigation(); currentDate(); currentConditions('5585010'); fiveDayForecast('5585010');</script>
+    <script>
+    loadNavigation(); 
+    currentDate(); 
+    currentConditions('5585010'); 
+    fiveDayForecast('5585010');
+    eventData('Fish Haven');
+    </script>
     </body>
 </html>

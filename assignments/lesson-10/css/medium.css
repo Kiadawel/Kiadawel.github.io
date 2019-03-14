@@ -146,7 +146,10 @@
     .lotemp{
         opacity: .7;
     }
-
+    /* Town Events Section */
+    .events{
+        margin: 1rem 1rem 0 1rem;
+    }
 
     /* Article Section */
 

@@ -323,13 +323,29 @@ main {
     display: none;
 }
 
+/* Town Events Section */
+.events{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 1rem .5rem 0 .5rem;
+    padding: .5rem;  
+    background-color: #fff; 
+    border-radius: .2rem;
+}
+.events ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 /* Featured Article Section */
 
 .featured {
     display: flex;
     flex-flow: column-reverse nowrap;
     margin: 0 .5rem 0 .5rem;
-    margin-top: 2.5rem;
+    margin-top: 1rem;
     padding: 0.5rem;
     border: 1px solid #282828;
     border-radius: .2rem;
@@ -559,4 +575,5 @@ input[type=submit]:active{
 }
 .clear {
     clear: both;
+    line-height: 0;
 }

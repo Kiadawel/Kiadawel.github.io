@@ -19,6 +19,7 @@
             <script src="scripts/currentdate.js"></script>
             <script src="scripts/windchill.js"></script>
             <script src="scripts/weather.js"></script>
+            <script src="scripts/eventdata.js"></script>
     </head>
     
     <body>
@@ -95,6 +96,12 @@
                 </div>
             </article>
 
+            <article class="events">
+                <div class="eventsbox" id="eventdata">
+                    <!--Populated by JSON Data. Leave blank! -->
+                </div>
+            </article> 
+
             <section class="contact">
                 <div class="contact_item">
                 <h4>Tri-Town Weather Watch</h4>
@@ -117,6 +124,12 @@
         </footer>
     </main>
 
-    <script>loadNavigation(); currentDate(); currentConditions('5604473'); fiveDayForecast('5604473');</script>
+    <script>
+    loadNavigation(); 
+    currentDate(); 
+    currentConditions('5604473'); 
+    fiveDayForecast('5604473'); 
+    eventData('Preston');
+    </script>
     </body>
 </html>

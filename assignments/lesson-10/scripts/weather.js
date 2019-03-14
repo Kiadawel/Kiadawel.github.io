@@ -92,7 +92,6 @@ function fiveDayForecast(townid){
                     dayArray.push(foreCast.list[i]);
                 }
             }
-            console.log(dayArray);
 
             for(i=0; i<dayArray.length; i++){
                 var dayBox = document.createElement('div');
