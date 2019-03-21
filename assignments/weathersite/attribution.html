@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Attribution | Tri-Town Weather Watch</title>
+            <meta name="description" content="Attribution for Weather Site">
+            <meta name="author" content="Kimi Weldon">
+            <link rel="stylesheet" href="css/normalize.css">
+            <link rel="stylesheet" href="css/small.css">
+            <link rel="stylesheet" href="css/medium.css">
+            <link rel="stylesheet" href="css/large.css">
+            <link href="https://fonts.googleapis.com/css?family=Muli:200i,400" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+            <link rel="icon" href="images/ttww_favicon.png">
+            <script src="scripts/hamburger.js"></script>
+            <script src="scripts/currentdate.js"></script>
+    </head>
+    
+    <body>
+        <header> 
+            <!-- Site header divisions for CSS styling -->
+            <div class="headwrapper">
+                <div class="sitelogo">
+                    <a href="index.html"><img src="images/ttww_logo.png" alt="Tri-Town Weather Watch Logo"></a>
+                </div>
+                <div class="sitehead">
+                    <div class="sitename">Tri-Town Weather&nbsp;Watch</div>
+                    <div class="motto">You watch us, we'll watch the weather</div>
+                </div>
+            </div>
+            
+            <nav>
+                <div class="menubutton">
+                    <a onclick="toggleNav()"><img src="images/menu.png" alt="Menu"> Menu</a>
+                </div>
+                <ul id="navigation" class="navlinks">
+                    <!-- loaded dynamically with Javascript -->
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 class="pagename">Attribution</h1>
+
+            <div class="attbox">
+            
+                <div>
+                    <h2>Usage</h2>
+                    <p>
+                        This site was hand-coded by Kimi Weldon as a design and coding project for <strong>CIT230: 
+                        Web Frontend Development</strong> at <a href="https://byui.edu">BYU-Idaho.</a>
+                        The contents therein are intended entirely for educational purposes. Articles,
+                        blog posts, event data and town information are created expressly for this purpose
+                        and should not be used as factual data sources.
+                    </p>
+                </div>
+
+                <div>
+                    <h2>Weather Data</h2>
+                    <p>
+                        All weather data including current conditions, forecasting, temperatures, wind speed,
+                        etc. provided by the API at <a href="https://openweathermap.org/">OpenWeatherMap.org</a>
+                        and used with gratitude. Data is as accurate as the API can provide, specific to the 
+                        stated locations. (Note: This uses a free ATT-ID account. Please do not over-refresh 
+                        the town pages and freeze the API.)
+                    </p>
+                </div>
+
+                
+                <div>
+                    <h2>Images</h2>
+                    <p>
+                        Photographic images for Tri-Town Weather Watch, including article/blog headers, hero images,
+                        homepage town-info cards and gallery photos are stock photos (not actual local photography) 
+                        sourced from <a href="https://www.pexels.com/">Pexels.com</a>
+                    </p>
+                    <p>
+                        Five-Day Forecast weather icons provided by <a href="https://openweathermap.org/">OpenWeatherMap.org</a>
+                    </p>
+                    <p>
+                        Tri-Town Weather Watch logo, Storm Center slider image, and overall site design 
+                        created by Kimi Weldon. &copy;2019.
+                    </p>
+                </div>
+
+                <p>
+                    <a href="index.html">Home</a>
+                </p>
+
+            </div>
+            
+        </main>
+
+        <section class="contact">
+            <div class="contact_item">
+            <h4>Tri-Town Weather Watch</h4>
+            <p>
+            375 Ninth St.<br>
+            Preston, ID 83263
+            </p>
+            <p>
+                999.999.9999<br>
+               weatherwatchers@ttww.com
+            </p>
+            </div>
+            <img class="contact_item" src="images/preston-map.jpg" alt="Map of Preston">
+        </section>
+        
+        <footer>
+            <div>&copy; 2019 Kimi Weldon</div> 
+            <div><a href="#">Attribution</a></div>
+            <div><span id="currentdate"> </span></div>
+        </footer>
+
+    <script>loadNavigation(); currentDate(); stormForm();</script>
+    </body>
+</html>

@@ -10,7 +10,6 @@ function currentConditions(townid) {
         weatherRequest.onload = function(){
             
             var weatherData = weatherRequest.response;
-            console.log(weatherData);
 
             var summaryHeading = document.createElement('h3');
             var headingLine = document.createElement('hr');
@@ -101,4 +100,45 @@ function fiveDayForecast(townid){
                 container.appendChild(dayBox);
             }
         }
+}
+
+// function to receive temp and wind speed data and send back final temperature
+function findWindChill(tempF,speed) {
+
+    // Check for accurate values and only run calculations if
+    // temperature and wind speed meet requirements
+    var check = checkInput(tempF, speed);
+
+        // function to make sure values are valid for the equation
+        // according to the National Weather Service
+        function checkInput(tempF, speed){
+            if (tempF > 50 || isNaN(tempF) || tempF == ''){
+                return false;
+            }
+            else if (speed < 3 || isNaN(speed) || speed == ''){
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    if (check == false){
+        return false;			
+    }
+    else {
+        //if valid, send temperature and wind speed to be calculated
+        //and return final value
+        var wChill = windChill(tempF, speed);
+        return wChill
+    }
+}
+
+// function to receive temperature and wind speed,
+// plug into wind chill equation, 
+// and return a new temperature value
+function windChill(tmp, spd){
+    spd = Math.pow(spd, 0.16);
+    var newTemp = 35.74 + (0.6215 * tmp) - (35.75 * spd) + (0.4275 * tmp * spd);
+    newTemp = Math.round(windChill * 10)/10;
+    return newTemp;
 }

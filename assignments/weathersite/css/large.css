@@ -54,6 +54,14 @@ nav a{
     width: 40%;
 }
 
+/* Town Page Styles */
+.featured {
+    margin: 1rem;
+}
+.events {
+    margin: 1rem 1rem 0 1rem;
+}
+
 /* Storm Center Styles */
 fieldset {
     margin: .5rem auto;
@@ -81,5 +89,20 @@ fieldset {
     box-shadow: 0 .5rem 1rem #666666;
 }
 
-/* END MEDIA QUERY*/
+    /*Attribution Formatting */
+    .attbox{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 1rem;
+    }
+    .attbox div:nth-child(3){
+        grid-row: 1;
+        grid-column: 3;
+    }
+    .attbox p {
+        grid-row: 2;
+        grid-column: 1 / span 3;
+        justify-self: center;
+    }
 }

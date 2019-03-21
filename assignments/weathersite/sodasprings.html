@@ -11,13 +11,13 @@
             <link rel="stylesheet" href="css/normalize.css">
             <link rel="stylesheet" href="css/small.css">
             <link rel="stylesheet" href="css/medium.css">
+            <link rel="stylesheet" href="css/medium_towns.css">
             <link rel="stylesheet" href="css/large.css">
             <link href="https://fonts.googleapis.com/css?family=Muli:200i,400" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
             <link rel="icon" href="images/ttww_favicon.png">
             <script src="scripts/hamburger.js"></script>
             <script src="scripts/currentdate.js"></script>
-            <script src="scripts/windchill.js"></script>
             <script src="scripts/weather.js"></script>
             <script src="scripts/eventdata.js"></script>
     </head>
@@ -34,16 +34,17 @@
                     <div class="motto">You watch us, we'll watch the weather</div>
                 </div>
             </div>
-            
-            <nav>
-                <div class="menubutton">
-                    <a onclick="toggleNav()"><img src="images/menu.png" alt="Menu"> Menu</a>
-                </div>
-                <ul id="navigation" class="navlinks">
-                    <!-- loaded dynamically with Javascript -->
-                </ul>
-            </nav>
         </header>
+
+        <nav>
+            <div class="menubutton">
+                <a onclick="toggleNav()"><img src="images/menu.png" alt="Menu"> Menu</a>
+            </div>
+            <ul id="navigation" class="navlinks">
+                <!-- loaded dynamically with Javascript -->
+            </ul>
+        </nav>
+
         <main>
             <h1 class="pagename">Soda Springs, Idaho</h1>
 
@@ -65,9 +66,13 @@
                 <div class="forecastbox" id="fivedayforecast">
                     <!--Populated by JSON Data. Leave blank! -->
                 </div>
-                <p class="tinylink">Weather Data Sourced from 
-                    <a href="https://openweathermap.org">OpenWeatherMap.org</a></p>
             </section>
+
+            <article class="events">
+                <div class="eventsbox" id="eventdata">
+                    <!--Populated by JSON Data. Leave blank! -->
+                </div>
+            </article> 
 
             <article class="featured">
                 <div class="featured_item">
@@ -91,34 +96,28 @@
                         </p>
                 </div>
             </article>
+        </main>
 
-            <article class="events">
-                <div class="eventsbox" id="eventdata">
-                    <!--Populated by JSON Data. Leave blank! -->
-                </div>
-            </article> 
-
-            <section class="contact">
-                <div class="contact_item">
-                <h4>Tri-Town Weather Watch</h4>
-                <p>
-                375 Ninth St.<br>
-                Preston, ID 83263
-                </p>
-                <p>
-                    999.999.9999<br>
-                    weatherwatchers@ttww.com
-                </p>
-                </div>
-                <img class="contact_item" src="images/preston-map.jpg" alt="Map of Preston">
-            </section>
+        <section class="contact">
+            <div class="contact_item">
+            <h4>Tri-Town Weather Watch</h4>
+            <p>
+            375 Ninth St.<br>
+            Preston, ID 83263
+            </p>
+            <p>
+                999.999.9999<br>
+                weatherwatchers@ttww.com
+            </p>
+            </div>
+            <img class="contact_item" src="images/preston-map.jpg" alt="Map of Preston">
+        </section>
         
         <footer>
             <div>&copy; 2019 Kimi Weldon</div> 
-            <div><a href="#">Terms of Use</a></div>
+            <div><a href="attribution.html">Attribution</a></div>
             <div><span id="currentdate"> </span></div>
         </footer>
-    </main>
 
     <script>
     loadNavigation(); 

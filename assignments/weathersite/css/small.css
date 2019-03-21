@@ -31,6 +31,7 @@ body>header{
     background-color: #133751;
     margin: 0 auto;
     text-align: center;
+    width:100%;
 }
 
 .headwrapper{
@@ -294,7 +295,7 @@ main {
     margin-left: 1rem;
     margin-top: 1rem;
     padding: .5rem; 
-    width: 55%;
+    width: 12rem;
     height: 12rem;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -328,9 +329,9 @@ main {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    margin: 1rem .5rem 0 .5rem;
+    margin: 2.5rem .5rem 0 .5rem;
     padding: .5rem;  
-    background-color: #fff; 
+    background-color: #a6c4d4; 
     border-radius: .2rem;
 }
 .events ul{
@@ -344,8 +345,7 @@ main {
 .featured {
     display: flex;
     flex-flow: column-reverse nowrap;
-    margin: 0 .5rem 0 .5rem;
-    margin-top: 1rem;
+    margin: 1rem .5rem 1rem .5rem;
     padding: 0.5rem;
     border: 1px solid #282828;
     border-radius: .2rem;
@@ -359,7 +359,7 @@ main {
     text-indent: 1rem;
 }
 .tinylink{
-    font-size: .7rem;
+    font-size: .8rem;
 }
 .author {
     margin-top: 0;
@@ -382,7 +382,6 @@ main {
     margin: 0 auto;
     margin-top: 1rem;
     padding: .5rem;
-    border: 1px solid #133751;
     background-color: #133751;
     color: #ffffff;
     font-size: 1rem;
@@ -576,4 +575,15 @@ input[type=submit]:active{
 .clear {
     clear: both;
     line-height: 0;
+}
+
+/*Attribution Formatting */
+.attbox{
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    padding: .5rem;
+}
+.attbox div{
+    margin-top: 1rem;
 }
