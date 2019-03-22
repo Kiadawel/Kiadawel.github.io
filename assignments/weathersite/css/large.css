@@ -6,7 +6,7 @@ nav a{
 } 
 
 /* Homepage Styles */
-#tritown {
+.tritown {
     flex-flow: row nowrap;
 }
 .townbox {
@@ -103,6 +103,6 @@ fieldset {
     .attbox p {
         grid-row: 2;
         grid-column: 1 / span 3;
-        justify-self: center;
+        align-self: center;
     }
 }

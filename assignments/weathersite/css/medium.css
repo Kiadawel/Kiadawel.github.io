@@ -41,7 +41,7 @@
     }
 
     /* Homepage Styles */
-    #tritown{
+    .tritown{
         flex-flow: column nowrap;
         justify-content: center;
     }
@@ -110,7 +110,6 @@
         display:flex;
         flex-flow: column nowrap;
         align-items: center;
-        justify-self: stretch;
         margin: .1rem;
         padding: .5rem;
         width: 16%;

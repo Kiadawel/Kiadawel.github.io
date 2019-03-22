@@ -1,5 +1,5 @@
 function townData(){
-    var section = document.querySelector('#tritown');
+    var section = document.querySelector('#tritownjson');
     var requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
     var request = new XMLHttpRequest();
 
@@ -18,7 +18,7 @@ function townData(){
             var simplename = towns[i].name.toLowerCase().replace(' ','');
 
             if(simplename == 'preston' || simplename == 'fishhaven' || simplename == 'sodasprings'){
-                var articleBox = document.createElement('article');
+                var articleBox = document.createElement('section');
                 var infoDiv = document.createElement('div');
                 var townHeader = document.createElement('h2');
                 var townMotto = document.createElement('p');
