@@ -389,6 +389,11 @@ main {
 .contact h4{
     color: #ffe348;
 }
+.contact iframe{
+    width: 400px;
+    height:300px;
+    border:0;
+}
 
 /* Footer Styles */
 footer {
