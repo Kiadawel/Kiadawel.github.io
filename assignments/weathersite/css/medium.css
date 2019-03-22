@@ -116,7 +116,6 @@
         background-color: #ffffff;
         border: 1px solid #282828;
         border-radius: .2rem;
-        font-size: 1rem;
     }
     .forecastbox .forecast p{
         padding:0;
@@ -146,20 +145,6 @@
         width: 50%;
         margin: .25rem;
     }
-    .featured h2{
-        margin-bottom: 0;
-    }
-    .featured p{
-        text-indent: 1rem;
-    }
-    .author {
-        margin-top: 0;
-        margin-left: 1rem;
-        padding-top: 0;
-        font-size: .7rem;
-        font-style: italic;       
-    }
-
 
     /* Contact Section */
 
@@ -233,7 +218,6 @@
         grid-row: 2;
         grid-column: 1 / span 2;
         width: 50%;
-        justify-self: center;
     }
     .attbox p {
         grid-row: 3;

@@ -34,6 +34,10 @@ body>header{
     width:100%;
 }
 
+article, section, figcaption {
+    font-size: 1rem;
+}
+
 .headwrapper{
     display: flex;
     flex-flow: row nowrap;
@@ -194,7 +198,6 @@ main {
     margin: 0 .5rem 2rem .5rem;
     padding: 1rem .5rem;
     border-radius: .2rem;
-    font-size: 1rem;
     box-shadow: 0 3px 3px #666666;
 }
 .townbox div {
@@ -233,7 +236,6 @@ main {
     padding: .5rem;
     border: 1px solid #282828;
     border-radius: .2rem;
-    font-size: 1rem;
 }
 .topnews_summary{
     width: 48%;
@@ -293,7 +295,6 @@ main {
     padding: .5rem; 
     width: 12rem;
     height: 12rem;
-    font-size: 1rem;
     line-height: 1.5rem;
     background-color: #282828;
     color: #ffffff;
@@ -345,7 +346,6 @@ main {
     padding: 0.5rem;
     border: 1px solid #282828;
     border-radius: .2rem;
-    font-size: 1rem;
     align-self: stretch;
 }
 .featured h2{
@@ -361,7 +361,7 @@ main {
     margin-top: 0;
     margin-left: 1rem;
     padding-top: 0;
-    font-size: .7rem;
+    font-size: .8rem;
     font-style: italic;       
 }
 .featured_item{
@@ -380,7 +380,6 @@ main {
     padding: .5rem;
     background-color: #133751;
     color: #ffffff;
-    font-size: 1rem;
     border-radius: .2rem .2rem 0 0;
 }
 .contact_item {
@@ -396,7 +395,7 @@ footer {
     margin: 0;
     background-color: #282828;
     color: #FFFFFF;
-    font-size: .7rem;
+    font-size: .8rem;
     width:100%;
     display: inline-flex;
     justify-content: space-between;
@@ -451,7 +450,6 @@ footer a:active{
 .gallery_grid figcaption {
     text-align: center;
     padding: .5rem;
-    font-size: 1rem;
 }
 
 /* Storm Center Styles */
@@ -563,7 +561,6 @@ input[type=submit]:active{
     padding: 0.5rem;
     border: 1px solid #282828;
     border-radius: .2rem;
-    font-size: 1rem;
 }
 .thankswide {
     display: none;
