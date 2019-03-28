@@ -1,0 +1,57 @@
+body {
+    background-color: #f7f6ee;
+    color: #594d41;
+    font-size: 2vh;
+    font-family: 'Cardo', serif;
+}
+header {
+    display:flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 40px;
+    background-color: #594d41;
+    color: #f7f6ee;
+    align-items: flex-start;
+}
+main {
+    background-color: #ffffff;
+    width: 95%;
+    margin: 0 auto;
+}
+article, section, p, aside {
+    font-size: 1rem;
+}
+h1 {
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 2rem;
+}
+.sitelogo {
+    width: 35%;
+    margin-left: 1.3rem;
+    padding: 2rem .5rem .5rem .5rem;
+    background-color: #e4e2d5;
+    border-radius: 0 0 .3rem .3rem;
+    text-align: center;
+}
+.sitelogo img {
+    max-width: 100%;
+}
+
+/* NAVIGATION STYLES */
+nav {
+    justify-self: stretch;
+    width:100%;
+}
+nav ul{
+    width:100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+}
+.navtext{
+    display:none;
+}
