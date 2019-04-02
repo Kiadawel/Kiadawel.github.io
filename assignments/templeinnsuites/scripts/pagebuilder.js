@@ -52,3 +52,17 @@ function loadNav(){
     }
 
 }
+
+function loadFoot(){
+    var pageFooter = '<div class="footerlinks">' +
+        '<p>&copy; 2019 Kimi Weldon</p>' +
+        '<a href="FAQ">Frequently Asked Questions</a>' +
+        '<a href="attribution.html">Attribution</a>' +
+        '</div>' +
+        '<div class="social">' +
+            '<a href="http://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>' +
+            '<a href="http://www.facebook.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>' +
+            '<a href="http://www.facebook.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>' +
+        '</div>';
+    document.getElementById('footloader').innerHTML = pageFooter;
+}

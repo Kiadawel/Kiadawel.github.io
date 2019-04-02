@@ -12,28 +12,83 @@
             <link rel="stylesheet" href="css/small.css">
             <link href="https://fonts.googleapis.com/css?family=Cardo:400,400i,700" rel="stylesheet"> 
             <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
-            <script src="scripts/navigation.js"></script> 
+            <script src="scripts/pagebuilder.js"></script> 
+            <script src="scripts/currentdate.js"></script>
     </head>
     
     <body>
         <header>
-            <div class="sitelogo">
-                <a href="index.html"><img src="images/sitelogo.png" alt="The Temple Inn and Suites logo"></a>
+            <div class="row1">
+                <div class="sitelogo">
+                    <a href="index.html"><img src="images/sitelogo.png" alt="The Temple Inn and Suites logo"></a>
+                </div>
+            
+                <nav id="navloader">
+                    <!-- Content loaded by Javascript -->
+                </nav>
             </div>
-            <nav id="navloader">
-                <!-- Content loaded by Javascript -->
-            </nav>            
+
+            <div class="row2">
+                <div id="currentdate" class="subhead"> <!-- Javascript-loaded Date --> </div>
+            </div>            
         </header>
 
         <main>
             <section class="hero">
-                <img src="images/hero.jpg" alt="">
+                    <img alt="Peaceful Hotel Suite"
+                    srcset="images/hero_550.jpg 550w, 
+                        images/hero_768.jpg 768w,
+                        images/hero_1024.jpg 1024w"
+                    sizes="(max-width:550px) 100vw,
+                        (min-width:551px) 95vw, (min-width: 769px) 1024px"
+                    src="images/hero_550.jpg">
+                    <div class="calltoaction">
+                        <p>Book Your Stay Today!<br>555-555-5555</p>
+                    </div>
+            </section>
+
+            <article class="featured">
+                <img src="images/featured.jpg" alt="Washington DC Temple">
+                <h2 class="featured_head">Washington, DC Temple</h2>
+                <p class="featured_blurb">
+                        This week’s featured temple serves thousands of 
+                        members of the Church of Jesus Christ of Latter-Day 
+                        Saints on the East
+                        Coast of the United States. Located in an area
+                        of great historical significance, its spires 
+                        serve as a beacon to the entire United States.
+                        This temple site is located near to our
+                        headquarters in Bethesda, Maryland.
+                </p>
+            </article>
+
+            <section class="amenities">
+                <div class="amenities_item">
+                    <h2 class="amenities_head">Breakfast</h2>
+                    <a href="amenities.html#breakfast"><img src="images/amenities/breakfast_sm.jpg" alt="Breakfast"></a>
+                </div>
+                <div class="amenities_item">
+                    <h2 class="amenities_head">Indoor Pool</h2>
+                    <a href="amenities.html#indoorpool"><img src="images/amenities/indoorpool_sm.jpg" alt="Breakfast"></a>
+                </div>
+                <div class="amenities_item">
+                    <h2 class="amenities_head">Exercise Facilities</h2>
+                    <a href="amenities.html#exercise"><img src="images/amenities/exercise_sm.jpg" alt="Breakfast"></a>
+                </div>
+                <div class="amenities_item">
+                    <h2 class="amenities_head">Free Wi-Fi</h2>
+                    <a href="amenities.html#wifi"><img src="images/amenities/wifi_sm.jpg" alt="Breakfast"></a>
+                </div>
             </section>
 
         </main>
+
+        <footer id="footloader">
+            <!-- Generated dynamically with Javascript -->
+        </footer>
     
         <script>
-            loadNav();
+            loadNav(); currentDate(); loadFoot();
         </script>
     </body>
 </html>
