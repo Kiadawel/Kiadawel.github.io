@@ -1,6 +1,6 @@
 function templeNav(){
     var templeListDiv = document.querySelector('#templelist');
-    var templeURL = 'temples.json';
+    var templeURL = 'https://kiadawel.github.io/assignments/templeinnsuites/scripts/temples.json';
     var allTemples = new XMLHttpRequest();
 
     allTemples.open('GET',templeURL);
@@ -12,12 +12,12 @@ function templeNav(){
     }
 
     function listAll(templeData){
-        var temples = allTemples['temples'];
-        var templeList = createElement('ul');
+        var temples = templeData['temples'];
+        var templeList = document.createElement('ul');
 
         for (var i=0; i < temples.length; i++){
-            var templeNavItem = createElement('li');
-            var templeShowLink = createElement('a');
+            var templeNavItem = document.createElement('li');
+            var templeShowLink = document.createElement('a');
             var anchorFunction = 'showTempleInfo('+ temples[i] + ')';
             
             templeShowLink.setAttribute('onclick',anchorFunction);
@@ -27,5 +27,7 @@ function templeNav(){
             templeList.appendChild(templeNavItem);
         }
         templeListDiv.appendChild(templeList);
+        console.log(temples[0]);
+        console.log(templeListDiv.innerHTML);
     }
 }
