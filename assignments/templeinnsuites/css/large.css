@@ -4,7 +4,6 @@ nav ul{
     width: 98%;
     justify-content: space-between;
 }
-
 nav a{
     display:flex;
     flex-flow: row nowrap;
