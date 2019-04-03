@@ -15,7 +15,7 @@ function templeNav(){
         var temples = templeData['temples'];
         var templeList = document.createElement('ul');
 
-        console.log(temples[i]);
+        console.log(temples[3]);
 
         for (var i=0; i < temples.length; i++){
             var templeNavItem = document.createElement('li');

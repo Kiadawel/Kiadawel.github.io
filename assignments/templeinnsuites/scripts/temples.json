@@ -1,6 +1,5 @@
-{"temples":
-    [{"seattle":
-        [{
+{"temples":[
+    {"tag":"seattle",
         "name":"Seattle Washington Temple",
         "ded":"17 November 1980",
         "weatherid":5786882,
@@ -25,9 +24,8 @@
             "cafeteria":"yes",
             "dist":"yes"
             }]
-        }],
-    "boise":
-        [{
+    },
+    {"tag":"boise",
         "name":"Boise Idaho Temple",
         "ded":"25 May 1984",
         "weatherid":5586437,
@@ -55,9 +53,8 @@
             "cafeteria":"no",
             "dist":"yes"
             }]
-        }],
-    "cardston":
-        [{
+    },
+    {"tag":"cardston",
         "name":"Cardston Alberta Temple",
         "ded":"26 August 1923",
         "weatherid":5916821,
@@ -81,9 +78,8 @@
             "cafeteria":"yes",
             "dist":"yes"
             }]
-        }],     
-    "calgary":
-        [{
+    },     
+    {"tag":"calgary",
         "name":"Calgary Alberta Temple",
         "ded":"28 October 2012",
         "weatherid":5913490,
@@ -104,9 +100,8 @@
             "cafeteria":"no",
             "dist":"yes"
             }]
-        }], 
-    "kona":
-        [{
+    }, 
+    {"tag":"kona",
         "name":"Kona Hawaii Temple",
         "ded":"23 January 2000",
         "weatherid":5847504,
@@ -133,9 +128,8 @@
             "cafeteria":"no",
             "dist":"no"
             }]
-        }],
-    "dallas":
-        [{
+    },
+    {"tag":"dallas",
         "name":"Dallas Texas Temple",
         "ded":"19 October 1984",
         "weatherid":4684904,
@@ -162,9 +156,8 @@
             "cafeteria":"yes",
             "dist":"yes"
             }]
-        }]   
-    }]
-}
+    }   
+]}
     
 
 
