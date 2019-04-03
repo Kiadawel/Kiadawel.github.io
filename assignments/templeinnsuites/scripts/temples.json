@@ -4,13 +4,13 @@
         "ded":"17 November 1980",
         "weatherid":5786882,
         "address":
-            [{
-            "street":"2808 148th Ave SE",
-            "city":"Bellevue, WA",
-            "zip":"98007",
-            "country":"USA",
-            "tel":"(1) 425-643-5144"
-            }],
+            [
+            {"street":"2808 148th Ave SE"},
+            {"city":"Bellevue, WA"},
+            {"zip":"98007"},
+            {"country":"USA"},
+            {"tel":"(1) 425-643-5144"}
+            ],
         "closures":[
             "Saturday, 6 April 2019",
             "Thursday, 4 July 2019",
@@ -30,13 +30,13 @@
         "ded":"25 May 1984",
         "weatherid":5586437,
         "address":
-            [{
-            "street":"1211 S Cole Rd",
-            "city":"Boise, ID",
-            "zip":"83709",
-            "country":"USA",
-            "tel":"(1) 208-322-4422"
-            }],
+            [
+            {"street":"1211 S Cole Rd"},
+            {"city":"Boise, ID"},
+            {"zip":"83709"},
+            {"country":"USA"},
+            {"tel":"(1) 208-322-4422"}
+            ],
         "closures":[
             "Saturday, 6 April 2019",
             "Monday, 6 May 2019 - Monday, 20 May 2019",
@@ -59,13 +59,13 @@
         "ded":"26 August 1923",
         "weatherid":5916821,
         "address":
-            [{
-            "street":"348 3rd St W",
-            "city":"Cardston, AB",
-            "zip":"T0K 0K0",
-            "country":"Canada",
-            "tel":"(1) 403-653-3552"
-            }],
+            [
+            {"street":"348 3rd St W"},
+            {"city":"Cardston, AB"},
+            {"zip":"T0K 0K0"},
+            {"country":"Canada"},
+            {"tel":"(1) 403-653-3552"}
+            ],
         "closures":[
             "Saturday, 6 April 2019",
             "Monday, 29 July 2019 - Monday, 12 August 2019",
@@ -84,13 +84,13 @@
         "ded":"28 October 2012",
         "weatherid":5913490,
         "address":
-            [{
-            "street":"9802 Rocky Ridge Rd NW",
-            "city":"Calgary, AB",
-            "zip":"T3G 5J7",
-            "country":"Canada",
-            "tel":"(1) 403-241-4250"
-            }],
+            [
+            {"street":"9802 Rocky Ridge Rd NW"},
+            {"city":"Calgary, AB"},
+            {"zip":"T3G 5J7"},
+            {"country":"Canada"},
+            {"tel":"(1) 403-241-4250"}
+            ],
         "closures":[
             "Saturday, 6 April 2019",
             "Tuesday, 16 April 2019 - Monday, 4 November 2019"   
@@ -106,13 +106,13 @@
         "ded":"23 January 2000",
         "weatherid":5847504,
         "address":
-            [{
-            "street":"75-230 Kalani St",
-            "city":"Kailua-Kona, HI",
-            "zip":"96740",
-            "country":"USA",
-            "tel":"(1) 808-331-8504"
-            }],
+            [
+            {"street":"75-230 Kalani St"},
+            {"city":"Kailua-Kona, HI"},
+            {"zip":"96740"},
+            {"country":"USA"},
+            {"tel":"(1) 808-331-8504"}
+            ],
         "closures":[
             "Saturday, 6 April 2019",
             "Monday, 8 April 2019 - Monday, 22 April 2019",
@@ -134,13 +134,13 @@
         "ded":"19 October 1984",
         "weatherid":4684904,
         "address":
-            [{
-            "street":"6363 Willow Ln",
-            "city":"Dallas, TX",
-            "zip":"75230",
-            "country":"USA",
-            "tel":"(1) 972-991-1273"
-            }],
+            [
+            {"street":"6363 Willow Ln"},
+            {"city":"Dallas, TX"},
+            {"zip":"75230"},
+            {"country":"USA"},
+            {"tel":"(1) 972-991-1273"}
+            ],
         "closures":[
             "Saturday, 6 April 2019",
             "Monday, 22 April 2019 - Monday, 6 May 2019",
