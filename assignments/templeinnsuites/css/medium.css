@@ -1,0 +1,82 @@
+@media only screen and (min-width:550px){
+.row1 {
+    display:flex;
+    background-color: #594d41;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 5rem;
+    margin: 0 auto;
+    align-items: flex-start;
+    max-width: 1024px;
+}
+
+nav ul{
+    width: 98%;
+    align-content: center;
+}
+.navtext{
+    display:block;
+}
+
+.currentpage{
+    border: none;
+    background-color: #594d41;
+    color: #9d8984;
+    text-shadow: none;
+}
+.currentpage:hover{
+    border: none;
+    transform:none;
+    color: #9d8984;
+    text-shadow: none;
+}
+
+.sitelogo {
+    width: 35%;
+    min-width: 130px;
+    max-width: fit-content;
+    margin-left: 1.3rem;
+    padding: 1.5rem .25rem .25rem .25rem;
+    background-color: #e4e2d5;
+    box-shadow: 3px 3px 3px rgba(51,51,51,.5);
+}
+
+/*HERO IMAGE STYLES */
+.hero{
+    height: 400px;
+    background: url('../images/hero_1024.jpg') no-repeat center;
+}
+.calltoaction{
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+}
+
+/*MAIN LAYOUT */
+.homepage{
+    display:flex;
+    flex-flow: row nowrap;
+}
+.nonhome{
+    padding-top: 2rem;
+}
+.amenities{
+    margin-top: 1rem;
+    width: 38%;
+}
+
+/* AMENITIES PAGE */
+.amenitybox{
+    margin: 0 auto;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: .5rem;
+}
+
+.featured {
+    width: 58%;
+}
+
+
+}

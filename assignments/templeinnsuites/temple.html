@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Temple | The Temple Inn &amp; Suites</title>
+            <meta name="description" content="List of The Church of Jesus Christ of Latter-Day Saints temples with
+            Temple Inn and Suites locations nearby, including temple information and services.">
+            <meta name="author" content="Kimi Weldon">
+            <link rel="stylesheet" href="css/normalize.css">
+            <link rel="stylesheet" href="css/small.css">
+            <link rel="stylesheet" href="css/medium.css">
+            <link rel="stylesheet" href="css/large.css">
+            <link href="https://fonts.googleapis.com/css?family=Cardo:400,400i,700" rel="stylesheet"> 
+            <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
+            <script src="scripts/pagebuilder.js"></script> 
+            <script src="scripts/templebuilder.js"></script> 
+            <script src="scripts/currentdate.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="row1">
+                <div class="sitelogo">
+                    <a href="index.html"><img src="images/sitelogo.png" alt="Temple Inn and Suites - Home"></a>
+                </div>
+            
+                <nav id="navloader">
+                    <!-- Content loaded by Javascript -->
+                </nav>
+            </div>
+
+            <div class="row2">
+                <div id="currentdate" class="subhead"> <!-- Javascript-loaded Date --> </div>
+            </div>            
+        </header>
+
+        <main class="nonhome">
+            <h1>Temples</h1>
+            
+            <p class="templeintro">The Temple Inn & Suites has locations serving the Church of Jesus Christ of Latter-Day
+                Saints temples listed below. Click a temple's name to view more information.
+            </p>
+
+            <div id="templelist" class="templenav">
+                <!-- Content loaded by Javascript and JSON -->
+            </div>
+
+            <div id="templeclicked" class="templecard">
+                <!-- Content loaded by Javascript and JSON -->
+            </div>
+
+
+        </main>
+
+        <footer id="footloader">
+            <!-- Generated dynamically with Javascript -->
+        </footer>
+    
+        <script>
+            loadNav(); currentDate(); templeNav(); loadFoot();
+        </script>
+    </body>
+</html>
