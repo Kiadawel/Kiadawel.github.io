@@ -15,6 +15,8 @@ function templeNav(){
         var temples = templeData['temples'];
         var templeList = document.createElement('ul');
 
+        console.log(temples[i]);
+
         for (var i=0; i < temples.length; i++){
             var templeNavItem = document.createElement('li');
             var templeShowLink = document.createElement('a');
@@ -27,7 +29,6 @@ function templeNav(){
             templeList.appendChild(templeNavItem);
         }
         templeListDiv.appendChild(templeList);
-        console.log(temples[0]);
         console.log(templeListDiv.innerHTML);
     }
 }
