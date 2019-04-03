@@ -1,5 +1,5 @@
 {"temples":
-    [{"seattle":
+    {"seattle":
         [{
         "name":"Seattle Washington Temple",
         "ded":"17 November 1980",
@@ -163,7 +163,7 @@
             "dist":"yes"
             }]
         }]   
-    }]
+    }
 }
     
 
