@@ -23,7 +23,8 @@
             "rent":"yes",
             "cafeteria":"yes",
             "dist":"yes"
-            }
+            },
+        "map":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2691.1620764014797!2d-122.14313018400333!3d47.58408949752534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906e9f85ad6089%3A0x2b9193587e9dffa!2sSeattle+Washington+Temple!5e0!3m2!1sen!2sus!4v1554356726952!5m2!1sen!2sus"
     },
     {"tag":"boise",
         "name":"Boise Idaho Temple",
@@ -52,7 +53,8 @@
             "rent":"no",
             "cafeteria":"no",
             "dist":"yes"
-            }
+            },
+        "map":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.6264106628055!2d-116.27701088408902!3d43.593497364306515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54ae564e5361a6fd%3A0x779b77dc4064fd62!2sBoise+Idaho+Temple!5e0!3m2!1sen!2sus!4v1554356654430!5m2!1sen!2sus"
     },
     {"tag":"cardston",
         "name":"Cardston Alberta Temple",
@@ -77,7 +79,8 @@
             "rent":"yes",
             "cafeteria":"yes",
             "dist":"yes"
-            }
+            },
+        "map":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.1185983364985!2d-113.31162678396682!3d49.19830968466559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x536f26d6afcb0afb%3A0x12662afd808ab0bb!2sCardston+Alberta+Temple!5e0!3m2!1sen!2sus!4v1554356592911!5m2!1sen!2sus"
     },     
     {"tag":"calgary",
         "name":"Calgary Alberta Temple",
@@ -99,7 +102,8 @@
             "rent":"no",
             "cafeteria":"no",
             "dist":"yes"
-            }
+            },
+        "map":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.2495413700058!2d-114.23546648392104!3d51.14074924526505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716909d9b423f3%3A0xe0962cdc757e3e68!2sCalgary+Alberta+Temple!5e0!3m2!1sen!2sus!4v1554356516462!5m2!1sen!2sus"
     }, 
     {"tag":"kona",
         "name":"Kona Hawaii Temple",
@@ -127,7 +131,8 @@
             "rent":"no",
             "cafeteria":"no",
             "dist":"no"
-            }
+            },
+        "map":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3757.666796836614!2d-155.98844908443533!3d19.641537989054473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x79540ee522414f21%3A0xda49d692848e7511!2sKona+Hawaii+Temple!5e0!3m2!1sen!2sus!4v1554356427216!5m2!1sen!2sus"
     },
     {"tag":"dallas",
         "name":"Dallas Texas Temple",
@@ -155,7 +160,8 @@
             "rent":"yes",
             "cafeteria":"yes",
             "dist":"yes"
-            }
+            },
+        "map":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.386855793903!2d-96.79870088428092!3d32.91437588427506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c208b76080729%3A0x1f20c49a930dec7f!2sDallas+Texas+Temple!5e0!3m2!1sen!2sus!4v1554356092403!5m2!1sen!2sus"
     }   
 ]}
     
