@@ -38,10 +38,13 @@
 
         <main class="nonhome">
             <h1>Temples</h1>
-            
-            <p class="templeintro">The Temple Inn & Suites has locations serving the Church of Jesus Christ of Latter-Day
-                Saints temples listed below. Click a temple's name to view more information.
+            <p id="templeintro" class="templeintro">The Temple Inn & Suites has locations serving many of the Church of Jesus Christ of Latter-Day
+                Saints temples. Click the temple icon below to select from the list of participating temples.
             </p>
+
+            <a onclick="templeNavToggle()" class="templenavtoggle">
+                <img src="images/navicon_temple.png" alt="Click to Hide or Show Temple List">
+            </a>
 
             <div id="templelist" class="templenav">
                 <!-- Content loaded by Javascript and JSON -->

@@ -1,3 +1,14 @@
+function templeNavToggle(){
+    var navDisplay = document.getElementById('templelist');
+    
+    if (navDisplay.className === 'templenav'){
+            navDisplay.className += '_show';
+    }
+    else {
+        navDisplay.className = 'templenav';
+    }
+}
+
 function templeNav(){
     var templeListDiv = document.querySelector('#templelist');
     var templeURL = 'https://kiadawel.github.io/assignments/templeinnsuites/scripts/temples.json';
@@ -31,6 +42,8 @@ function templeNav(){
 }
 
 function showTempleInfo(templetag){
+    document.getElementById('templeintro').style.display = 'none';
+    document.getElementById('templelist').className = 'templenav';
     var templeInfoDiv = document.querySelector('#templeclicked');
         templeInfoDiv.innerHTML = '';
     var templeURL = 'https://kiadawel.github.io/assignments/templeinnsuites/scripts/temples.json';
@@ -49,18 +62,27 @@ function showTempleInfo(templetag){
                break;
             }
         } 
-        var templeTitle = document.createElement('h2');
-        var templeDed = document.createElement('h3');
-        var templeImg = document.createElement('img');
-        var templeBasicsDiv = document.createElement('div');
+        var templeHead = document.createElement('section');
+            var templeTitle = document.createElement('h2');
+            var templeDed = document.createElement('h3');
+            var templeImg = document.createElement('img');
+
+        var templeBasics = document.createElement('section');
+            templeBasics.setAttribute('class','location');
             var templeAddress = document.createElement('p');
             var templePhone = document.createElement('p');
+            var templeMap = document.createElement('iframe');
+                templeMap.setAttribute('src',thisTemple.map);
+                templeMap.setAttribute('class','templemap');
+
         var templeWeather = document.createElement('section');
             templeWeather.setAttribute('id','weatherbox');
-            var weatherLink = document.createElement('a');
-            weatherLink.textContent = 'See Current Weather';
-            weatherLink.setAttribute('onclick','getTempleWeather("' + thisTemple.weatherid + '")');
-        templeWeather.appendChild(weatherLink);
+            templeWeather.setAttribute('class','weather')
+            //var weatherLink = document.createElement('a');
+            //weatherLink.textContent = 'See Current Weather';
+            //weatherLink.setAttribute('onclick','getTempleWeather("' + thisTemple.weatherid + '")');
+        //templeWeather.appendChild(weatherLink);
+
         var closuresSection = document.createElement('section');
             var closuresTitle = document.createElement('h3');
             var closuresList = document.createElement('ul');
@@ -71,45 +93,79 @@ function showTempleInfo(templetag){
                 }
         var servSection = document.createElement('section');
             var servTitle = document.createElement('h3');
+                servTitle.textContent = "Services";
             var servList = document.createElement('ul');
-                var servRent = document.createElement('li');
-                    servRent.textContent = 'Clothing Rental: ' + thisTemple.services.rent;
-                var servCafe = document.createElement('li');
-                    servCafe.textContent = 'Cafeteria: ' + thisTemple.services.cafeteria;
-                var servDist = document.createElement('li');
-                    servDist.textContent = 'Distribution Center Nearby: ' + thisTemple.services.dist;
-            servList.appendChild(servRent);
-            servList.appendChild(servCafe);
-            servList.appendChild(servDist);
+                for (s in thisTemple.services){
+                    var servItem = document.createElement('li');
+                    var servIcon = document.createElement('img');
+                    var servIconPath = 'images/';
+                        if(thisTemple.services[s] == 'yes'){
+                            servIconPath += 'yes.png';
+                        }
+                        else{
+                            servIconPath += 'no.png';
+                        }
+                    servIcon.setAttribute('src',servIconPath);
+                    servIcon.setAttribute('alt',thisTemple.services[s]);
+                    servItem.appendChild(servIcon);
+                    var service = '';
+                        switch(s){
+                            case 'rent':
+                                service = 'Clothing Rental';
+                                break;
+                            case 'cafeteria':
+                                service = 'Cafeteria Available';
+                                break;
+                            case 'dist':
+                                service = 'Distribution Center Nearby';
+                                break;  
+                        }
+                    var servText = document.createTextNode(service);
+                    console.log(servText);
+                    servItem.appendChild(servText);
+                    servList.appendChild(servItem);
+                }
+                
+                //var servRent = document.createElement('li');
+                  //  servRent.textContent = 'Clothing Rental' + thisTemple.services.rent;
+                //var servCafe = document.createElement('li');
+                  //  servCafe.textContent = 'Cafeteria' + thisTemple.services.cafeteria;
+                //var servDist = document.createElement('li');
+                  //  servDist.textContent = 'Distribution Center Nearby' + thisTemple.services.dist;
+            //servList.appendChild(servRent);
+            //servList.appendChild(servCafe);
+            //servList.appendChild(servDist);
         servSection.appendChild(servTitle);
         servSection.appendChild(servList);
     
-        templeTitle.textContent = thisTemple.name;
-        templeDed.textContent = 'Dedicated ' + thisTemple.ded;
-
-            var imgPath = 'images/temples/' + templetag + '.jpg';
-            var imgAlt = thisTemple.name;
-        templeImg.setAttribute('src',imgPath);
-        templeImg.setAttribute('alt',imgAlt);
+            templeTitle.textContent = thisTemple.name;
+            templeDed.textContent = 'Dedicated ' + thisTemple.ded;
+                var imgPath = 'images/temples/' + templetag + '.jpg';
+                var imgAlt = thisTemple.name;
+            templeImg.setAttribute('src',imgPath);
+            templeImg.setAttribute('alt',imgAlt);
+        templeHead.appendChild(templeTitle);
+        templeHead.appendChild(templeDed);
+        templeHead.appendChild(templeImg);
         
             templeAddress.innerHTML = thisTemple.address.street + '<br>' +
                                     thisTemple.address.city + thisTemple.address.zip + '<br>' +
                                     thisTemple.address.country;
             templePhone.textContent = thisTemple.address.tel;
-        templeBasicsDiv.appendChild(templeAddress);
-        templeBasicsDiv.appendChild(templePhone);
+        templeBasics.appendChild(templeAddress);
+        templeBasics.appendChild(templePhone);
+        templeBasics.appendChild(templeMap);
 
             closuresTitle.textContent = 'Temple Closures';
         closuresSection.appendChild(closuresTitle);
         closuresSection.appendChild(closuresList);
         
-        templeInfoDiv.appendChild(templeTitle);
-        templeInfoDiv.appendChild(templeDed);
+        templeInfoDiv.appendChild(templeHead);
+        templeInfoDiv.appendChild(templeBasics);
         templeInfoDiv.appendChild(templeWeather);
-        templeInfoDiv.appendChild(templeImg);
-        templeInfoDiv.appendChild(templeBasicsDiv);
         templeInfoDiv.appendChild(servSection);
         templeInfoDiv.appendChild(closuresSection);
+        getTempleWeather(thisTemple.weatherid);
     }
 }
 
@@ -125,7 +181,7 @@ function getTempleWeather(templeid) {
             
             var weatherData = weatherRequest.response;
             var weatherBox = document.getElementById('weatherbox');
-                weatherBox.innerHTML = '';
+                //weatherBox.innerHTML = '';
 
             var weatherIcon = document.createElement('img');
             var summaryHeading = document.createElement('h3');
@@ -146,7 +202,8 @@ function getTempleWeather(templeid) {
                 var iconString = 'images/weather/' + weatherData.weather[0].icon+'.png';
                 var altString = weatherData.weather[0].description;
             weatherIcon.setAttribute('src',iconString);
-            summaryHeading.textContent = 'Temple Weather:';
+            weatherIcon.setAttribute('alt',altString);
+            summaryHeading.textContent = 'Temple Weather';
             currentCond.textContent = 'Currently: ' + weatherData.weather[0].main;
             currentTemp.innerHTML = 'Temperature: ' + tempF + '&#176; F';
             currentWindChill.innerHTML = 'Feels Like: ' + feelsLike + '&#176; F'; 
