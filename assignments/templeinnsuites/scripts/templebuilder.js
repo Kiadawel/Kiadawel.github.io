@@ -80,11 +80,7 @@ function showTempleInfo(templetag){
 
         var templeWeather = document.createElement('section');
             templeWeather.setAttribute('id','weatherbox');
-            templeWeather.setAttribute('class','weather')
-            //var weatherLink = document.createElement('a');
-            //weatherLink.textContent = 'See Current Weather';
-            //weatherLink.setAttribute('onclick','getTempleWeather("' + thisTemple.weatherid + '")');
-        //templeWeather.appendChild(weatherLink);
+            templeWeather.setAttribute('class','weather');
 
         var closuresSection = document.createElement('section');
             var closuresTitle = document.createElement('h3');
