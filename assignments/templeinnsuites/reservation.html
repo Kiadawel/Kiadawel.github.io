@@ -4,9 +4,8 @@
     <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Temple | The Temple Inn &amp; Suites</title>
-            <meta name="description" content="List of The Church of Jesus Christ of Latter-Day Saints temples with
-            Temple Inn and Suites locations nearby, including temple information and services.">
+            <title>Reservations | The Temple Inn &amp; Suites</title>
+            <meta name="description" content="Reservation Form page for Temple Inn and Suites international hotel chain.">
             <meta name="author" content="Kimi Weldon">
             <link rel="stylesheet" href="css/normalize.css">
             <link rel="stylesheet" href="css/small.css">
@@ -15,7 +14,6 @@
             <link href="https://fonts.googleapis.com/css?family=Cardo:400,400i,700" rel="stylesheet"> 
             <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
             <script src="scripts/pagebuilder.js"></script> 
-            <script src="scripts/templebuilder.js"></script> 
             <script src="scripts/currentdate.js"></script>
     </head>
     
@@ -23,7 +21,7 @@
         <header>
             <div class="row1">
                 <div class="sitelogo">
-                    <a href="index.html"><img src="images/sitelogo.png" alt="Temple Inn and Suites - Home"></a>
+                    <a href="index.html"><img src="images/sitelogo.png" alt="The Temple Inn and Suites logo"></a>
                 </div>
             
                 <nav id="navloader">
@@ -37,23 +35,7 @@
         </header>
 
         <main class="nonhome">
-            <h1>Temples</h1>
-            <p id="templeintro" class="templeintro">The Temple Inn & Suites has locations serving many of the Church of Jesus Christ of Latter-Day
-                Saints temples. Click the temple icon below to select from the list of participating temples.
-            </p>
-
-            <a onclick="templeNavToggle()" class="templenavtoggle">
-                <img src="images/navicon_temple.png" alt="Click to Hide or Show Temple List">
-            </a>
-
-            <div id="templelist" class="templenav">
-                <!-- Content loaded by Javascript and JSON -->
-            </div>
-
-            <div id="templeclicked" class="templecard">
-                <!-- Content loaded by Javascript and JSON -->
-            </div>
-
+            <h1>Reservations</h1>
 
         </main>
 
@@ -62,7 +44,7 @@
         </footer>
     
         <script>
-            loadNav(); currentDate(); templeNav(); loadFoot();
+            loadNav(); currentDate(); loadFoot();
         </script>
     </body>
 </html>

@@ -25,7 +25,7 @@ nav ul{
     text-shadow: none;
 }
 .currentpage:hover{
-    border: none;
+    border:none;
     transform:none;
     color: #9d8984;
     text-shadow: none;
@@ -54,28 +54,40 @@ nav ul{
 
 /*MAIN LAYOUT */
 .homepage{
-    display:flex;
-    flex-flow: row nowrap;
+    display:grid;
+    grid-template-areas: 
+    "featured amen";
+    grid-template-columns: 58% 1fr;    
+}
+.featuredbox {
+    grid-area: featured;
 }
 .nonhome{
     padding-top: 2rem;
 }
 .amenities{
+    grid-area: amen;
     margin-top: 1rem;
-    width: 38%;
 }
 
-/* AMENITIES PAGE */
+/* AMENITIES STYLES */
+.amenities_head{
+    font-size:1.5rem;
+}
+.amenities_item img{
+    object-fit:cover;
+    overflow-y:hidden;
+    height:19%;
+    width:100%;
+    opacity: .5;
+    border-radius: .3rem;
+}
 .amenitybox{
     margin: 0 auto;
     width: 95%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: .5rem;
-}
-
-.featured {
-    width: 58%;
 }
 
 

@@ -162,6 +162,28 @@
             "dist":"yes"
             },
         "map":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.386855793903!2d-96.79870088428092!3d32.91437588427506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c208b76080729%3A0x1f20c49a930dec7f!2sDallas+Texas+Temple!5e0!3m2!1sen!2sus!4v1554356092403!5m2!1sen!2sus"
+    }
+    {"tag":"washingtondc",
+        "name":"Washington DC Temple",
+        "ded":"November 19, 1974",
+        "weatherid":4348599,
+        "address":
+            {
+            "street":"9900 Stoneybrook Dr",
+            "city":"Kensington, MD",
+            "zip":"20895",
+            "country":"USA",
+            "tel":"(closed for renovation)"
+            },
+        "closures":[
+            "This temple is currently closed for renovation."
+            ],
+        "services":{
+            "rent":"no",
+            "cafeteria":"no",
+            "dist":"no"
+            },
+        "map":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3099.981874081396!2d-77.06663998464614!3d39.01572697955258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7ced232fa530f%3A0xaf60ba5252d6a5a2!2sWashington+DC+Temple!5e0!3m2!1sen!2sus!4v1554422573876!5m2!1sen!2sus"
     }   
 ]}
     

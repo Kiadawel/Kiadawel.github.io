@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Contact | The Temple Inn &amp; Suites</title>
+            <meta name="description" content="Contact information for the Temple Inn and Suites, including headquarters address,
+                telephone information and a contact form.">
+            <meta name="author" content="Kimi Weldon">
+            <link rel="stylesheet" href="css/normalize.css">
+            <link rel="stylesheet" href="css/small.css">
+            <link rel="stylesheet" href="css/medium.css">
+            <link rel="stylesheet" href="css/large.css">
+            <link href="https://fonts.googleapis.com/css?family=Cardo:400,400i,700" rel="stylesheet"> 
+            <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
+            <script src="scripts/pagebuilder.js"></script> 
+            <script src="scripts/currentdate.js"></script>
+            <script src="scripts/contactform.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="row1">
+                <div class="sitelogo">
+                    <a href="index.html"><img src="images/sitelogo.png" alt="The Temple Inn and Suites logo"></a>
+                </div>
+            
+                <nav id="navloader">
+                    <!-- Content loaded by Javascript -->
+                </nav>
+            </div>
+
+            <div class="row2">
+                <div id="currentdate" class="subhead"> <!-- Javascript-loaded Date --> </div>
+            </div>            
+        </header>
+
+        <main class="nonhome">
+            <h1>Thank You</h1>
+
+            <p id="contactsummary" class="thanks">
+                <!-- Loaded by JavaScript-->
+            </p>
+            <a href="contact.html">Return to Contact Page</a>
+        </main>
+
+        <footer id="footloader">
+            <!-- Generated dynamically with Javascript -->
+        </footer>
+    
+        <script>
+            loadNav(); currentDate(); loadFoot(); contactForm();
+        </script>
+    </body>
+</html>

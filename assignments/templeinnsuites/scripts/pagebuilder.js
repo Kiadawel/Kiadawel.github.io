@@ -1,5 +1,5 @@
 function loadNav(){
-    var navLinks = ['Temple','Reservation','Services','Contact'];
+    var navLinks = ['Temples','Reservation','Services','Contact'];
     var navLoader = document.querySelector('#navloader');
     var navList = document.createElement('ul');
 
@@ -49,7 +49,7 @@ function loadNav(){
 function loadFoot(){
     var pageFooter = '<div class="footerlinks">' +
         '<p>&copy; 2019 Kimi Weldon</p>' +
-        '<a href="FAQ">Frequently Asked Questions</a>' +
+        '<a href="about.html">About</a>' +
         '<a href="attribution.html">Attribution</a>' +
         '</div>' +
         '<div class="social">' +

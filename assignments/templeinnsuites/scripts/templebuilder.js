@@ -43,6 +43,7 @@ function templeNav(){
 
 function showTempleInfo(templetag){
     document.getElementById('templeintro').style.display = 'none';
+    document.getElementById('templenavicon').setAttribute('src','images/navicon_temple3.png');
     document.getElementById('templelist').className = 'templenav';
     var templeInfoDiv = document.querySelector('#templeclicked');
         templeInfoDiv.innerHTML = '';
@@ -68,6 +69,8 @@ function showTempleInfo(templetag){
             var templeImg = document.createElement('img');
 
         var templeBasics = document.createElement('section');
+            var basicsTitle = document.createElement('h3');
+                basicsTitle.textContent = 'Address'
             templeBasics.setAttribute('class','location');
             var templeAddress = document.createElement('p');
             var templePhone = document.createElement('p');
@@ -125,16 +128,7 @@ function showTempleInfo(templetag){
                     servItem.appendChild(servText);
                     servList.appendChild(servItem);
                 }
-                
-                //var servRent = document.createElement('li');
-                  //  servRent.textContent = 'Clothing Rental' + thisTemple.services.rent;
-                //var servCafe = document.createElement('li');
-                  //  servCafe.textContent = 'Cafeteria' + thisTemple.services.cafeteria;
-                //var servDist = document.createElement('li');
-                  //  servDist.textContent = 'Distribution Center Nearby' + thisTemple.services.dist;
-            //servList.appendChild(servRent);
-            //servList.appendChild(servCafe);
-            //servList.appendChild(servDist);
+
         servSection.appendChild(servTitle);
         servSection.appendChild(servList);
     
@@ -156,7 +150,7 @@ function showTempleInfo(templetag){
         templeBasics.appendChild(templePhone);
         templeBasics.appendChild(templeMap);
 
-            closuresTitle.textContent = 'Temple Closures';
+            closuresTitle.textContent = 'Closures';
         closuresSection.appendChild(closuresTitle);
         closuresSection.appendChild(closuresList);
         

@@ -2,8 +2,8 @@ function getAmenities(){
     var amenSection = document.querySelector('#amenbox');
     var amenitiesList = [
         'Breakfast', 
-        'Indoor&nbsp;Pool',
         'Exercise&nbsp;Facilities',
+        'Indoor&nbsp;Pool',
         'Free&nbsp;Wi-Fi',
         'Family&nbsp;History'
         ];

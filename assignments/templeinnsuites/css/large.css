@@ -9,6 +9,34 @@ nav a{
     flex-flow: row nowrap;
     font-size: 1.7rem;
 }
+.homepage{
+    max-width:1200px;
+    grid-template-areas:
+        "featured"
+        "amen";
+    grid-template-columns: 100%;;
+}
+.featuredbox{
+    display:flex;
+    flex-flow: row nowrap;
+}
+.featured {
+    width: 48%;
+}
+.amenities{
+    display:flex;
+    flex-flow: row nowrap;
+}
 
-
+/* AMENITIES STYLES */
+.amenities_head{
+    font-size:2rem;
+}
+.amenitybox{
+    margin: 0 auto;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: .5rem;
+}
 }
