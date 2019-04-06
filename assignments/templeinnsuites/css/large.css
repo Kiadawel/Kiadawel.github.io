@@ -27,10 +27,7 @@ nav a{
 }
 .homepage{
     max-width:1200px;
-    grid-template-areas:
-        "featured"
-        "amen";
-    grid-template-columns: 100%;;
+
 }
 .nonhome{
     max-width: 1200px;

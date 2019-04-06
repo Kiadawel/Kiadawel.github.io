@@ -9,8 +9,17 @@ nav ul{
 .navtext{
     display:block;
 }
-.sitelogo{
-    height: 6rem;
+.sitelogo {
+    width: 35%;
+    max-width: 252px;
+    margin-left: 1.5rem;
+    height: 6.5rem;
+}
+.sitelogo img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
 }
 .currentpage{
     border: none;
@@ -57,22 +66,12 @@ nav ul{
 
 /*MAIN LAYOUT */
 .homepage{
-    display:grid;
-    grid-template-areas: 
-    "featured amen";
-    grid-template-columns: 58% 1fr;    
-}
-.featuredbox {
-    grid-area: featured;
+
 }
 .nonhome{
     padding-top: 2rem;
 }
-.respage{
-    padding-top:0;
-}
 .amenities{
-    grid-area: amen;
     margin-top: 1rem;
 }
 
