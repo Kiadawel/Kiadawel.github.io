@@ -69,8 +69,9 @@ function showTempleInfo(templetag){
             var templeImg = document.createElement('img');
 
         var templeBasics = document.createElement('section');
-            var basicsTitle = document.createElement('h3');
-                basicsTitle.textContent = 'Address'
+            var locationDiv = document.createElement('div')
+            var locationHead = document.createElement('h3');
+                locationHead.textContent = 'Address';
             templeBasics.setAttribute('class','location');
             var templeAddress = document.createElement('p');
             var templePhone = document.createElement('p');
@@ -120,11 +121,9 @@ function showTempleInfo(templetag){
                                 break;  
                         }
                     var servText = document.createTextNode(service);
-                    console.log(servText);
                     servItem.appendChild(servText);
                     servList.appendChild(servItem);
                 }
-
         servSection.appendChild(servTitle);
         servSection.appendChild(servList);
     
@@ -139,11 +138,14 @@ function showTempleInfo(templetag){
         templeHead.appendChild(templeImg);
         
             templeAddress.innerHTML = thisTemple.address.street + '<br>' +
-                                    thisTemple.address.city + thisTemple.address.zip + '<br>' +
+                                    thisTemple.address.city + ' ' + thisTemple.address.zip + '<br>' +
                                     thisTemple.address.country;
-            templePhone.textContent = thisTemple.address.tel;
-        templeBasics.appendChild(templeAddress);
-        templeBasics.appendChild(templePhone);
+            var phoneImg = '<img src="images/telephone.png" alt="Telephone">';
+            templePhone.innerHTML = phoneImg + thisTemple.address.tel;
+        locationDiv.appendChild(locationHead);
+        locationDiv.appendChild(templeAddress);
+        locationDiv.appendChild(templePhone);
+        templeBasics.appendChild(locationDiv);
         templeBasics.appendChild(templeMap);
 
             closuresTitle.textContent = 'Closures';
@@ -193,7 +195,7 @@ function getTempleWeather(templeid) {
                 var altString = weatherData.weather[0].description;
             weatherIcon.setAttribute('src',iconString);
             weatherIcon.setAttribute('alt',altString);
-            summaryHeading.textContent = 'Temple Weather';
+            summaryHeading.textContent = 'Weather';
             currentCond.textContent = 'Currently: ' + weatherData.weather[0].main;
             currentTemp.innerHTML = 'Temperature: ' + tempF + '&#176; F';
             currentWindChill.innerHTML = 'Feels Like: ' + feelsLike + '&#176; F'; 

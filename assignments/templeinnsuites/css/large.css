@@ -9,12 +9,31 @@ nav a{
     flex-flow: row nowrap;
     font-size: 1.7rem;
 }
+.hero{
+    max-width: 1200px;
+    background: url('../images/hero_1200.jpg') no-repeat center;
+}
+.reshero{
+    background: url('../images/reshero_1200.jpg') no-repeat center;
+}
+.contacthero{
+    background: url('../images/contacthero_1200.jpg') no-repeat center;
+}
+.templehero{
+    background: url('../images/templehero_1200.jpg') no-repeat center;
+}
+.servicehero{
+    background: url('../images/servicehero_1200.jpg') no-repeat center;
+}
 .homepage{
     max-width:1200px;
     grid-template-areas:
         "featured"
         "amen";
     grid-template-columns: 100%;;
+}
+.nonhome{
+    max-width: 1200px;
 }
 .featuredbox{
     display:flex;
@@ -39,4 +58,73 @@ nav a{
     grid-template-columns: 1fr 1fr;
     grid-column-gap: .5rem;
 }
+
+/* TEMPLE STYLES */
+.templecard {
+    display: grid;
+    grid-template:
+    "photo photo"
+    "map weather"
+    "map services"
+    "closures closures"
+}
+
+.templecard .location{
+    flex-flow: column nowrap;
+}
+.location div{
+    width: 100%;
+}
+.templemap{
+    width: 100%;
+    height: 15rem;
+}
+
+/* RESERVATIONS PAGE STYLES */
+.resinfo p:nth-child(-n+5){
+    width: 33%; 
+}
+.resinfo p:nth-child(6){
+    width: 66%;
+}
+.resinfo p:last-child{
+    width: 100%;
+}
+.personalshow{
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.personalshow p:nth-child(-n+6){
+    width: 33%;
+}
+.personalshow p:nth-child(odd){
+    padding-right: 33%;
+}
+.personalshow p:nth-last-child(2){
+    width: 100%;
+    padding-right: 0;
+}
+
+
+/*CONTACT US STYLES */
+.hqmap{
+    height: 20rem;
+}
+.contactpage{
+    display:flex;
+    flex-flow: row nowrap;
+}
+.contactfield{
+    align-self: center;
+    background-color: #f7f6ee;
+}
+.contactfield, .contactform{
+    width: 48%;
+}
+
+/*FOOTER STYLES */
+footer{
+    max-width: 1200px;
+}
+
 }

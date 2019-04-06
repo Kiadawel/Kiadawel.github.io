@@ -24,6 +24,7 @@ a, a:visited{
 a:hover, a:active, a:focus{
     color:#594d41;
     font-weight:700;
+    transition: .3s
 }
 
 /* HOMEPAGE HEADER/NAVIGATION STYLES */
@@ -47,13 +48,14 @@ header a{
     height: 4rem;
     margin: 0 auto;
     align-items: flex-start;
-    max-width: 1024px;
+    max-width: 1200px;
 }
 .sitelogo {
     width: 35%;
-    max-width: fit-content;
-    margin-left: 1.3rem;
-    padding: 2rem .5rem .5rem .5rem;
+    max-width: max-content;
+    margin-left: 1rem;
+    padding: .5rem;
+    height: 5rem;
     background-color: #e4e2d5;
     border-radius: 0 0 .5rem .5rem;
     text-align: center;
@@ -61,6 +63,7 @@ header a{
     box-shadow: 5px 5px 5px rgba(51,51,51,.5);
 }
 .sitelogo img {
+    margin-top: auto;
     max-width: 100%;
 }
 nav {
@@ -93,6 +96,7 @@ nav a:hover{
     color: #9d8984;
     transform: translateY(-2px);
     text-shadow: 0 3px 2px #333333;
+    transition: .3s;
 }
 nav a:active, nav a:focus{
     color: #9d8984;
@@ -116,7 +120,7 @@ nav a:active, nav a:focus{
 }
 .subhead{
     width:100%;
-    max-width: 1024px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: right;
 }
@@ -125,7 +129,7 @@ nav a:active, nav a:focus{
 .hero{
     position: relative;
     width:100%;
-    max-width: 1024px;
+    max-width: 1200px;
     height: 300px;
     background: url('../images/hero_550.jpg') no-repeat center;
     background-size: cover;
@@ -145,15 +149,71 @@ nav a:active, nav a:focus{
     padding: 0 .5rem 0 .5rem;
     font-weight: 700;
 }
+.reshero{
+    position: relative;
+    width:100%;
+    max-width: 1200px;
+    height: 300px;
+    background: url('../images/reshero_550.jpg') no-repeat center;
+    background-size: cover;
+    overflow-x:hidden;
+    margin: 0 auto;
+    padding: 0;
+}
+.contacthero{
+    position: relative;
+    width:100%;
+    max-width: 1200px;
+    height: 300px;
+    background: url('../images/contacthero_550.jpg') no-repeat center;
+    background-size: cover;
+    overflow-x:hidden;
+    margin: 0 auto;
+    padding: 0;
+}
+.templehero{
+    position: relative;
+    width:100%;
+    max-width: 1200px;
+    height: 300px;
+    background: url('../images/templehero_550.jpg') no-repeat center;
+    background-size: cover;
+    overflow-x:hidden;
+    margin: 0 auto;
+    padding: 0;
+}
+.servicehero{
+    position: relative;
+    width:100%;
+    max-width: 1200px;
+    height: 300px;
+    background: url('../images/servicehero_550.jpg') no-repeat center;
+    background-size: cover;
+    overflow-x:hidden;
+    margin: 0 auto;
+    padding: 0;
+}
+.pageheader{
+    position: absolute;
+    bottom: .5rem;
+    right: 0;
+    color: #f7f6ee;
+    border-radius:.3rem 0 0 .3rem;
+    background-color: rgba(89,77,65,.5);
+    text-shadow: 0 3px 3px rgba(51,51,51,.8);;
+    text-align: center;
+    padding: 0 .5rem 0 .5rem;
+    font-weight: 700;
+}
 
 
 /* MAIN SECTION STYLES */
 main {
     background-color: #f7f6ee;
     width: 100%;
-    max-width: 1024px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: .5rem 0 .5rem 0;
+    padding:0 0 .5rem 0;
     text-align: center;
 }
 .featured {
@@ -188,18 +248,16 @@ main {
 }
 
 /* AMENITIES STYLES */
-.amenities, .amenities2 {
+.amenities {
     display:flex;
     flex-flow: column nowrap;
     width: 95%;
     margin: 0 auto;
     padding: 0;
 }
-.amenities_item, .amenities2_item {
+.amenities_item {
     position: relative;
     margin: 0 0 1rem 0;
-    padding: .5rem;
-    background-color: #9d8984;
     border-radius: .3rem;
     line-height: 0;
     box-shadow: 3px 3px 3px rgba(51,51,51,.5);
@@ -217,11 +275,7 @@ main {
     overflow-y:hidden;
     height: 200px;
     width:100%;
-    opacity: .5;
     border-radius: .3rem;
-}
-.amenities_item img:hover{
-    opacity: 1;
 }
 .amenities_item a{
     display:block;
@@ -264,10 +318,9 @@ main {
 /* TEMPLE STYLES */
 .templeintro{
     display:block;
-    max-width:400px;
+    max-width: 800px;
     width: 95%;
     margin: 0 auto;
-    text-align: left;
 }
 .templenavtoggle{
     display:block;
@@ -281,7 +334,9 @@ main {
 .templenav{
     position: absolute;
     top: 0;
-    left: -999em;
+    left: 0;
+    max-height:0;
+    overflow-y:hidden;
 }
 .templenav_show{
     position:absolute;
@@ -289,6 +344,7 @@ main {
     left: 0;
     display:block;
     width:100%;
+    max-height: 14rem;
     margin: 0 auto;
 }
 .templenav_show ul{
@@ -306,40 +362,38 @@ main {
     background-color: #c4bdbc;
     font-weight: bold;
     cursor: pointer;
+    transition: .3s;
 }
 .templecard{
     display:flex;
     flex-flow: column nowrap;
-    width:100%;
+    width:95%;
     margin: 1rem auto;
     padding: 0;
     background-color:#f7f6ee;
+}
+.templecard section{
+    display:flex;
+    flex-flow: column nowrap;
+    margin: .5rem 0 0 0;
+    padding: .5rem;
+    border-radius: .5rem;
+    background-color: #ffffff;
+    box-shadow:2px 2px 2px rgba(51,51,51,.5)
+}
+.templecard section h3{
+    background-color: #e4e2d5;
 }
 .templecard section:first-child img{
     align-self: center;
     border-radius: .5rem;
     width: 400px;
 }
-.templecard section:nth-child(4) img{
+.templecard section:nth-child(2) img, .templecard section:nth-child(4) img{
     vertical-align:middle;   
 }
 .templecard img{
     margin: .25rem;
-}
-.templecard section{
-    display:flex;
-    flex-flow: column nowrap;
-    align-content: center;
-    width:95%;
-    margin: .5rem auto;
-    padding: .5rem;
-    border-radius: .5rem;
-}
-.templecard section:nth-child(odd){
-    background-color: #ffffff;
-}
-.templecard section:nth-child(even){
-    background-color: #e4e2d5;
 }
 .templecard ul{
     list-style-type:none;
@@ -354,20 +408,23 @@ main {
     border: 0;
     align-self: center;
 }
-.weather a, .weather a:hover{
-    display:block;
-    width: 100%;
-    font-weight:700;
-    cursor:pointer;
-}
 .weather img{
     max-width:64px;
     align-self:center;
 }
+.wchill{
+    font-style: italic;
+    margin-left: 1.5rem;
+}
+
 /* GENERAL FORM STYLES */
+form{
+    width: 95%;
+    margin: 0 auto;
+}
 legend{
     font-family: 'Petit Formal Script', cursive;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: .5rem;
     padding: .5rem;
     border: 1px solid #594d41;
@@ -375,22 +432,24 @@ legend{
     background-color: #f7f6ee;
 }
 fieldset{
+    margin: 0 auto;
     border: 1px solid #594d41;
     border-radius: .5rem;
     background-color: #e4e2d5;
 }
 fieldset:focus-within{
-    background-color:#ffffff;
+    background-color:rgba(228,226,213,.7);
 }
 fieldset p{
     display:flex;
     flex-flow: column nowrap;
     text-align: left;
 }
-input, textarea{
+input, select{
     font-size: 1rem;
     border:1px dashed #594d41;
     background-color: #f7f6ee;
+    box-sizing: border-box;
     color: #594d41; 
     height: 2rem;
     margin:0;
@@ -400,21 +459,27 @@ input::placeholder, textarea::placeholder{
     color: #c4bdbc;
     font-size: 1rem;
 }
-input:focus, textarea:focus{
+input:focus, select:focus, textarea:focus{
     outline: 2px solid #9d8984;
     box-shadow: 2px 2px 2px rgba(51,51,51,.5);
 }
 textarea{
+    font-size: 1rem;
+    border:1px dashed #594d41;
+    box-sizing: border-box;
+    background-color: #f7f6ee;
     color: #594d41;
     resize:none;
     overflow-y:scroll;
     width:100%;
     height: 10rem;
+    margin: 0;
+    padding: .5rem;
 }
-input[type=submit]{
+input[type=submit], input[type=button]{
     align-self: flex-end;
     width: fit-content;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     height: 3rem;
     font-weight: bold;
     text-align: center;
@@ -423,12 +488,39 @@ input[type=submit]{
     border-radius: .3rem;
     box-shadow: 0px 3px 3px rgba(51,51,51,.5);
 }
-input[type=submit]:focus{
+input[type=submit]:focus, input[type=button]:focus{
     outline: 2px solid #9d8984;
 }
-input[type=submit]:active{
+input[type=submit]:active, input[type=button]:focus{
     transform: translateY(2px);
     box-shadow: none;
+}
+input[type=radio]{
+    height: .8rem;
+    width: .8rem;
+    margin: .5rem;
+}
+input[type=radio]:active, input[type=radio]:focus{
+    border: none;
+}
+.radioset{
+    display:flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+/* RESERVATION PAGE STYLES */
+.resinfo{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+}
+.personalhide{
+    display: none;
+}
+.personalshow{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
 }
 /* CONTACT PAGE STYLES */
 .contactfield{
@@ -469,18 +561,21 @@ input[type=submit]:active{
 /* FOOTER STYLES */
 footer {
     background-color: #e4e2d5;
-    margin: 0 auto;
-    max-width: 1024px;
+    font-size: 1rem;
+    margin: 0 auto 1.5rem;
+    max-width: 1200px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
     border-radius: 0 0 .5rem .5rem;
+}
+footer img{
+    margin: .5rem;
 }
 .footerlinks {
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
     padding: .5rem;
 }
 .social {

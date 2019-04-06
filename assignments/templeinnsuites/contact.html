@@ -36,63 +36,67 @@
             </div>            
         </header>
 
-        <main class="nonhome">
-            <h1>Contact Us</h1>
-
-            <div class="contactfield">
-            <section class="contact">
-                <h3>Temple Inn &amp; Suites<br>Headquarters</h3>
-                <p>
-                4800 Montgomery Ln #300<br>
-                Bethesda, MD 20814
-                </p>
-
-                <p>
-                t: (1) 555-555-5555<br>
-                f: (1) 555-555-5555
-                </p>
+        <main>
+            <section class="contacthero">
+                <h1 class="pageheader">Contact Us</h1>
             </section>
 
-            <iframe class="hqmap" 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3101.404837028573!2d-77.09772048416434!3d38.98325594948281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c97b6b3b5b43%3A0x9c8eb1c5547b83eb!2s4800+Montgomery+Ln+%23300%2C+Bethesda%2C+MD+20814!5e0!3m2!1sen!2sus!4v1554401455946!5m2!1sen!2sus">
-            </iframe>
+            <div class="contactpage">
+                <div class="contactfield">
+                    <section class="contact">
+                        <h3>Temple Inn &amp; Suites<br>Headquarters</h3>
+                        <p>
+                        4800 Montgomery Ln #300<br>
+                        Bethesda, MD 20814
+                        </p>
+
+                        <p>
+                        t: (1) 555-555-5555<br>
+                        f: (1) 555-555-5555
+                        </p>
+                    </section>
+
+                    <iframe class="hqmap" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3101.404837028573!2d-77.09772048416434!3d38.98325594948281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c97b6b3b5b43%3A0x9c8eb1c5547b83eb!2s4800+Montgomery+Ln+%23300%2C+Bethesda%2C+MD+20814!5e0!3m2!1sen!2sus!4v1554401455946!5m2!1sen!2sus">
+                    </iframe>
+                </div>
+
+                <form id="contactform" class="contactform" action="thankyou.html" method="GET">
+                    <fieldset>
+                    <legend>Email Us</legend>
+                        <p>We'd love to hear from you! Please email us with any questions, comments or 
+                            concerns using the form below.
+                        </p>
+                        <p>
+                        <label for="name">Name: </label>
+                        <input name="name" id="name" type="text" placeholder="John Doe" pattern="[A-Za-z\s].{3,}" 
+                                title="Please enter your name. (At least 3 letters)" 
+                                autocomplete="on" required>
+                        </p>
+        
+                        <p>
+                        <label for="email">Email: </label>
+                        <input name="email" id="email" type="email" placeholder="example@email.com" pattern="[A-Za-z0-9_-.]{3,}[@][A-Za-z0-9=_.][.][A-Za-z].{2,}"
+                                title="Please enter a valid email address." autocomplete="on" required>
+                        </p>
+        
+                        <p>
+                        <label for="telephone">Phone Number: <em>(optional)</em></label>
+                        <input name="telephone" id="telephone" type="tel" placeholder="555-555-5555" autocomplete="on" 
+                                pattern="(?:[0-9]{3}[-][0-9]{3}[-][0-9]{4})?" title="Please enter your contact phone number. Accepted format: xxx-xxx-xxxx">
+                        </p>
+        
+                        <p>
+                        <label for="comments">What can we do for you?</label> <em>(250 character maximum)</em>
+                        <textarea name="comments" id="comments" maxlength="250" placeholder="Comments" title="Please enter a brief comments, questions or concerns." required></textarea>
+                        </p>
+
+                        <p>
+                        <input type="submit" value="Send Comments">
+                        </p>
+                    </fieldset>
+                </form>
             </div>
-
-            <form id="contactform" action="thankyou.html" method="GET">
-                <fieldset>
-                <legend>Email Us</legend>
-                    <p>We'd love to hear from you! Please email us with any questions, comments or 
-                        concerns using the form below.
-                    </p>
-                    <p>
-                    <label for="name">Name: </label>
-                    <input name="name" id="name" type="text" placeholder="John Doe" pattern="[A-Za-z\s].{3,}" 
-                            title="Please enter your name. (At least 3 letters)" 
-                            autocomplete="on" required>
-                    </p>
-    
-                    <p>
-                    <label for="email">Email: </label>
-                    <input name="email" id="email" type="email" placeholder="example@email.com" pattern="[A-Za-z0-9_-.]{3,}[@][A-Za-z0-9=_.][.][A-Za-z].{2,}"
-                            title="Please enter a valid email address." autocomplete="on" required>
-                    </p>
-    
-                    <p>
-                    <label for="telephone">Phone Number: <em>(optional)</em></label>
-                    <input name="telephone" id="telephone" type="tel" placeholder="555-555-5555" autocomplete="on" 
-                            pattern="(?:[0-9]{3}[-][0-9]{3}[-][0-9]{4})?" title="Please enter your contact phone number. Accepted format: xxx-xxx-xxxx">
-                    </p>
-    
-                    <p>
-                    <label for="comments">What can we do for you?</label> <em>(250 character maximum)</em>
-                    <textarea name="comments" id="comments" maxlength="250" placeholder="Comments" title="Please enter a brief comments, questions or concerns." required></textarea>
-                    </p>
-
-                    <p>
-                    <input type="submit" value="Send Comments">
-                    </p>
-                </fieldset>
-            </form>
         </main>
 
         <footer id="footloader">

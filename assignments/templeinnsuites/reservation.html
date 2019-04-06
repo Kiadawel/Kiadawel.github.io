@@ -14,7 +14,8 @@
             <link href="https://fonts.googleapis.com/css?family=Cardo:400,400i,700" rel="stylesheet"> 
             <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
             <script src="scripts/pagebuilder.js"></script> 
-            <script src="scripts/currentdate.js"></script>
+            <script src="scripts/currentdate.js"></script> 
+            <script src="scripts/resform.js"></script>
     </head>
     
     <body>
@@ -34,8 +35,188 @@
             </div>            
         </header>
 
-        <main class="nonhome">
-            <h1>Reservations</h1>
+        <main class="respage">
+            <section class="reshero">
+                <h1 class="pageheader">Reservations</h1>
+            </section>
+
+            <form id="resform" action="confirmation.html" method="GET">
+                <fieldset id="resinfo" class="resinfo">
+                    <legend>Book Your Stay</legend>
+                    <p>
+                        <label for="loc">Location: </label>
+                        <select name="loc" id="loc" required>
+                            <option disabled selected value="">Select Location</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="checkin">Check-in: </label>
+                        <input name="checkin" id="checkin" type="date" required>                        
+                    </p>
+                    <p>
+                        <label for="checkout">Check-out: </label>
+                        <input name="checkout" id="checkout" type="date" required>
+                    </p>
+                    <p>
+                        <label for="roomnum"># Rooms:</label>
+                        <select name="roomnum" id="roomnum" required>
+                            <option value="" disabled selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="more">6+</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label>Room Type: </label>
+                        <span class="radioset">
+                                <input type="radio" name="roomtype" id="btn-single" value="single">
+                                    <label for="btn-single">Single </label>
+                                <input type="radio" name="roomtype" id="btn-double" value="double">
+                                    <label for="btn-double">Double </label>
+                                <input type="radio" name="roomtype" id="btn-suite" value="suite">
+                                    <label for="btn-suite">Suite </label>
+                        </span>
+                    </p>
+                    <p>
+                        <input type="button" onclick="showPersonalInfo()" value="Continue">
+                    </p>
+                </fieldset>
+                <p id="error"><!-- keep empty for errors --></p>
+                <fieldset id="personalinfo" class="personalhide">
+                    <legend>Personal Information</legend>
+                    <p>
+                        <label for="firstname">First Name: </label>
+                        <input name="firstname" id="firstname" type="text" placeholder="First" pattern="[A-Za-z\s'-]{2,}"
+                            title="Enter your first name" autocomplete="on" required>
+                    </p>
+                    <p>
+                        <label for="lastname">Last Name: </label>
+                        <input name="lastname" id="lastname" type="text" placeholder="Last" pattern="[A-Za-z\s'-]{2,}"
+                            title="Enter your last name" autocomplete="on" required>
+                    </p>
+                    <p>
+                        <label for="email">Email: </label>
+                        <input name="email" id="email" type="email" placeholder="example@email.com" pattern="[A-Za-z0-9_-.]{3,}[@][A-Za-z0-9=_.][.][A-Za-z].{2,}"
+                                title="Please enter a valid email address." autocomplete="on" required>
+                    </p>
+                    <p>
+                        <label for="telephone">Phone Number: </label>
+                        <input name="telephone" id="telephone" type="tel" placeholder="555-555-5555" autocomplete="on" required
+                                pattern="(?:[0-9]{3}[-][0-9]{3}[-][0-9]{4})?" title="Please enter your contact phone number. Accepted format: xxx-xxx-xxxx">
+                    </p>
+                    <p>
+                        <label for="country">State/Country of Residence: </label>
+                        <input name="country" id="country" type="text" placeholder="USA" pattern="[A-Za-z\s'-]{5,}"
+                            title="Please enter your state or country of residence." autocomplete="on" required>
+                    </p>
+                    <p>
+                        <label for="comments">Special Requests/Accommodations</label> <em>(optional, 250 character maximum)</em>
+                        <textarea name="comments" id="comments" maxlength="250" placeholder="Comments" title="Enter any special needs you or your party may have."></textarea>
+                    </p>
+                    
+                    <p>
+                    <input type="submit" value="Submit Registration">
+                    </p>
+                    
+                </fieldset>
+
+
+
+
+
+            </form>
+            <!--
+            <form id="stormform" action="thanks.html" method="GET">
+                    <fieldset>
+                    <legend>Personal Information</legend>
+                        <p>
+                        <label for="name">Full Name: </label>
+                        <input name="name" id="name" type="text" placeholder="John Doe" pattern="[A-Za-z].{5,}" 
+                            title="Enter your first and last name (minimum 5 letters, no numbers or special characters)." 
+                            autocomplete="on" required>
+                        </p>
+    
+                        <p>
+                        <label for="email">Email: <em>(optional)</em> </label>
+                        <input name="email" id="email" type="email" placeholder="example@ttww.com" autocomplete="on">
+                        </p>
+    
+                        <p>
+                        <label for="telephone">Phone Number:</label>
+                        <input name="telephone" id="telephone" type="tel" placeholder="XXX-XXX-XXXX" autocomplete="on" required>
+                        </p>
+    
+                        <p>
+                        <label for="zipcode">Zip Code:</label>
+                        <input name="zipcode" id="zipcode" type="number" min="83263" autocomplete="on" required>
+                        </p>
+                    </fieldset>
+    
+                    <fieldset>
+                    <legend>Storm Information</legend>
+                        
+                        <p>
+                        <label for="stormdate">Storm Date:</label>
+                        <input name="stormdate" id="stormdate" type="date">
+                        </p>
+    
+                        <p>
+                        <label for="stormtype">Storm Type:</label>
+                        <input name="stormtype" id="stormtype" type="text" placeholder="Select One..." list="stormtypelist">
+                        <datalist id="stormtypelist">
+                            <option value="Flash Flood">
+                            <option value="Hail">
+                            <option value="Hurricane">
+                            <option value="Thunderstorm">
+                            <option value="Tornado">
+                        </datalist>    
+                        </p>
+    
+                        <p>
+                        <label for="severity">Storm Severity (1-10):</label> 
+                        <span class="slidebox">
+                            <input name="severity" id="severity" type="range" value="1" min="1" max="10" 
+                            step="1" oninput="severityLevel(this.value)" onchange="severityLevel(this.value)" class="slider">
+                            <span id="rangevalue">1</span>
+                        </span>
+                        </p>
+    
+                        <p>
+                        <label for="stormregion">Storm Region:</label>
+                        <select name="stormregion" id="stormregion">
+                            <option disabled selected>Select Region...</option>
+                            <option value="preston">Preston</option>
+                            <option value="soda">Soda Springs</option>
+                            <option value="fish">Fish Haven</option>
+                        </select>
+                        </p>
+    
+                        <p>
+                        <label>Are You In Danger? <em>(Select one)</em></label>
+                        <span class="stayh">
+                            <input type="radio" name="dangerlvl" id="dangeryes" value="y">
+                                <label for="dangeryes">Yes </label>
+                            <input type="radio" name="dangerlvl" id="dangermaybe" value="m">
+                                <label for="dangermaybe">Maybe </label>
+                            <input type="radio" name="dangerlvl" id="dangerno" value="n">
+                                <label for="dangerno">No </label>
+                        </span>
+                        </p>
+    
+                        <p>
+                        <label for="comments">Comments <em>(Optional)</em></label>
+                        <textarea name="comments" id="comments" placeholder="Additional Info..."></textarea>
+                        </p>
+    
+                        <p>
+                        <input type="submit" value="Submit Storm Report">
+                        </p>
+                    </fieldset>
+                </form>
+            -->
 
         </main>
 
@@ -44,7 +225,7 @@
         </footer>
     
         <script>
-            loadNav(); currentDate(); loadFoot();
+            loadNav(); currentDate(); locOptions(); loadFoot();
         </script>
     </body>
 </html>
