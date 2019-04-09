@@ -317,6 +317,19 @@ figcaption{
     padding: .25rem;
 }
 
+/* SERVICES SUPAGES */
+.serv_subpage{
+    margin: 0 auto;
+    width: 98%;
+    text-align: left;
+}
+.serv_subpage img{
+    float:right;
+    border-radius: .3rem;
+    padding: 1rem;
+    max-width: 100%;
+}
+
 /* AMENITIES SUBPAGE */
 .amenitybox {
     width: 100%;
@@ -597,6 +610,9 @@ input[type=radio]:active, input[type=radio]:focus{
 .thanks {
     background-color: #ffffff;
     border-radius: .5rem;
+    width: 98%;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 /* ATTRIBUTION */

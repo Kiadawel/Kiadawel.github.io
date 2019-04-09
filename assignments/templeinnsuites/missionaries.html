@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Amenities | The Temple Inn &amp; Suites</title>
+            <meta name="description" content="Detailed information for amenities available at Temple Inn and Suites locations.">
+            <meta name="author" content="Kimi Weldon">
+            <link rel="stylesheet" href="css/normalize.css">
+            <link rel="stylesheet" href="css/small.css">
+            <link rel="stylesheet" href="css/medium.css">
+            <link rel="stylesheet" href="css/large.css">
+            <link href="https://fonts.googleapis.com/css?family=Cardo:400,400i,700" rel="stylesheet"> 
+            <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
+            <script src="scripts/pagebuilder.js"></script> 
+            <script src="scripts/currentdate.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="row1">
+                <div class="sitelogo">
+                    <a href="index.html"><img src="images/sitelogo.png" alt="The Temple Inn and Suites logo"></a>
+                </div>
+            
+                <nav id="navloader">
+                    <!-- Content loaded by Javascript -->
+                </nav>
+            </div>
+
+            <div class="row2">
+                <div class="subhead"> 
+                    <ul>
+                        <li><a href="amenities.html">Amenities</a></li>
+                        <li><a href="missionaries.html">Temple Missionaries</a></li>
+                        <li><a href="receptions.html">Receptions</a></li>
+                    </ul>    
+                </div>
+            </div>               
+        </header>
+
+        <main class="nonhome">
+            <h1>Temple Missionaries</h1>
+            <div class="serv_subpage">
+                <p>Serving as full-time temple missionaries? We are happy to have you! We gladly offer long-term
+                    accommodations in kitchenette suites at a discounted rate.
+                </p>
+                <img src="images/seniorcouple.jpg" alt="Senior Couple attending the temple">
+                <p>
+                    Our suites include all of the regular hotel amenities and comforts, such as free wi-fi for connecting
+                    with family at home, free breakfast daily, fitness center, indoor pool, and <a href="amenities.html">more.</a>
+                </p>
+                <h2>Kitchenette</h2>
+                <p>Save time and money by preparing and storing your food right in your room! The kitchenette in each suite offers 
+                    a basic lineup of kitchenware and appliances, including:
+                    <ul>
+                        <li>Four place-settings of dishes (bowls, plates, glasses, mugs)</li>
+                        <li>Four place-settings of silverware</li>
+                        <li>Spatula, serving spoons, kitchen knives</li>
+                        <li>Saucepan, frying pan, and large cooking pot</li>
+                        <li>Baking sheet</li>
+                        <li>Toaster and microwave</li>
+                        <li>Refrigerator and freezer</li>
+                        <li>Stovetop and oven</li>
+                        <li>Small dining area</li>
+                    </ul>
+                </p>
+                <h2>Laundry Services</h2>
+                <p>
+                    All hotel-owned towels and bed linens for long-term suites are laundered every third day (more often on request).
+                    We offer dry-cleaning services for a small fee. For all other personal laundry, you will receive a keycard for our on-site
+                    laundry room. <em>Laundry detergent not provided; however, a vending machine is available in the laundry room.</em>
+                </p>
+                <form id="missionform" class="contactform" action="thanks.html" method="GET">
+                    <fieldset>
+                    <legend>Email Us</legend>
+                        <p>
+                            For more information about suites and pricing for temple missionaries, please fill out the form below.
+                        </p>
+                        <p>
+                        <label for="name">Name: </label>
+                        <input name="name" id="name" type="text" placeholder="John Doe" pattern="[A-Za-z\s].{3,}" 
+                                title="Please enter your name. (At least 3 letters)" 
+                                autocomplete="on" required>
+                        </p>
+        
+                        <p>
+                        <label for="email">Email: </label>
+                        <input name="email" id="email" type="email" placeholder="example@email.com" pattern="[A-Za-z0-9_-.]{3,}[@][A-Za-z0-9=_.][.][A-Za-z].{2,}"
+                                title="Please enter a valid email address." autocomplete="on" required>
+                        </p>
+        
+                        <p>
+                        <label for="telephone">Phone Number: <em>(optional)</em></label>
+                        <input name="telephone" id="telephone" type="tel" placeholder="555-555-5555" autocomplete="on" 
+                                pattern="(?:[0-9]{3}[-][0-9]{3}[-][0-9]{4})?" title="Please enter your contact phone number. Accepted format: xxx-xxx-xxxx">
+                        </p>
+        
+                        <p>
+                        <label for="comments">Any Specific Questions?</label> <em>(250 character maximum)</em>
+                        <textarea name="comments" id="comments" maxlength="250" placeholder="Questions" title="Give a brief description of your question or concern." required></textarea>
+                        </p>
+
+                        <p>
+                        <input type="submit" value="Send Request">
+                        </p>
+                    </fieldset>
+                </form>
+            </div>
+            
+            <p>
+                <a href="services.html">Return to Services</a>
+            </p>
+
+        </main>
+
+        <footer id="footloader">
+            <!-- Generated dynamically with Javascript -->
+        </footer>
+    
+        <script>
+            loadNav(); loadFoot();
+        </script>
+    </body>
+</html>
