@@ -40,25 +40,16 @@
             <section class="templehero">
                 <h1 class="pageheader">Temples</h1>
             </section>
-            <a onclick="templeNavToggle()" class="templenavtoggle">
-                <img id="templenavicon" src="images/navicon_temple2.png" alt="Click to Hide or Show Temple List">
-            </a>
-            <div class="navposition">
-                <div id="templelist" class="templenav">
-                    <!-- Content loaded by Javascript and JSON -->
-                </div>
-            </div>
 
             <div id="templeintro">
-                <p class="templeintro">Click the temple icon above to select from the list of participating temples.
+                <p class="templeintro">We serve many temples around the world. For more information about each temple, click
+                    a thumbnail below.
                 </p>
             </div>
 
-            <div id="templeclicked" class="templecard">
-                <!-- Content loaded by Javascript and JSON -->
+            <div id="templethumbs" class="templethumbs">
+                <!-- Content loaded by Javascript/JSON -->
             </div>
-
-
         </main>
 
         <footer id="footloader">
@@ -66,7 +57,7 @@
         </footer>
     
         <script>
-            loadNav(); currentDate(); templeNav(); loadFoot();
+            loadNav(); currentDate(); templeThumbs(); loadFoot();
         </script>
     </body>
 </html>

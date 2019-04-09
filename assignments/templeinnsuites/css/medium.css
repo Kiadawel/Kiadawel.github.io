@@ -91,16 +91,17 @@ nav ul{
     grid-area: photo;
 }
 .templecard .location{
-    display:flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: .5rem;
     grid-area: map;
 }
 .location div{
-    width: 50%;
+    width: 100%;
 }
 .templemap{
     height: 100%;
+    width: 100%;
     align-self: flex-end;
 }
 .weather{
@@ -136,16 +137,33 @@ nav ul{
 }
 
 /* AMENITIES STYLES */
-.amenities_head{
-    font-size:1.5rem;
+.specialservbox{
+    display: flex;
+    flex-flow: row wrap;
 }
-.amenities_item img{
-    object-fit:cover;
-    overflow-y:hidden;
-    height:19%;
-    width:100%;
-    opacity: .5;
-    border-radius: .3rem;
+.spec_services{
+    display: flex;
+    flex-flow: row wrap;
+}
+.spec_services h2{
+    width: 100%;
+}
+.spec_services img{
+    width: 48%;
+}
+.spec_services p{
+    width: 48%;
+    margin: 0;
+    padding: 0 .5rem 0 .5rem;
+}
+.amenities{
+    width: 100%;
+    margin: 0 auto;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.amenities_item{
+    width: 48%;
 }
 .amenitybox{
     margin: 0 auto;

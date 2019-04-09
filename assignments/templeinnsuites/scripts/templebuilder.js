@@ -9,6 +9,52 @@ function templeNavToggle(){
     }
 }
 
+function templeThumbs(){
+    var templeThumbDiv = document.querySelector('#templethumbs');
+    var templeURL = 'https://kiadawel.github.io/assignments/templeinnsuites/scripts/temples.json';
+    var allTemples = new XMLHttpRequest();
+
+    allTemples.open('GET',templeURL);
+    allTemples.responseType = 'json';
+    allTemples.send();
+    allTemples.onload = function(){
+        var templeData = allTemples.response;
+        showThumbs(templeData);
+    }
+
+    function showThumbs(templeData){
+        var temples = templeData['temples'];
+
+        for (var i=0; i < temples.length; i++){
+            var thumbFig = document.createElement('figure');
+            var templeLink = document.createElement('a');
+            var templeThumb = document.createElement('img');
+            var templeCap = document.createElement('figcaption');
+            
+            templeLink.setAttribute('href','templedisplay.html?tag='+temples[i].tag);
+            
+            templeCap.textContent = temples[i].name;
+
+                var thumbSrc = 'images/temples/'+temples[i].tag+'_thumb.jpg';
+            templeThumb.setAttribute('src',thumbSrc);
+            templeThumb.setAttribute('alt',temples[i].name);
+
+            templeLink.appendChild(templeThumb);
+            templeLink.appendChild(templeCap);
+            
+            thumbFig.appendChild(templeLink);
+
+            templeThumbDiv.appendChild(thumbFig);
+        }
+    }
+}
+
+function loadFirstTemple(){
+    var urlPiece = window.location.search.substring(1);
+    var templeTag = urlPiece.slice(4,100);
+    showTempleInfo(templeTag);
+}
+
 function templeNav(){
     var templeListDiv = document.querySelector('#templelist');
     var templeURL = 'https://kiadawel.github.io/assignments/templeinnsuites/scripts/temples.json';
@@ -42,8 +88,8 @@ function templeNav(){
 }
 
 function showTempleInfo(templetag){
-    document.getElementById('templeintro').style.display = 'none';
-    document.getElementById('templenavicon').setAttribute('src','images/navicon_temple3.png');
+    //document.getElementById('templeintro').style.display = 'none';
+    //document.getElementById('templenavicon').setAttribute('src','images/navicon_temple3.png');
     document.getElementById('templelist').className = 'templenav';
     var templeInfoDiv = document.querySelector('#templeclicked');
         templeInfoDiv.innerHTML = '';

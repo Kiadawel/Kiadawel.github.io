@@ -4,8 +4,8 @@
     <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Thank You | The Temple Inn &amp; Suites</title>
-            <meta name="description" content="Thank you page, intended to be displayed after filling out Contact form for Temple Inn and Suites.">
+            <title>Reservation Confirmation | The Temple Inn &amp; Suites</title>
+            <meta name="description" content="Reservation form confirmation page for Temple Inn and Suites.">
             <meta name="author" content="Kimi Weldon">
             <link rel="stylesheet" href="css/normalize.css">
             <link rel="stylesheet" href="css/small.css">
@@ -15,7 +15,7 @@
             <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
             <script src="scripts/pagebuilder.js"></script> 
             <script src="scripts/currentdate.js"></script>
-            <script src="scripts/contactform.js"></script>
+            <script src="scripts/resform.js"></script>
     </head>
     
     <body>
@@ -36,18 +36,18 @@
         </header>
 
         <main class="nonhome">
-            <h1>Thank You</h1>
+            <h1>Confirmation</h1>
 
-            <p id="contactsummary" class="thanks">
+            <div id="ressummary" class="confirmation">
                 <!-- Loaded by JavaScript-->
-            </p>
+            </div>
 
             <p>
-                Please be aware that this Contact form goes nowhere and does not submit your commentary to any hotel,
+                Please be aware that this reservation form goes nowhere and does not confirm an actual reservation to any hotel,
                 as this website represents a fictional company. However, thank you for taking the time to fill out the form and
                 test the website's functionality. Your participation is appreciated!
             </p>
-            <a href="contact.html">Return to Contact Page</a>
+            <a href="reservation.html">Return to Reservation Page</a>
         </main>
 
         <footer id="footloader">
@@ -55,7 +55,7 @@
         </footer>
     
         <script>
-            loadNav(); currentDate(); loadFoot(); contactForm();
+            loadNav(); currentDate(); loadFoot(); resConfirm();
         </script>
     </body>
 </html>

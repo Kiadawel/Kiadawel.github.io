@@ -23,8 +23,6 @@ a, a:visited{
 }
 a:hover, a:active, a:focus{
     color:#594d41;
-    font-weight:700;
-    transition: .3s
 }
 
 /* HOMEPAGE HEADER/NAVIGATION STYLES */
@@ -123,7 +121,27 @@ nav a:active, nav a:focus{
     width:100%;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: right;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+.subhead ul{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 0 0 auto;
+    list-style-type: none;
+    font-size: 1rem;
+    align-items: flex-end;
+}
+.subhead a, .subhead a:visited{
+    color: #f7f6ee;
+    display: block;
+    margin: 0 .5rem 0 .5rem;
+    text-decoration: none;
+}
+.subhead a:hover, .subhead a:focus, .subhead a:active{
+    color: #c4bdbc;
+    text-decoration: underline;
 }
 
 /*HERO IMAGE STYLES */
@@ -217,6 +235,9 @@ main {
     padding:0 0 .5rem 0;
     text-align: center;
 }
+.nonhome{
+    padding-top: 1rem;
+}
 .featured {
     display:flex;
     flex-flow: column nowrap;
@@ -248,7 +269,30 @@ main {
     border-radius: .5rem .5rem 0 0;
 }
 
-/* AMENITIES STYLES */
+/* SERVICES/AMENITIES STYLES */
+.serv_head {
+    background-color: #c4bdbc;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f7f6ee;
+    line-height: 150%;
+    text-shadow: 2px 2px 2px rgba(51,51,51,.5); 
+}
+.specialservbox{
+    width: 98%;
+    margin: 0 auto;
+}
+.spec_services {
+    margin: 1rem auto 0 auto;
+    text-align: left;
+    padding: .5rem;
+    border: 1px solid #594d41;
+    border-radius: .3rem;
+}
+.spec_services img{
+    border-radius: .3rem;
+    max-width: 100%;
+}
 .amenities {
     display:flex;
     flex-flow: column nowrap;
@@ -257,29 +301,20 @@ main {
     padding: 0;
 }
 .amenities_item {
-    position: relative;
     margin: 0 0 1rem 0;
     border-radius: .3rem;
-    line-height: 0;
     box-shadow: 3px 3px 3px rgba(51,51,51,.5);
-}
-.amenities_head {
-    position: absolute;
-    color: #f7f6ee;
-    z-index: 3;
-    bottom: 1.5rem;
-    left: 1rem;
-    text-shadow:2px 2px 2px rgba(51,51,51,.5);
 }
 .amenities_item img{
     object-fit:cover;
     overflow-y:hidden;
-    height: 200px;
+    max-height: 10rem;
     width:100%;
     border-radius: .3rem;
 }
-.amenities_item a{
-    display:block;
+figcaption{
+    font-weight: 700;
+    padding: .25rem;
 }
 
 /* AMENITIES SUBPAGE */
@@ -319,9 +354,25 @@ main {
 /* TEMPLE STYLES */
 .templeintro{
     display:block;
-    max-width: 800px;
+    max-width: 600px;
     width: 95%;
     margin: 0 auto;
+}
+.templethumbs{
+    width: 100%;
+    margin: 0 auto;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.templethumbs figure{
+    margin: 0;
+    padding: .5rem;
+    width: 150px;
+}
+.templethumbs figure img{
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px rgba(51,51,51,.5);
 }
 .templenavtoggle{
     display:block;
@@ -388,7 +439,8 @@ main {
 .templecard section:first-child img{
     align-self: center;
     border-radius: .5rem;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
 }
 .templecard section:nth-child(2) img, .templecard section:nth-child(4) img{
     vertical-align:middle;   
@@ -404,7 +456,8 @@ main {
     align-self:center;
 }
 .templemap{
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 250px;
     border: 0;
     align-self: center;

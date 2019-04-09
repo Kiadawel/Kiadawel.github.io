@@ -4,8 +4,9 @@
     <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Thank You | The Temple Inn &amp; Suites</title>
-            <meta name="description" content="Thank you page, intended to be displayed after filling out Contact form for Temple Inn and Suites.">
+            <title>Temples | The Temple Inn &amp; Suites</title>
+            <meta name="description" content="Display page for The Church of Jesus Christ of Latter-Day Saints temples with
+            Temple Inn and Suites locations nearby, including temple information and services.">
             <meta name="author" content="Kimi Weldon">
             <link rel="stylesheet" href="css/normalize.css">
             <link rel="stylesheet" href="css/small.css">
@@ -14,15 +15,15 @@
             <link href="https://fonts.googleapis.com/css?family=Cardo:400,400i,700" rel="stylesheet"> 
             <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
             <script src="scripts/pagebuilder.js"></script> 
+            <script src="scripts/templebuilder.js"></script> 
             <script src="scripts/currentdate.js"></script>
-            <script src="scripts/contactform.js"></script>
     </head>
     
     <body>
         <header>
             <div class="row1">
                 <div class="sitelogo">
-                    <a href="index.html"><img src="images/sitelogo.png" alt="The Temple Inn and Suites logo"></a>
+                    <a href="index.html"><img src="images/sitelogo.png" alt="Temple Inn and Suites - Home"></a>
                 </div>
             
                 <nav id="navloader">
@@ -36,18 +37,21 @@
         </header>
 
         <main class="nonhome">
-            <h1>Thank You</h1>
 
-            <p id="contactsummary" class="thanks">
-                <!-- Loaded by JavaScript-->
-            </p>
+            <a onclick="templeNavToggle()" class="templenavtoggle">
+                <img id="templenavicon" src="images/navicon_temple2.png" alt="Click to Hide or Show Temple List">
+            </a>
+            <div class="navposition">
+                <div id="templelist" class="templenav">
+                    <!-- Content loaded by Javascript and JSON -->
+                </div>
+            </div>
 
-            <p>
-                Please be aware that this Contact form goes nowhere and does not submit your commentary to any hotel,
-                as this website represents a fictional company. However, thank you for taking the time to fill out the form and
-                test the website's functionality. Your participation is appreciated!
-            </p>
-            <a href="contact.html">Return to Contact Page</a>
+            <div id="templeclicked" class="templecard">
+                <!-- Content loaded by Javascript and JSON -->
+            </div>
+
+
         </main>
 
         <footer id="footloader">
@@ -55,7 +59,7 @@
         </footer>
     
         <script>
-            loadNav(); currentDate(); loadFoot(); contactForm();
+            loadNav(); currentDate(); templeNav(); loadFirstTemple(); loadFoot();
         </script>
     </body>
 </html>
