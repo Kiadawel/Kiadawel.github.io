@@ -41,7 +41,7 @@ nav ul{
     flex-flow: row nowrap;
     margin: 0 0 0 auto;
     list-style-type: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     align-items: flex-end;
 }
 .subnav_hide .currentsubpage, .subnav_hide .currentsubpage:visited,
