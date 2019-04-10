@@ -327,17 +327,27 @@ main {
 .homeboxes{
     display:flex;
     flex-flow: row wrap;
-    width: 98%;
+    width: 100%;
     margin: 0 auto;
+    padding: .5rem 0 .5rem 0;
     justify-content: space-evenly;
+    background-color: #9d8984;
 }
 .homebox{
     box-sizing: border-box;
     position: relative;
     width: 45%;
-    margin: .5rem;
+    margin: .2rem;
     border-radius: .3rem;
     box-shadow: 2px 2px 2px rgba(51,51,51,.5);
+}
+.homebox a, .homebox a:visited{
+    color: #594d41;
+}
+.homebox:focus, .homebox:hover, .homebox:active{
+    transform: translateY(-2px) translateX(-2px);
+    box-shadow: 4px 4px 4px rgba(51,51,51,.5);
+    color: #f7f6ee;
 }
 .homebox img{
     object-fit: cover;
