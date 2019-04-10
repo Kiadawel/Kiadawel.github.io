@@ -56,8 +56,9 @@ nav ul{
     background: url('../images/hero_1024.jpg') no-repeat center;
 }
 .calltoaction{
-    bottom: 1rem;
-    right: 1rem;
+    height: 340px;
+    bottom: 20px;
+    right: 0;
     font-size: 2rem;
 }
 .reshero{
@@ -90,7 +91,15 @@ nav ul{
 .amenities{
     margin-top: 1rem;
 }
-
+.featured{
+    height: 450px;
+}
+.featured img{
+    height: 450px;
+}
+.featured_blurb{
+    width:50%;
+}
 /* TEMPLE STYLES */
 .templecard {
     display: grid;

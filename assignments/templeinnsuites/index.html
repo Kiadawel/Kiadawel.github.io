@@ -20,50 +20,55 @@
     
     <body>
         <header>
-            <div class="row1">
-                <div class="sitelogo">
-                    <a href="index.html"><img src="images/sitelogo.png" alt="The Temple Inn and Suites logo"></a>
-                </div>
-            
-                <nav id="navloader">
-                    <!-- Content loaded by Javascript -->
-                </nav>
-            </div>
-
-            <div class="row2">
-                <div id="currentdate" class="subhead"> <!-- Javascript-loaded Date --> </div>
-            </div> 
-
+            &nbsp;
         </header>
         <main class="homepage">
             
             <section class="hero">
                 <div class="calltoaction">
-                    <p>Find peace here.<br>555-555-5555</p>
+                    <img src="images/sitelogo.png">
+                    <h2>Find peace here.</h2>
+                    <p>Call today!<br>
+                        555-555-5555</p>
                 </div>
             </section>
 
-
-            <!--
-
-            <div class="featuredbox">
-        
-            <article class="featured">
-                <h2 class="featured_head">Boise, ID Temple</h2>
-                <img src="images/featured.jpg" alt="Boise Idaho Temple">
-                <p class="featured_blurb">
-                        This week's featured temple is lorem ipsum bubblegum
-                        friendly wooper pikachu gloom. Babble gabble psyduck
-                        ekans arbox team rocket pantyhose. Lorem ipsum bubblegum
-                        friendly wooper pikachu gloom. Babble gabble psyduck
-                        ekans arbox team rocket pantyhose. Lorem ipsum bubblegum
-                        friendly wooper pikachu gloom. Babble gabble psyduck
-                        ekans arbox team rocket pantyhose.
-                </p>
-            </article>
+            <div class="homeboxes">
+                <figure class="homebox">
+                    <a href="temples.html">
+                    <img src="images/visit.jpg" alt="Visit the Temple"></a>
+                    <figcaption><span class="home_callout">Visit</span> the temple</figcaption>
+                </figure>
+                <figure class="homebox">
+                    <a href="reservation.html">
+                    <img src="images/reserve.jpg" alt="Book Your Stay With Us"></a>
+                    <figcaption><span class="home_callout">Reserve</span> your stay</figcaption>
+                </figure>
+                <figure class="homebox">
+                    <a href="services.html">
+                    <img src="images/enjoy.jpg" alt="Enjoy our amenities"></a>
+                    <figcaption><span class="home_callout">Enjoy</span> specialized services</figcaption>
+                </figure>
+                <figure class="homebox">
+                    <a href="contact.html">
+                    <img src="images/askus.jpg" alt="Ask Us"></a>
+                    <figcaption><span class="home_callout">Ask Us</span> to learn more</figcaption>
+                </figure>
             </div>
-        -->
 
+            <article class="featured">
+                <h2 class="featured_head">Featured Temple</h2>
+                <div class="featured_blurb">
+                    <h3>Boise, Idaho Temple</h3>
+                    <p> Dedicated: 25 May 1984 </p>
+                    <p>One of our pilot locations, the temple in Boise Idaho is small but 
+                    beautiful. Its iconic spires rise above the surrounding treeline like
+                    a beacon of light. The nearby Temple Inn serves patrons of this temple
+                    and many others. For more information about our temples, view our 
+                    <a href="temples.html">Temples Page</a>
+                </div>
+                <img class="featured_img" src="images/featured.jpg" alt="Boise, Idaho Temple">
+            </article>
 
 
         </main>
@@ -73,7 +78,7 @@
         </footer>
     
         <script>
-            loadNav(); currentDate(); loadFoot();
+            loadFoot();
         </script>
     </body>
 </html>

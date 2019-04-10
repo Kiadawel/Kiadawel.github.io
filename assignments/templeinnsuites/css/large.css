@@ -27,7 +27,9 @@ nav a{
 }
 .homepage{
     max-width:1200px;
-
+}
+.homebox{
+    width: 23%;
 }
 .nonhome{
     max-width: 1200px;
@@ -37,7 +39,8 @@ nav a{
     flex-flow: row nowrap;
 }
 .featured {
-    width: 48%;
+    height: 400px;
+    width: 550px;
 }
 .amenities{
     width: 95%;
