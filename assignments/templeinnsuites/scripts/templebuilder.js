@@ -123,7 +123,8 @@ function showTempleInfo(templetag){
             var templePhone = document.createElement('p');
             var templeMap = document.createElement('iframe');
                 templeMap.setAttribute('src',thisTemple.map);
-                templeMap.setAttribute('class','templemap');
+                templeMap.setAttribute('class','templemap')
+                templeMap.setAttribute('title','Map showing '+thisTemple.name);
 
         var templeWeather = document.createElement('section');
             templeWeather.setAttribute('id','weatherbox');
