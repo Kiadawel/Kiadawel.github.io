@@ -754,6 +754,12 @@ footer img{
     flex-flow: column nowrap;
     padding: .5rem;
 }
+.footerlinks a, .footerlinks a:visited{
+    color: #594d41;
+}
+.footerlinks a:hover, .footerlinks a:active, .footerlinks a:focus{
+    color: #9d8984;
+}
 .social {
     display: flex;
     flex-flow: row nowrap;
