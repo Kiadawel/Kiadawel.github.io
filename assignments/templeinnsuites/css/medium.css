@@ -203,15 +203,12 @@ nav ul{
 }
 .servsub_intro{
     width: 98%;
-    display:flex;
-    flex-flow: column wrap;
-}
-.servsub_intro p{
-    width: 49%;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: .5rem;
+    justify-items: center;
 }
 .servsub_intro img{
-    width: 49%;
-    break-before: always;
     align-self: center;
 }
 
