@@ -67,6 +67,13 @@ nav a{
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: .5rem;
 }
+.servsub_intro{
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.serv_subpage .amenitycard {
+    width: 47%;
+}
 
 /* TEMPLE STYLES */
 .templecard {

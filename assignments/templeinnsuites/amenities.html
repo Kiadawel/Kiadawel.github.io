@@ -15,6 +15,7 @@
             <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
             <script src="scripts/pagebuilder.js"></script> 
             <script src="scripts/currentdate.js"></script>
+            <script src="scripts/subnav.js"></script>
     </head>
     
     <body>
@@ -30,12 +31,13 @@
             </div>
 
             <div class="row2">
-                <div class="subhead"> 
-                    <ul>
-                        <li><a href="amenities.html">Amenities</a></li>
-                        <li><a href="missionaries.html">Temple Missionaries</a></li>
-                        <li><a href="receptions.html">Receptions</a></li>
-                    </ul>    
+                <div class="subhead">
+                    <div class="menubutton">
+                        <a onclick="toggleSubNav()"><img src="images/menu.png" alt="Menu"></a>
+                    </div>
+                    <ul id="subnavigation" class="subnav_hide">
+                        <!-- JS loaded content -->
+                    </ul>
                 </div>
             </div>               
         </header>
@@ -119,7 +121,7 @@
         </footer>
     
         <script>
-            loadNav(); loadFoot();
+            loadNav(); loadSubNav(); loadFoot(); 
         </script>
     </body>
 </html>

@@ -33,6 +33,22 @@ nav ul{
     color: #9d8984;
     text-shadow: none;
 }
+.menubutton {
+    display: none;
+}
+.subnav_hide, .subnav_show{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 0 0 auto;
+    list-style-type: none;
+    font-size: 1rem;
+    align-items: flex-end;
+}
+.subnav_hide .currentsubpage, .subnav_hide .currentsubpage:visited,
+.subnav_show .currentsubpage, .subnav_show .currentsubpage:visited{
+    font-weight: bold;
+    color: #594d41;
+}
 
 /*HERO IMAGE STYLES */
 .hero{
@@ -171,6 +187,23 @@ nav ul{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: .5rem;
+}
+/* SERVICES SUBPAGES */
+.serv_subpage{
+    flex-flow: row wrap;
+}
+.servsub_intro{
+    width: 98%;
+    display:flex;
+    flex-flow: column wrap;
+}
+.servsub_intro p{
+    width: 49%;
+}
+.servsub_intro img{
+    width: 49%;
+    break-before: always;
+    align-self: center;
 }
 
 /*CONTACT US STYLES */

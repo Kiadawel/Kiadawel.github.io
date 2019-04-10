@@ -115,7 +115,8 @@ nav a:active, nav a:focus{
     flex-flow: row nowrap;
     justify-content: flex-end;
     background-color: #9d8984;
-    padding: .5rem;
+    height: 2rem;
+    padding: 0 .5rem 0 0;
 }
 .subhead{
     width:100%;
@@ -123,15 +124,10 @@ nav a:active, nav a:focus{
     margin: 0 auto;
     display: flex;
     flex-flow: row nowrap;
+    align-items: center;
     justify-content: flex-end;
-}
-.subhead ul{
-    display: flex;
-    flex-flow: row nowrap;
-    margin: 0 0 0 auto;
-    list-style-type: none;
-    font-size: 1rem;
-    align-items: flex-end;
+    height: 2rem;
+    position: relative;
 }
 .subhead a, .subhead a:visited{
     color: #f7f6ee;
@@ -142,6 +138,40 @@ nav a:active, nav a:focus{
 .subhead a:hover, .subhead a:focus, .subhead a:active{
     color: #c4bdbc;
     text-decoration: underline;
+}
+.subhead .menubutton{
+    margin: 0 0 0 auto;
+}
+.subnav_hide{
+    display:none;
+}
+.subnav_show{
+    z-index: 9;
+    position: absolute;
+    top: 2rem;
+    right: 0.5rem; 
+    list-style-type: none;
+    margin: 0;
+    line-height: 1.5rem;
+    padding: 0;
+    text-align: center;
+}
+.subnav_show a, .subnav_show a:visited{
+    display: block;
+    width: 100%;
+    background-color: #9d8984;
+    margin: 0;
+    padding: .5rem;
+    text-decoration: none;
+}
+.subnav_show a:hover, .subnav_show a:focus, .subnav_show a:active{
+    background-color: #c4bdbc;
+    color: #594d41;
+    text-decoration: none;
+}
+.subnav_show .currentsubpage, .subnav_show .currentsubpage:visited{
+    font-weight: bold;
+    background-color: #c4bdbc;
 }
 
 /*HERO IMAGE STYLES */
@@ -317,17 +347,22 @@ figcaption{
     padding: .25rem;
 }
 
-/* SERVICES SUPAGES */
+/* SERVICES SUBPAGES */
 .serv_subpage{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
     margin: 0 auto;
     width: 98%;
     text-align: left;
 }
 .serv_subpage img{
-    float:right;
     border-radius: .3rem;
-    padding: 1rem;
     max-width: 100%;
+    align-self: center;
+}
+.serv_subpage .amenitycard h3{
+    font-family: "Petit Formal Script", cursive;
 }
 
 /* AMENITIES SUBPAGE */

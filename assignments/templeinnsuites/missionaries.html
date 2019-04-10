@@ -15,6 +15,7 @@
             <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
             <script src="scripts/pagebuilder.js"></script> 
             <script src="scripts/currentdate.js"></script>
+            <script src="scripts/subnav.js"></script>
     </head>
     
     <body>
@@ -30,51 +31,57 @@
             </div>
 
             <div class="row2">
-                <div class="subhead"> 
-                    <ul>
-                        <li><a href="amenities.html">Amenities</a></li>
-                        <li><a href="missionaries.html">Temple Missionaries</a></li>
-                        <li><a href="receptions.html">Receptions</a></li>
-                    </ul>    
+                <div class="subhead">
+                    <div class="menubutton">
+                        <a onclick="toggleSubNav()"><img src="images/menu.png" alt="Menu"></a>
+                    </div>
+                    <ul id="subnavigation" class="subnav_hide">
+                        <!-- JS loaded content -->
+                    </ul>
                 </div>
-            </div>               
+            </div>                 
         </header>
 
         <main class="nonhome">
             <h1>Temple Missionaries</h1>
             <div class="serv_subpage">
-                <p>Serving as full-time temple missionaries? We are happy to have you! We gladly offer long-term
-                    accommodations in kitchenette suites at a discounted rate.
-                </p>
-                <img src="images/seniorcouple.jpg" alt="Senior Couple attending the temple">
-                <p>
-                    Our suites include all of the regular hotel amenities and comforts, such as free wi-fi for connecting
-                    with family at home, free breakfast daily, fitness center, indoor pool, and <a href="amenities.html">more.</a>
-                </p>
-                <h2>Kitchenette</h2>
-                <p>Save time and money by preparing and storing your food right in your room! The kitchenette in each suite offers 
-                    a basic lineup of kitchenware and appliances, including:
-                    <ul>
-                        <li>Four place-settings of dishes (bowls, plates, glasses, mugs)</li>
-                        <li>Four place-settings of silverware</li>
-                        <li>Spatula, serving spoons, kitchen knives</li>
-                        <li>Saucepan, frying pan, and large cooking pot</li>
-                        <li>Baking sheet</li>
-                        <li>Toaster and microwave</li>
-                        <li>Refrigerator and freezer</li>
-                        <li>Stovetop and oven</li>
-                        <li>Small dining area</li>
-                    </ul>
-                </p>
-                <h2>Laundry Services</h2>
-                <p>
-                    All hotel-owned towels and bed linens for long-term suites are laundered every third day (more often on request).
-                    We offer dry-cleaning services for a small fee. For all other personal laundry, you will receive a keycard for our on-site
-                    laundry room. <em>Laundry detergent not provided; however, a vending machine is available in the laundry room.</em>
-                </p>
-                <form id="missionform" class="contactform" action="thanks.html" method="GET">
+                <div class="servsub_intro">
+                    <p>Serving as full-time temple missionaries? We are happy to have you! We gladly offer long-term
+                        accommodations in kitchenette suites at a discounted rate.
+                    </p>
+                    <p>
+                        Our suites include all of the regular hotel amenities and comforts, such as free wi-fi for connecting
+                        with family at home, free breakfast daily, fitness center, indoor pool, and <a href="amenities.html">more.</a>
+                    </p>
+                    <img src="images/seniorcouple.jpg" alt="Senior Couple attending the temple">
+                </div>
+                <section class="amenitycard">
+                    <h3>Kitchenette</h3>
+                    <p>Save time and money by preparing and storing your food right in your room! The kitchenette in each suite offers 
+                        a basic lineup of kitchenware and appliances, including:
+                        <ul>
+                            <li>Four place-settings of dishes (bowls, plates, glasses, mugs)</li>
+                            <li>Four place-settings of silverware</li>
+                            <li>Spatula, serving spoons, kitchen knives</li>
+                            <li>Basic pots, pans and baking items</li>
+                            <li>Toaster and microwave</li>
+                            <li>Refrigerator and freezer</li>
+                            <li>Stovetop and oven</li>
+                            <li>Small dining area</li>
+                        </ul>
+                    </p>
+                </section>
+                <section class="amenitycard">
+                    <h3>Laundry Services</h3>
+                    <p>
+                        All hotel-owned towels and bed linens for long-term suites are laundered every third day (more often on request).
+                        We offer dry-cleaning services for a small fee. For all other personal laundry, you will receive a keycard for our on-site
+                        laundry room. <em>Laundry detergent not provided; however, a vending machine is available in the laundry room.</em>
+                    </p>
+                </section>
+                <form id="missionform" class="missform" action="thanks.html" method="GET">
                     <fieldset>
-                    <legend>Email Us</legend>
+                    <legend>Request Info</legend>
                         <p>
                             For more information about suites and pricing for temple missionaries, please fill out the form below.
                         </p>
@@ -120,7 +127,7 @@
         </footer>
     
         <script>
-            loadNav(); loadFoot();
+            loadNav(); loadSubNav(); loadFoot();
         </script>
     </body>
 </html>

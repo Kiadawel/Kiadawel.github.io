@@ -15,6 +15,7 @@
             <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
             <script src="scripts/pagebuilder.js"></script> 
             <script src="scripts/currentdate.js"></script>
+            <script src="scripts/subnav.js"></script>
     </head>
     
     <body>
@@ -30,72 +31,86 @@
             </div>
 
             <div class="row2">
-                <div class="subhead"> 
-                    <ul>
-                        <li><a href="amenities.html">Amenities</a></li>
-                        <li><a href="missionaries.html">Temple Missionaries</a></li>
-                        <li><a href="receptions.html">Receptions</a></li>
-                    </ul>    
+                <div class="subhead">
+                    <div class="menubutton">
+                        <a onclick="toggleSubNav()"><img src="images/menu.png" alt="Menu"></a>
+                    </div>
+                    <ul id="subnavigation" class="subnav_hide">
+                        <!-- JS loaded content -->
+                    </ul>
                 </div>
-            </div>               
+            </div>     
         </header>
 
         <main class="nonhome">
             <h1>Receptions</h1>
             <div class="serv_subpage">
-                
-                <p>
-                    After your temple wedding, hold your wedding reception in our beautiful Reception Hall! We provide a
-                    variety of services for your happy day. Packages and pricing available on request. Please see below
-                    for a brief summary of what we offer.
-                </p>
-                <img src="images/receptions.jpg" alt="Close-up of Wedding Decor">
-                <h2>Decor</h2>
-                <p>
-                    The hall is easily customized with the flowers and decor of your choice, with staff on hand to assist 
-                    in setup and cleanup according to your needs. We are happy to provide:
-                    <ul>
-                        <li>Tables and tablecloths</li>
-                        <li>Place settings of your choice (select from several options dependent on location)</li>
-                        <li>Pillars, vases, archways and other "large furniture" items around which to build your decor</li>
-                        <li>Contact information for local wedding vendors</li>
-                    </ul>
-                </p>
-                
-                <h2>Catering &amp; Food Service</h2>
-                <p>
-                    We would be delighted to cater your reception and ensure that all of your guests leave with pleasant
-                    memories and full bellies! We offer several catering options, including:
-                    <ul>
-                        <li>Full dinner menu with 3 meal choices</li>
-                        <li>Light refreshment buffet with an array of appetizers</li>
-                        <li>Dessert spread with chocolate fountain or sundae bar</li>
-                        <li>Beverage station with free refills for guests <em>(No alcohol will be served on the premises.)</em></li>
-                        <li>Vegan/vegetarian options on request</li>
-                        <li>Kitchen and serving area if you prefer outside catering</li>
-                        <li>Contact information for local catering services</li>
-                    </ul>
-                </p>
+                <div class="servsub_intro">
+                    <p>
+                        After your temple wedding, hold your wedding reception in our beautiful Reception Hall! We provide a
+                        variety of services for your happy day, including discounts on room rates for the bride and groom before
+                        and after the wedding.
+                    </p>
+                    <p>
+                        Packages and pricing available on request. Please see below
+                        for a brief summary of what we offer.
+                    </p>
+                    <img src="images/receptions.jpg" alt="Close-up of Wedding Decor">
+                </div>
+                <section class="amenitycard">
+                    <h3>Decor</h3>
+                    <p>
+                        The hall is easily customized with the flowers and decor of your choice, with staff on hand to assist 
+                        in setup and cleanup according to your needs. We are happy to provide:
+                        <ul>
+                            <li>Tables and tablecloths</li>
+                            <li>Place settings of your choice (select from several options dependent on location)</li>
+                            <li>Pillars, vases, archways and other "large furniture" items around which to build your decor</li>
+                            <li>Contact information for local wedding vendors</li>
+                        </ul>
+                    </p>
+                </section>
 
-                <h2>Staging Areas</h2>
-                <p>
-                    We know how important it is to capture every detail. We have set aside rooms near the Reception Hall for
-                    the bridal party and groom's party to dress, prepare and rest when needed, with comfortable seating, beautiful
-                    lighting and large mirrors. In the hall, several areas are set up with the perfect lighting for photography,
-                    whether it be your first dance together, your wedding party photos, or close-up photos of your special details.
-                    We are happy to provide contact information for our most popular local wedding photographers.
-                </p>
+                <section class="amenitycard">
+                    <h3>Catering &amp; Food Service</h3>
+                    <p>
+                        We would be delighted to cater your reception and ensure that all of your guests leave with pleasant
+                        memories and full bellies! We offer several catering options, including:
+                        <ul>
+                            <li>Full dinner menu with 3 meal choices</li>
+                            <li>Light refreshment buffet with an array of appetizers</li>
+                            <li>Dessert spread with chocolate fountain or sundae bar</li>
+                            <li>Beverage station with free refills for guests <em>(No alcohol will be served on the premises.)</em></li>
+                            <li>Vegan/vegetarian options on request</li>
+                            <li>Kitchen and serving area if you prefer outside catering</li>
+                            <li>Contact information for local catering services</li>
+                        </ul>
+                    </p>
+                </section>
 
-                <h2>Honeymoon Suite & Room Rates</h2>
-                <p>
-                    Enjoy extra-special pampering for the bride and groom in our special honeymoon suite. After your event, we
-                    give you plenty of space to relax in a plush, king-sized bed with soft sheets and plenty of pillows.
-                    Celebrate your new marriage with a complimentary bottle of sparkling cider on ice and delicious chocolates.
-                </p>
-                <p>
-                    We are pleased to offer a discount on rooms booked in a block for weddings planned at least three months
-                    in advance. Please call to make special arrangements for your wedding party and guests.
-                </p>
+                <section class="amenitycard">
+                    <h3>Staging Areas</h3>
+                    <p>
+                        We know how important it is to capture every detail. We have set aside rooms near the Reception Hall for
+                        the bridal party and groom's party to dress, prepare and rest when needed, with comfortable seating, beautiful
+                        lighting and large mirrors. In the hall, several areas are set up with the perfect lighting for photography,
+                        whether it be your first dance together, your wedding party photos, or close-up photos of your special details.
+                        We are happy to provide contact information for our most popular local wedding photographers.
+                    </p>
+                </section>
+
+                <section class="amenitycard">
+                    <h3>Honeymoon Suite & Room Rates</h3>
+                    <p>
+                        Enjoy extra-special pampering for the bride and groom in our special honeymoon suite. After your event, we
+                        give you plenty of space to relax in a plush, king-sized bed with soft sheets and plenty of pillows.
+                        Celebrate your new marriage with a complimentary bottle of sparkling cider on ice and delicious chocolates.
+                    </p>
+                    <p>
+                        We are pleased to offer a discount on rooms booked in a block for weddings planned at least three months
+                        in advance. Please call to make special arrangements for your wedding party and guests.
+                    </p>
+                </section>
             </div>
 
             <p>
@@ -109,7 +124,7 @@
         </footer>
     
         <script>
-            loadNav(); loadFoot();
+            loadNav(); loadSubNav(); loadFoot();
         </script>
     </body>
 </html>
