@@ -371,13 +371,9 @@ main {
 }
 
 /* SERVICES/AMENITIES STYLES */
-.serv_head {
-    background-color: #c4bdbc;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #f7f6ee;
-    line-height: 150%;
-    text-shadow: 2px 2px 2px rgba(51,51,51,.5); 
+hr{
+    width: 80%;
+    color: #594d41;
 }
 .specialservbox{
     width: 98%;
@@ -466,7 +462,7 @@ figcaption{
     margin: 0;
     padding: .5rem 0 .5rem 0;
     width: 100%;
-    background-color: #c4bdbc;
+    background-color: #e4e2d5;
     text-align: center;
 }
 
